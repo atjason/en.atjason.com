@@ -1,0 +1,919 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/en/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/en/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/en/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Jason, Blog" />
+
+
+
+
+
+  <link rel="alternate" href="/en/atom.xml" title="Jason" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/en/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="This article records the detailed steps to add localizations for a project. The project could be downloaded here.
+Development environment:
+
+OS X: 10.11.4
+XCode: 7.3
+Swift: 2.2
+
+#Auto Layout and Double">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift & Cocoa: Localization">
+<meta property="og:url" content="http://atjason.com/en/Cocoa/Swift & Cocoa: Localization.html">
+<meta property="og:site_name" content="Jason">
+<meta property="og:description" content="This article records the detailed steps to add localizations for a project. The project could be downloaded here.
+Development environment:
+
+OS X: 10.11.4
+XCode: 7.3
+Swift: 2.2
+
+#Auto Layout and Double">
+<meta property="og:image" content="http://atjason.com/en/../media/SelectPreview.jpg">
+<meta property="og:image" content="http://atjason.com/en/../media/SelectPseudolanguage.jpg">
+<meta property="og:image" content="http://atjason.com/en/../media/ProjectAddLanguage.jpg">
+<meta property="og:image" content="http://atjason.com/en/../media/ProjectAddLanguageSelectBase.jpg">
+<meta property="og:image" content="http://atjason.com/en/../media/MainStoryboardWithLocalization.jpg">
+<meta property="og:image" content="http://atjason.com/en/../media/AddStringsFile.jpg">
+<meta property="og:image" content="http://atjason.com/en/../media/LocalizationFileWithoutString.jpg">
+<meta property="og:image" content="http://atjason.com/en/../media/FinderFileTree.jpg">
+<meta property="og:image" content="http://atjason.com/en/../media/ExportLocalization1.jpg">
+<meta property="og:image" content="http://atjason.com/en/../media/ImportLocalization1.jpg">
+<meta property="og:image" content="http://atjason.com/en/../media/ImportLocalization2.jpg">
+<meta property="og:image" content="http://atjason.com/en/../media/LocalizationFileWithString.jpg">
+<meta property="og:image" content="http://atjason.com/en/../media/ChangeSystemLanguage.jpg">
+<meta property="og:image" content="http://atjason.com/en/../media/DuplicateScheme.jpg">
+<meta property="og:image" content="http://atjason.com/en/../media/SelectChineseInScheme.jpg">
+<meta property="og:image" content="http://atjason.com/en/../media/LocalizedApp.jpg">
+<meta property="og:updated_time" content="2016-05-07T05:14:48.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Swift & Cocoa: Localization">
+<meta name="twitter:description" content="This article records the detailed steps to add localizations for a project. The project could be downloaded here.
+Development environment:
+
+OS X: 10.11.4
+XCode: 7.3
+Swift: 2.2
+
+#Auto Layout and Double">
+<meta name="twitter:image" content="http://atjason.com/en/../media/SelectPreview.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title> Swift & Cocoa: Localization | Jason </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-26569268-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/en/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Jason</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/en/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Swift & Cocoa: Localization
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-04-15T12:20:00+08:00" content="2016-04-15">
+              2016-04-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/en/categories/Cocoa/" itemprop="url" rel="index">
+                    <span itemprop="name">Cocoa</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/en/Cocoa/Swift & Cocoa: Localization.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Cocoa/Swift & Cocoa: Localization.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>This article records the detailed steps to add localizations for a project. The project could be downloaded <a href="https://github.com/atjason/LearnCocoaWithSwift/tree/master/26_LocalizationAndBundles/LocalizationDemo" target="_blank" rel="external">here</a>.</p>
+<p>Development environment:</p>
+<ul>
+<li>OS X: 10.11.4</li>
+<li>XCode: 7.3</li>
+<li>Swift: 2.2</li>
+</ul>
+<p>#Auto Layout and Double-Length Pseudolanguage<br>For localized app, typically you need to set the UI to ‘<strong>Auto Layout</strong>‘. As the same string in different languages may have very different length, the ‘auto layout’ could let each language corecttly display.</p>
+<p>How to test the auto layout correclty work or not? Beside really test the app with different language, you can also use ‘<strong>Double-Length Pseudolanguage</strong>‘. This localization simply takes the text of your development language, and doubles it. So, for example, “Tell the World” becomes “Tell the World Tell the World.” While many pieces of text won’t actually double in length when translated to another langauge, it serves as a great way to test to see whether your interface can handle the wide variation in length.</p>
+<p>Steps to preview a localization in Interface Builder:</p>
+<ul>
+<li>In project navigator, select the <code>.storyboard</code> or <code>.xib</code> file you want to preview.</li>
+<li>Choose View &gt; Assistant Editor &gt; Show Assistant Editor.</li>
+<li>In the assistant editor jump bar, open the Assistant pop-up menu, scroll to and choose the Preview item, and choose the <code>.storyboard</code> or <code>.xib</code> file from the submenu.<br>If a preview of the app’s user interface doesn’t appear in the assistant editor, select the window or view you want to preview in the icon or outline view.</li>
+</ul>
+<p><img src="../media/SelectPreview.jpg" alt=""></p>
+<ul>
+<li>In the assistant editor, choose the localization you want to preview from the language pop-up menu in the lower-right corner.</li>
+</ul>
+<p><img src="../media/SelectPseudolanguage.jpg" alt=""></p>
+<p>Now, a preview of the localization appears in the assistant editor. If you choose a real language, strings that do not need to be localized or need to be localized, but currently are not, appear in uppercase.</p>
+<a id="more"></a>
+<p>#Use Localized String in Code<br>The key is to use <code>NSLocalizedString</code> function. It could load localized text from the localized string file.</p>
+<p>To explicit ordering of tokens in format strings, could use <code>%1$@</code>, <code>%2$@</code>, etc.</p>
+<p>The related code is:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">setLabelStrings</span><span class="params">()</span></span> &#123;</span><br><span class="line">  <span class="keyword">let</span> dateFormatter = <span class="type">NSDateFormatter</span>()</span><br><span class="line">  dateFormatter.dateStyle = .<span class="type">NoStyle</span></span><br><span class="line">  dateFormatter.timeStyle = .<span class="type">ShortStyle</span></span><br><span class="line">  <span class="keyword">let</span> dateString = dateFormatter.stringFromDate(<span class="type">NSDate</span>())</span><br><span class="line">  </span><br><span class="line">  question = <span class="type">NSLocalizedString</span>(<span class="string">"Q: What's the time now?"</span>, comment: <span class="string">"Question"</span>)</span><br><span class="line">  answer = <span class="type">String</span>(format: <span class="type">NSLocalizedString</span>(<span class="string">"A: It's %@."</span>, comment: <span class="string">"Answer"</span>), dateString)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>#Add Localization Language for Project<br>Add a new localization to the project could make Xcode aware that you want to start translating files into that language, which means you can do things like select that language in the Preview assistant.</p>
+<ul>
+<li>Select the project in the project navigator.<br>Note: It’s <strong>PROJECT</strong>, but not targets.</li>
+<li>Add the new localization.<br>Scroll down to the Localizations section. Click the + button, and select ‘Chinese (Simplified)’ from the menu that appears</li>
+</ul>
+<p><img src="../media/ProjectAddLanguage.jpg" alt=""></p>
+<ul>
+<li>Select the files you want to localize.<br>Xcode will ask you which files you want to translate into the new language. At this stage, there will only be a single file: the app’s interface, stored in MainMenu.xib. It’s selected by default, so click Finish.<br>Note: select “Locializable Strings”, but not ‘Interface Builder Story’.</li>
+</ul>
+<p><img src="../media/ProjectAddLanguageSelectBase.jpg" alt=""></p>
+<ul>
+<li>A new file will be created: a strings file for the storyboard file. It’ll appear as an item inside the storyboard file, in the project navigator.</li>
+</ul>
+<p><img src="../media/MainStoryboardWithLocalization.jpg" alt=""></p>
+<p>#Add Localizations Files</p>
+<p>To well organize the localized strings, it’s better we manually add 2 string files here: ‘<strong>Localizable.strings</strong>‘ and ‘<strong>InfoPlist.strings</strong>‘. ‘Localizable.strings’ will store the strings in app. For ‘InfoPlist.strings’, please check the following introduction.</p>
+<p>##Localizing Property List Values<br>The values for many keys in an information property list file are human-readable strings that are displayed to the user by the Finder or your own app. When you localize your app, you should be sure to localize the values for these strings in addition to the rest of your app’s content.</p>
+<p>Localized values are not stored in the Info.plist file itself. Instead, you store the values for a particular localization in a strings file with the name ‘<strong>InfoPlist.strings</strong>‘. You place this file in the same language-specific project directory that you use to store other resources for the same localization. The contents of the InfoPlist.strings file are the individual keys you want localized and the appropriately translated value. The routines that look up key values in the Info.plist file take the user’s language preferences into account and return the localized version of the key (from the appropriate InfoPlist.strings file) when one exists. If a localized version of a key does not exist, the routines return the value stored in the Info.plist file.</p>
+<p>##Add ‘Localizable.strings’ and ‘InfoPlist.strings’<br>Before add the strings files, it’s better to add a ‘Localizations’ group in project. And it’s also better to create the corresponding folder in Finder.</p>
+<p>Now it’s time really add the string files.</p>
+<ul>
+<li>Create a new file in the project: a strings file. You’ll find this in the Resource section of the file templates. Name the file as ‘Localizable.strings’, save in the ‘Localizations’ folder.</li>
+</ul>
+<p><img src="../media/AddStringsFile.jpg" alt=""></p>
+<ul>
+<li>Select the ‘Localizable.strings’ file. Open the ‘File Inspector’ and scroll down to Localizations.<br>Click the Localize button. A menu will appear; choose Base and click Localize.</li>
+</ul>
+<p>Now the localization option has changed, with three small checkboxes, one for Base, one for English, and the last for Chinese Simplified. Select Base and Chinese Simplified. In fact the Base is just English as we choose English as development language.</p>
+<p><img src="../media/LocalizationFileWithoutString.jpg" alt=""></p>
+<p>Now create ‘InfoPlist.strings’ and did same settings as ‘Localizable.strings’. The difference is, save the ‘InfoPlist.strings’ in same level of ‘Localizations’ in Finder, but still in the ‘Localizations’ group in project. After set it as localization, it will auto matically be moved to ‘Base.lproj’ and ‘zh-Hans.lproj’ in Finder.</p>
+<p>How to localize the app’s name displayed with app icon in Finder? Add this string in Base version of ‘InfoPlist.strings’:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* App Name */</span></span><br><span class="line"><span class="string">"CFBundleDisplayName"</span> =<span class="string">"Localization Demo"</span>;</span><br></pre></td></tr></table></figure></p>
+<p>And add this for the Chinese Simplified version:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* App Name */</span></span><br><span class="line"><span class="string">"CFBundleDisplayName"</span> =<span class="string">"本地化示例"</span>;</span><br></pre></td></tr></table></figure></p>
+<p><strong>NOTE</strong><br>It’s important to use the file names of ‘InfoPlist.strings’ and ‘Localizable.strings’, as the app will look for the files with these names.</p>
+<p>After added, the files in Finder will looks like:</p>
+<p><img src="../media/FinderFileTree.jpg" alt=""></p>
+<p>#Edit Localization Files<br>There’re 2 ways to edit the localization files: Direclty Edit and Using .xliff Files. Now let’s introduce the .xliff files.</p>
+<p>Normally, you don’t translate the app by yourself, but let some others who are expert for the language to do it. How to cooperate with them? Use .xliff file.</p>
+<p>##Export .xliff Files</p>
+<ul>
+<li>Select the root of the project.</li>
+<li>Select ‘Editor’ menu &gt; ‘Export for localization…’. In the popup dialog, select where to store the files. Need to select ‘Chinese (Simplied)’ in languages. This means export the .xliff file for the languages selected. Click ‘Save’.<br><img src="../media/ExportLocalization1.jpg" alt=""></li>
+<li>Open the ‘zh-Hans.xliff’ you just saved. You can see it’s like a xml file.</li>
+</ul>
+<p>Edit parts for ‘Localizable.strings’. Find the following part, add <code>&lt;target&gt;...&lt;/target&gt;</code> under the <code>&lt;source&gt;A: It&#39;s %@.&lt;/source&gt;</code>. This is just the core of ‘localization’.</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">file</span> <span class="attr">original</span>=<span class="string">"LocalizationDemo/Localizable.strings"</span> <span class="attr">source-language</span>=<span class="string">"en"</span> <span class="attr">datatype</span>=<span class="string">"plaintext"</span> <span class="attr">target-language</span>=<span class="string">"zh-Hans"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tool</span> <span class="attr">tool-id</span>=<span class="string">"com.apple.dt.xcode"</span> <span class="attr">tool-name</span>=<span class="string">"Xcode"</span> <span class="attr">tool-version</span>=<span class="string">"7.3"</span> <span class="attr">build-num</span>=<span class="string">"7D175"</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">trans-unit</span> <span class="attr">id</span>=<span class="string">"A: It's %@."</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">source</span>&gt;</span>A: It's %@.<span class="tag">&lt;/<span class="name">source</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">target</span>&gt;</span>答：现在是 %@。<span class="tag">&lt;/<span class="name">target</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">note</span>&gt;</span>Answer<span class="tag">&lt;/<span class="name">note</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">trans-unit</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">trans-unit</span> <span class="attr">id</span>=<span class="string">"Q: What's the time now?"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">source</span>&gt;</span>Q: What's the time now?<span class="tag">&lt;/<span class="name">source</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">target</span>&gt;</span>问：现在几点了？<span class="tag">&lt;/<span class="name">target</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">note</span>&gt;</span>Question<span class="tag">&lt;/<span class="name">note</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">trans-unit</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>##Import .xliff Files</p>
+<ul>
+<li>Select the root of the project.</li>
+<li>Select ‘Editor’ menu &gt; ‘Import localization…’. In the popup dialog, select the ‘zh-Hans.xliff’ you just modified. It should pop up a dialog to show the difference between the files in project and the one you just modified. Click ‘Import’ if it’s fine.</li>
+</ul>
+<p><img src="../media/ImportLocalization1.jpg" alt=""></p>
+<p><img src="../media/ImportLocalization2.jpg" alt=""></p>
+<p>After it’s done, open the ‘InfoPlist.strings’ or ‘Localizable.strings’, you should be able to say the new translated strings. Did you remember I just said there’re 2 ways to edit the string files, and another one is directly edit it? Here it is, you can directly edit the files and add the strings like you added through .xliff.</p>
+<p><img src="../media/LocalizationFileWithString.jpg" alt=""></p>
+<p><strong>Special Tips</strong><br>Seems XCode has issue. If you project has test or other target, if you import the modified strings for the first, the XCode may crash.<br>The solution is, export strings, don’t change it and import again.<br>I guess this mainly let the test or other project be localized. Even you don’t need to localize them, but have to do it to walk around XCode’s issue (again, it’s what I guess).</p>
+<p>#Test Localization<br>There’re 2 ways to test the localization.</p>
+<p>##1. Change System’s Language<br>Open ‘System Preferences’ &gt; ‘Language &amp; Region’, you can drag Chinese Simplied to top of the list to activate it. You can also change the ragion.</p>
+<p><img src="../media/ChangeSystemLanguage.jpg" alt=""></p>
+<p>The disadvantage of this way is, you need to reboot to let the change work. And the entire system’s language will be changed. How only change the language for the app? Check the following way.</p>
+<p>##2. Use XCode’s Scheme<br>You can make Xcode launch the application using the special langauge or region.<br>To do this, you can duplicate current scheme, name it as ‘Chinese (Simplified)’. Open the Options panel. Change the Application Language from System Language to ‘Chinese (Simplified)’.</p>
+<p><img src="../media/DuplicateScheme.jpg" alt=""></p>
+<p><img src="../media/SelectChineseInScheme.jpg" alt=""></p>
+<p>Now, run the app, it should look like:</p>
+<p><img src="../media/LocalizedApp.jpg" alt=""></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/en/Cocoa/Swift & Cocoa: Auto Launch at Login.html" rel="next" title="Swift & Cocoa: Auto Launch at Login">
+                <i class="fa fa-chevron-left"></i> Swift & Cocoa: Auto Launch at Login
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/en/Cocoa/XCode Debug Flag for Swift.html" rel="prev" title="XCode Debug Flag for Swift">
+                XCode Debug Flag for Swift <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://ww3.sinaimg.cn/large/006ghf8igw1f3lxt6lgnsj30lc0jygn8.jpg"
+               alt="Jason" />
+          <p class="site-author-name" itemprop="name">Jason</p>
+          <p class="site-description motion-element" itemprop="description">Digital Nomad, Mac Developer</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/en/">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/en/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/en/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/atjason" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/hereisjason" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/atjasonzone" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://toolinbox.net/" title="Toolinbox" target="_blank">Toolinbox</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2011 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jason</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/en/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/en/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/en/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/en/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/en/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/en/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/en/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/en/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/en/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/en/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/en/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'atjason';
+      var disqus_identifier = 'Cocoa/Swift & Cocoa: Localization.html';
+      var disqus_title = 'Swift & Cocoa: Localization';
+      var disqus_url = 'http://atjason.com/en/en/Cocoa/Swift & Cocoa: Localization.html';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/en/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+  
+
+  
+
+  
+
+</body>
+</html>

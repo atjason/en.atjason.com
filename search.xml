@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[Action When Enter-key is Pressed on NSTextField]]></title>
+      <url>http://atjason.com/en/en/Cocoa/Action%20When%20Enter-key%20is%20Pressed%20on%20NSTextField.html</url>
+      <content type="html"><![CDATA[<h1 id="Add-Action-in-NSTextField’s-Delegate"><a href="#Add-Action-in-NSTextField’s-Delegate" class="headerlink" title="Add Action in NSTextField’s Delegate"></a>Add Action in NSTextField’s Delegate</h1><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@IBAction</span> <span class="function"><span class="keyword">func</span> <span class="title">textFieldAction</span><span class="params">(sender: NSTextField)</span></span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(sender.stringValue)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Connect-NSTextField’s-Action-to-Delegate’s-One"><a href="#Connect-NSTextField’s-Action-to-Delegate’s-One" class="headerlink" title="Connect NSTextField’s Action to Delegate’s One"></a>Connect NSTextField’s Action to Delegate’s One</h1><p><img src="../media/Connect.jpg" alt=""></p>
+<h1 id="Set-NSTextField’s-Action-Type"><a href="#Set-NSTextField’s-Action-Type" class="headerlink" title="Set NSTextField’s Action Type"></a>Set NSTextField’s Action Type</h1><p><img src="../media/SelectAction.jpg" alt=""></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[XCode Debug Flag for Swift]]></title>
+      <url>http://atjason.com/en/en/Cocoa/XCode%20Debug%20Flag%20for%20Swift.html</url>
+      <content type="html"><![CDATA[<h1 id="Set-Debug-Flag-in-XCode-for-Swift"><a href="#Set-Debug-Flag-in-XCode-for-Swift" class="headerlink" title="Set Debug Flag in XCode for Swift"></a>Set Debug Flag in XCode for Swift</h1><ul>
+<li>Open ‘Build Settings’ for Project (not target)</li>
+<li>Search ‘<strong>Swift Compiler - Custom Flags</strong>‘. Add a <code>-D DEBUG</code> entry in <code>Other Swift Flags</code></li>
+</ul>
+<p><img src="../media/DebugFlag.jpg" alt=""></p>
+<h1 id="Use-Debug-Flag-in-Swift"><a href="#Use-Debug-Flag-in-Swift" class="headerlink" title="Use Debug Flag in Swift"></a>Use Debug Flag in Swift</h1><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#<span class="keyword">if</span> <span class="type">DEBUG</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"I'm running in DEBUG mode"</span>)</span><br><span class="line">#<span class="keyword">else</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"I'm running in a non-DEBUG mode"</span>)</span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Swift & Cocoa: Localization]]></title>
+      <url>http://atjason.com/en/en/Cocoa/Swift%20&%20Cocoa:%20Localization.html</url>
+      <content type="html"><![CDATA[<p>This article records the detailed steps to add localizations for a project. The project could be downloaded <a href="https://github.com/atjason/LearnCocoaWithSwift/tree/master/26_LocalizationAndBundles/LocalizationDemo" target="_blank" rel="external">here</a>.</p>
+<p>Development environment:</p>
+<ul>
+<li>OS X: 10.11.4</li>
+<li>XCode: 7.3</li>
+<li>Swift: 2.2</li>
+</ul>
+<p>#Auto Layout and Double-Length Pseudolanguage<br>For localized app, typically you need to set the UI to ‘<strong>Auto Layout</strong>‘. As the same string in different languages may have very different length, the ‘auto layout’ could let each language corecttly display.</p>
+<p>How to test the auto layout correclty work or not? Beside really test the app with different language, you can also use ‘<strong>Double-Length Pseudolanguage</strong>‘. This localization simply takes the text of your development language, and doubles it. So, for example, “Tell the World” becomes “Tell the World Tell the World.” While many pieces of text won’t actually double in length when translated to another langauge, it serves as a great way to test to see whether your interface can handle the wide variation in length.</p>
+<p>Steps to preview a localization in Interface Builder:</p>
+<ul>
+<li>In project navigator, select the <code>.storyboard</code> or <code>.xib</code> file you want to preview.</li>
+<li>Choose View &gt; Assistant Editor &gt; Show Assistant Editor.</li>
+<li>In the assistant editor jump bar, open the Assistant pop-up menu, scroll to and choose the Preview item, and choose the <code>.storyboard</code> or <code>.xib</code> file from the submenu.<br>If a preview of the app’s user interface doesn’t appear in the assistant editor, select the window or view you want to preview in the icon or outline view.</li>
+</ul>
+<p><img src="../media/SelectPreview.jpg" alt=""></p>
+<ul>
+<li>In the assistant editor, choose the localization you want to preview from the language pop-up menu in the lower-right corner.</li>
+</ul>
+<p><img src="../media/SelectPseudolanguage.jpg" alt=""></p>
+<p>Now, a preview of the localization appears in the assistant editor. If you choose a real language, strings that do not need to be localized or need to be localized, but currently are not, appear in uppercase.</p>
+<a id="more"></a>
+<p>#Use Localized String in Code<br>The key is to use <code>NSLocalizedString</code> function. It could load localized text from the localized string file.</p>
+<p>To explicit ordering of tokens in format strings, could use <code>%1$@</code>, <code>%2$@</code>, etc.</p>
+<p>The related code is:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">setLabelStrings</span><span class="params">()</span></span> &#123;</span><br><span class="line">  <span class="keyword">let</span> dateFormatter = <span class="type">NSDateFormatter</span>()</span><br><span class="line">  dateFormatter.dateStyle = .<span class="type">NoStyle</span></span><br><span class="line">  dateFormatter.timeStyle = .<span class="type">ShortStyle</span></span><br><span class="line">  <span class="keyword">let</span> dateString = dateFormatter.stringFromDate(<span class="type">NSDate</span>())</span><br><span class="line">  </span><br><span class="line">  question = <span class="type">NSLocalizedString</span>(<span class="string">"Q: What's the time now?"</span>, comment: <span class="string">"Question"</span>)</span><br><span class="line">  answer = <span class="type">String</span>(format: <span class="type">NSLocalizedString</span>(<span class="string">"A: It's %@."</span>, comment: <span class="string">"Answer"</span>), dateString)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>#Add Localization Language for Project<br>Add a new localization to the project could make Xcode aware that you want to start translating files into that language, which means you can do things like select that language in the Preview assistant.</p>
+<ul>
+<li>Select the project in the project navigator.<br>Note: It’s <strong>PROJECT</strong>, but not targets.</li>
+<li>Add the new localization.<br>Scroll down to the Localizations section. Click the + button, and select ‘Chinese (Simplified)’ from the menu that appears</li>
+</ul>
+<p><img src="../media/ProjectAddLanguage.jpg" alt=""></p>
+<ul>
+<li>Select the files you want to localize.<br>Xcode will ask you which files you want to translate into the new language. At this stage, there will only be a single file: the app’s interface, stored in MainMenu.xib. It’s selected by default, so click Finish.<br>Note: select “Locializable Strings”, but not ‘Interface Builder Story’.</li>
+</ul>
+<p><img src="../media/ProjectAddLanguageSelectBase.jpg" alt=""></p>
+<ul>
+<li>A new file will be created: a strings file for the storyboard file. It’ll appear as an item inside the storyboard file, in the project navigator.</li>
+</ul>
+<p><img src="../media/MainStoryboardWithLocalization.jpg" alt=""></p>
+<p>#Add Localizations Files</p>
+<p>To well organize the localized strings, it’s better we manually add 2 string files here: ‘<strong>Localizable.strings</strong>‘ and ‘<strong>InfoPlist.strings</strong>‘. ‘Localizable.strings’ will store the strings in app. For ‘InfoPlist.strings’, please check the following introduction.</p>
+<p>##Localizing Property List Values<br>The values for many keys in an information property list file are human-readable strings that are displayed to the user by the Finder or your own app. When you localize your app, you should be sure to localize the values for these strings in addition to the rest of your app’s content.</p>
+<p>Localized values are not stored in the Info.plist file itself. Instead, you store the values for a particular localization in a strings file with the name ‘<strong>InfoPlist.strings</strong>‘. You place this file in the same language-specific project directory that you use to store other resources for the same localization. The contents of the InfoPlist.strings file are the individual keys you want localized and the appropriately translated value. The routines that look up key values in the Info.plist file take the user’s language preferences into account and return the localized version of the key (from the appropriate InfoPlist.strings file) when one exists. If a localized version of a key does not exist, the routines return the value stored in the Info.plist file.</p>
+<p>##Add ‘Localizable.strings’ and ‘InfoPlist.strings’<br>Before add the strings files, it’s better to add a ‘Localizations’ group in project. And it’s also better to create the corresponding folder in Finder.</p>
+<p>Now it’s time really add the string files.</p>
+<ul>
+<li>Create a new file in the project: a strings file. You’ll find this in the Resource section of the file templates. Name the file as ‘Localizable.strings’, save in the ‘Localizations’ folder.</li>
+</ul>
+<p><img src="../media/AddStringsFile.jpg" alt=""></p>
+<ul>
+<li>Select the ‘Localizable.strings’ file. Open the ‘File Inspector’ and scroll down to Localizations.<br>Click the Localize button. A menu will appear; choose Base and click Localize.</li>
+</ul>
+<p>Now the localization option has changed, with three small checkboxes, one for Base, one for English, and the last for Chinese Simplified. Select Base and Chinese Simplified. In fact the Base is just English as we choose English as development language.</p>
+<p><img src="../media/LocalizationFileWithoutString.jpg" alt=""></p>
+<p>Now create ‘InfoPlist.strings’ and did same settings as ‘Localizable.strings’. The difference is, save the ‘InfoPlist.strings’ in same level of ‘Localizations’ in Finder, but still in the ‘Localizations’ group in project. After set it as localization, it will auto matically be moved to ‘Base.lproj’ and ‘zh-Hans.lproj’ in Finder.</p>
+<p>How to localize the app’s name displayed with app icon in Finder? Add this string in Base version of ‘InfoPlist.strings’:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* App Name */</span></span><br><span class="line"><span class="string">"CFBundleDisplayName"</span> =<span class="string">"Localization Demo"</span>;</span><br></pre></td></tr></table></figure></p>
+<p>And add this for the Chinese Simplified version:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* App Name */</span></span><br><span class="line"><span class="string">"CFBundleDisplayName"</span> =<span class="string">"本地化示例"</span>;</span><br></pre></td></tr></table></figure></p>
+<p><strong>NOTE</strong><br>It’s important to use the file names of ‘InfoPlist.strings’ and ‘Localizable.strings’, as the app will look for the files with these names.</p>
+<p>After added, the files in Finder will looks like:</p>
+<p><img src="../media/FinderFileTree.jpg" alt=""></p>
+<p>#Edit Localization Files<br>There’re 2 ways to edit the localization files: Direclty Edit and Using .xliff Files. Now let’s introduce the .xliff files.</p>
+<p>Normally, you don’t translate the app by yourself, but let some others who are expert for the language to do it. How to cooperate with them? Use .xliff file.</p>
+<p>##Export .xliff Files</p>
+<ul>
+<li>Select the root of the project.</li>
+<li>Select ‘Editor’ menu &gt; ‘Export for localization…’. In the popup dialog, select where to store the files. Need to select ‘Chinese (Simplied)’ in languages. This means export the .xliff file for the languages selected. Click ‘Save’.<br><img src="../media/ExportLocalization1.jpg" alt=""></li>
+<li>Open the ‘zh-Hans.xliff’ you just saved. You can see it’s like a xml file.</li>
+</ul>
+<p>Edit parts for ‘Localizable.strings’. Find the following part, add <code>&lt;target&gt;...&lt;/target&gt;</code> under the <code>&lt;source&gt;A: It&#39;s %@.&lt;/source&gt;</code>. This is just the core of ‘localization’.</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">file</span> <span class="attr">original</span>=<span class="string">"LocalizationDemo/Localizable.strings"</span> <span class="attr">source-language</span>=<span class="string">"en"</span> <span class="attr">datatype</span>=<span class="string">"plaintext"</span> <span class="attr">target-language</span>=<span class="string">"zh-Hans"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tool</span> <span class="attr">tool-id</span>=<span class="string">"com.apple.dt.xcode"</span> <span class="attr">tool-name</span>=<span class="string">"Xcode"</span> <span class="attr">tool-version</span>=<span class="string">"7.3"</span> <span class="attr">build-num</span>=<span class="string">"7D175"</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">trans-unit</span> <span class="attr">id</span>=<span class="string">"A: It's %@."</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">source</span>&gt;</span>A: It's %@.<span class="tag">&lt;/<span class="name">source</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">target</span>&gt;</span>答：现在是 %@。<span class="tag">&lt;/<span class="name">target</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">note</span>&gt;</span>Answer<span class="tag">&lt;/<span class="name">note</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">trans-unit</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">trans-unit</span> <span class="attr">id</span>=<span class="string">"Q: What's the time now?"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">source</span>&gt;</span>Q: What's the time now?<span class="tag">&lt;/<span class="name">source</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">target</span>&gt;</span>问：现在几点了？<span class="tag">&lt;/<span class="name">target</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">note</span>&gt;</span>Question<span class="tag">&lt;/<span class="name">note</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">trans-unit</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>##Import .xliff Files</p>
+<ul>
+<li>Select the root of the project.</li>
+<li>Select ‘Editor’ menu &gt; ‘Import localization…’. In the popup dialog, select the ‘zh-Hans.xliff’ you just modified. It should pop up a dialog to show the difference between the files in project and the one you just modified. Click ‘Import’ if it’s fine.</li>
+</ul>
+<p><img src="../media/ImportLocalization1.jpg" alt=""></p>
+<p><img src="../media/ImportLocalization2.jpg" alt=""></p>
+<p>After it’s done, open the ‘InfoPlist.strings’ or ‘Localizable.strings’, you should be able to say the new translated strings. Did you remember I just said there’re 2 ways to edit the string files, and another one is directly edit it? Here it is, you can directly edit the files and add the strings like you added through .xliff.</p>
+<p><img src="../media/LocalizationFileWithString.jpg" alt=""></p>
+<p><strong>Special Tips</strong><br>Seems XCode has issue. If you project has test or other target, if you import the modified strings for the first, the XCode may crash.<br>The solution is, export strings, don’t change it and import again.<br>I guess this mainly let the test or other project be localized. Even you don’t need to localize them, but have to do it to walk around XCode’s issue (again, it’s what I guess).</p>
+<p>#Test Localization<br>There’re 2 ways to test the localization.</p>
+<p>##1. Change System’s Language<br>Open ‘System Preferences’ &gt; ‘Language &amp; Region’, you can drag Chinese Simplied to top of the list to activate it. You can also change the ragion.</p>
+<p><img src="../media/ChangeSystemLanguage.jpg" alt=""></p>
+<p>The disadvantage of this way is, you need to reboot to let the change work. And the entire system’s language will be changed. How only change the language for the app? Check the following way.</p>
+<p>##2. Use XCode’s Scheme<br>You can make Xcode launch the application using the special langauge or region.<br>To do this, you can duplicate current scheme, name it as ‘Chinese (Simplified)’. Open the Options panel. Change the Application Language from System Language to ‘Chinese (Simplified)’.</p>
+<p><img src="../media/DuplicateScheme.jpg" alt=""></p>
+<p><img src="../media/SelectChineseInScheme.jpg" alt=""></p>
+<p>Now, run the app, it should look like:</p>
+<p><img src="../media/LocalizedApp.jpg" alt=""></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Swift & Cocoa: Auto Launch at Login]]></title>
+      <url>http://atjason.com/en/en/Cocoa/Swift%20&%20Cocoa:%20Auto%20Launch%20at%20Login.html</url>
+      <content type="html"><![CDATA[<p>This article is based on this <a href="http://martiancraft.com/blog/2015/01/login-items/" target="_blank" rel="external">blog</a>. I adjust and implement using Swift. The project could be downloaded <a href="https://github.com/atjason/CocoaDemoWithSwift/tree/master/AutoLaunch" target="_blank" rel="external">here</a>.</p>
+<p>Development environment:</p>
+<ul>
+<li>OS X: 10.11.4</li>
+<li>XCode: 7.3</li>
+<li>Swift: 2.2</li>
+</ul>
+<p>#Enable ‘launch at login’ in Mac App Store<br>Beside works in sandbox mode, to enable ‘launch at login’ in Mac App Store, should mee this requirement:</p>
+<blockquote>
+<p>2.26 Apps that are set to auto-launch or to have other code automatically run at startup or login without user consent will be rejected.</p>
+</blockquote>
+<p>How to deal with it?<br>Easy, just add a checkbox in Preferences to let user choose auto launch or not. And, make sure, do <strong>NOT</strong> enable it by default. Otherwise Apple will reject it (I was ever rejected for this reason).</p>
+<p><img src="../media/AutoLaunchApp.jpg" alt=""></p>
+<a id="more"></a>
+<p>#Steps<br>The precondition is, you already setup your normal project.</p>
+<p>##Add New Target of Helper<br>Add a new target of your project. You can name the target as “XHelper”, and “X” is your main project.<br>Note: to reduce app’s size, choose the Language of ‘Objective-C’. No worry, only a few code is needed.</p>
+<p><img src="../media/Add Helper Target.jpg" alt=""></p>
+<h2 id="Settings-for-Helper-Target"><a href="#Settings-for-Helper-Target" class="headerlink" title="Settings for Helper Target"></a>Settings for Helper Target</h2><p>Let the helper works in the background and doesn’t display a Dock icon.<br>Open the <strong>Info</strong> tab for the helper target.</p>
+<ul>
+<li>Under the ‘Custom OS X Application Target Properties’ section, add a new row with the Key ‘<strong>Application is background only</strong>’ and the Boolean value of ‘<strong>YES</strong>’.</li>
+</ul>
+<p><img src="../media/Helper in Background.jpg" alt=""></p>
+<p>Next, let the helper target skips the install when the base application also gets installed. To do this:<br>Open the <strong>Build Settings</strong> tab for the helper target.</p>
+<ul>
+<li>Search for ‘<strong>Skip Install</strong>’, setting this option to ‘<strong>YES</strong>’</li>
+</ul>
+<p><img src="../media/HelperSkipInstall.jpg" alt=""></p>
+<h2 id="Settings-for-Main-Target"><a href="#Settings-for-Main-Target" class="headerlink" title="Settings for Main Target"></a>Settings for Main Target</h2><p>Open the <strong>Build Settings</strong> tab for the main target.</p>
+<ul>
+<li>Search for the item called ‘<strong>Strip Debug Symbols During Copy</strong>’, and set this item to ‘<strong>NO</strong>’.</li>
+</ul>
+<p><img src="../media/Strip Debug Symbols During Copy.jpg" alt=""></p>
+<p>Open the <strong>Build Phases</strong> tab for the main target</p>
+<ul>
+<li>If you don’t already have a ‘Copy Files’ phase, then add one by selecting the small + sign in the top left corner of this section.</li>
+<li>Expand the ‘Copy Files’ phase, and select ‘<strong>Wrapper</strong>’ from the Destination drop-down menu</li>
+<li>In the Subpath section, type the following path: “<strong>Contents/Library/LoginItems</strong>“</li>
+<li>Select the + button for the Name section, then search for and add the ‘X Helper.app’ application bundle from the source list that appears, and select it in the list. Click ‘Add’ when done.</li>
+</ul>
+<p><img src="../media/Copy Helper Files.jpg" alt=""></p>
+<p>This will ensure that the Helper target is copied into our application bundle when we compile the project.</p>
+<h2 id="Code-for-Helper-Target"><a href="#Code-for-Helper-Target" class="headerlink" title="Code for Helper Target"></a>Code for Helper Target</h2><p>First, remove the menu and base window in the Helper app’s XIB file.</p>
+<p>Open <code>AppDelegate.m</code>, add these code in <code>applicationDidFinishLaunching</code>. It will find out the path for the main application, launch it, and then terminate itself.<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)applicationDidFinishLaunching:(<span class="built_in">NSNotification</span> *)aNotification &#123;</span><br><span class="line">  <span class="built_in">NSArray</span> *pathComponents = [[[<span class="built_in">NSBundle</span> mainBundle] bundlePath] pathComponents];</span><br><span class="line">  pathComponents = [pathComponents subarrayWithRange:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, [pathComponents count] - <span class="number">4</span>)];</span><br><span class="line">  <span class="built_in">NSString</span> *path = [<span class="built_in">NSString</span> pathWithComponents:pathComponents];</span><br><span class="line">  [[<span class="built_in">NSWorkspace</span> sharedWorkspace] launchApplication:path];</span><br><span class="line">  [<span class="built_in">NSApp</span> terminate:<span class="literal">nil</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Code-for-Main-Target"><a href="#Code-for-Main-Target" class="headerlink" title="Code for Main Target"></a>Code for Main Target</h2><p>There’re mainly 2 parts.</p>
+<h3 id="Add-Preferences"><a href="#Add-Preferences" class="headerlink" title="Add Preferences"></a>Add Preferences</h3><p>This is mainly to remember user’s choice to auto launch or not. For details, refer to my another <a href="https://github.com/atjason/CocoaDemoWithSwift/tree/master/Preferences" target="_blank" rel="external">project for Preferences</a>.</p>
+<h3 id="Set-Auto-Launch"><a href="#Set-Auto-Launch" class="headerlink" title="Set Auto Launch"></a>Set Auto Launch</h3><p>This step is in fact easy. The core is function of <code>SMLoginItemSetEnabled</code>. Remember to <code>import ServiceManagement</code>.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Cocoa</span><br><span class="line"><span class="keyword">import</span> ServiceManagement</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainWindowController</span>: <span class="title">NSWindowController</span> </span>&#123;   </span><br><span class="line">  <span class="meta">@IBAction</span> <span class="function"><span class="keyword">func</span> <span class="title">set</span><span class="params">(sender: NSButton)</span></span> &#123;    </span><br><span class="line">    <span class="keyword">let</span> appBundleIdentifier = <span class="string">"com.atjason.swift.cocoa.AutoLaunchHelper"</span></span><br><span class="line">    <span class="keyword">let</span> autoLaunch = (autoLaunchCheckbox.state == <span class="type">NSOnState</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="type">SMLoginItemSetEnabled</span>(appBundleIdentifier, autoLaunch) &#123;</span><br><span class="line">      <span class="keyword">if</span> autoLaunch &#123;</span><br><span class="line">        <span class="type">NSLog</span>(<span class="string">"Successfully add login item."</span>)</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="type">NSLog</span>(<span class="string">"Successfully remove login item."</span>)</span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="type">NSLog</span>(<span class="string">"Failed to add login item."</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Test-Auto-Launch"><a href="#Test-Auto-Launch" class="headerlink" title="Test Auto Launch"></a>Test Auto Launch</h1><p>In theory, your app and helper should meet these requirements:</p>
+<ul>
+<li>Move the app in the /Applications folder.</li>
+<li>Both the main and Helper application are signed.</li>
+<li>Both the main and Helper application are sandboxed. </li>
+</ul>
+<p>But in fact, when my test app meet none of the requirements above, it still can auto lauch after reboot. Not sure why, but if you plan to release your app in Mac App Store, obviously these requirements will be met. </p>
+<p>Good luck.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Preferences Window]]></title>
+      <url>http://atjason.com/en/en/Cocoa/Preferences%20Window.html</url>
+      <content type="html"><![CDATA[<p>This article introduces how to build preferences window on Mac OS X using Cocoa with Swift. The source code can be downloaded <a href="https://github.com/atjason/CocoaDemoWithSwift/tree/master/Preferences" target="_blank" rel="external">here</a>.</p>
+<p>Development environment:</p>
+<ul>
+<li>OS X: 10.11.4</li>
+<li>XCode: 7.3</li>
+<li>Swift: 2.2</li>
+</ul>
+<p>After it’s finished, the app looks like:</p>
+<p><img src="../media/Preferences Window.jpg" alt=""></p>
+<p>#NSTabViewController<br>The mainly used class is <a href="https://developer.apple.com/library/mac/documentation/AppKit/Reference/NSTabViewController_Class/" target="_blank" rel="external"><code>NSTabViewController</code></a>.<br>An <code>NSTabViewController</code> object is a container view controller that manages a tab view interface, which organizes multiple pages of content but displays only one of those pages at a time. Each page of content is managed by a separate child view controller. Navigation between child view controllers is accomplished with the help of an NSTabView object, which the tab view controller manages. When the user selects a new tab, the tab view controller displays the content associated with the associated child view controller, replacing the previous content.</p>
+<a id="more"></a>
+<p>#Storyboard<br>Storyboard isn’t necessary to build preferences window, but it could let the workflow be clear and simple.</p>
+<p><img src="../media/Storyboard.jpg" alt=""></p>
+<p>#Preference Manager<br>Typically there’re many settings in preferences. To make it easy to manage all of them, it’s better to use one singleton class to access them, e.g., register factory defaults, read, write, reset, etc.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PreferenceManager</span> </span>&#123;</span><br><span class="line">  <span class="comment">// Single instance</span></span><br><span class="line">  <span class="keyword">static</span> <span class="keyword">let</span> sharedInstance = <span class="type">PreferenceManager</span>()</span><br><span class="line">    </span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">init</span>() &#123;</span><br><span class="line">    registerFactoryDefaults()</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">let</span> userDefaults = <span class="type">NSUserDefaults</span>.standardUserDefaults()</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">let</span> initializedKey = <span class="string">"Initialized"</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">var</span> startAtLogin: <span class="type">Bool</span> &#123;</span><br><span class="line">    <span class="keyword">get</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> userDefaults.boolForKey(startAtLoginKey)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">set</span> &#123;</span><br><span class="line">      userDefaults.setBool(newValue, forKey: startAtLoginKey)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  <span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">registerFactoryDefaults</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">let</span> factoryDefaults = [</span><br><span class="line">      initializedKey: <span class="type">NSNumber</span>(bool: <span class="literal">false</span>),</span><br><span class="line">    ]</span><br><span class="line">    </span><br><span class="line">    userDefaults.registerDefaults(factoryDefaults)</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">func</span> <span class="title">synchronize</span><span class="params">()</span></span> &#123;</span><br><span class="line">    userDefaults.synchronize()</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">func</span> <span class="title">reset</span><span class="params">()</span></span> &#123;</span><br><span class="line">    userDefaults.removeObjectForKey(initializedKey)    </span><br><span class="line">    synchronize()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>#Bind with User Defaults<br>Beside using <code>class PreferenceManager</code>, you can also directly bind object’s value to user defaults.</p>
+<p><img src="../media/Bind.jpg" alt=""></p>
+<p>#Register Factory Defaults<br>It’s better each setting has default value. <code>NSUserDefaults.registerDefaults</code> works for it.<br><strong>Note</strong>: The contents of the registration domain are not written to disk; you need to call this method each time your application starts. You can place a plist file in the application’s Resources directory and call registerDefaults: with the contents that you read in from that file.</p>
+<p>#Archive<br>To store data in user defaults, the object need to support archvie. For key based archive, the class need to conform to <code>NSCoding</code>. For more introduction, please refer to <a href="https://github.com/atjason/LearnCocoaWithSwift/tree/master/12_Archiving/RaiseMan" target="_blank" rel="external">here</a>.</p>
+<p>#Store Tab View’s Size<br>If you allow user to resize the size of each tab view, its better to store them in user defaults, and restore when user access preferences window again. But as the structure of <code>NSSize</code> doesn’t support archive, you need to use a class to archive it.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SizeArchiver</span>: <span class="title">NSObject</span>, <span class="title">NSCoding</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">let</span> sizeKey = <span class="string">"Size"</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">var</span> size = <span class="type">NSSize</span>()</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">var</span> width: <span class="type">CGFloat</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> size.width</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">var</span> height: <span class="type">CGFloat</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> size.height</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">override</span> <span class="keyword">init</span>() &#123;</span><br><span class="line">    <span class="keyword">super</span>.<span class="keyword">init</span>()</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">init</span>(size: <span class="type">NSSize</span>) &#123;</span><br><span class="line">    <span class="keyword">super</span>.<span class="keyword">init</span>()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">self</span>.size = size</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// MARK: - NSCoding</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">required</span> <span class="keyword">init</span>?(coder aDecoder: <span class="type">NSCoder</span>) &#123;</span><br><span class="line">    <span class="keyword">super</span>.<span class="keyword">init</span>()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">self</span>.size = aDecoder.decodeSizeForKey(<span class="type">SizeArchiver</span>.sizeKey)</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">func</span> <span class="title">encodeWithCoder</span><span class="params">(aCoder: NSCoder)</span></span> &#123;</span><br><span class="line">    aCoder.encodeSize(<span class="keyword">self</span>.size, forKey: <span class="type">SizeArchiver</span>.sizeKey)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Storyboard]]></title>
+      <url>http://atjason.com/en/en/Cocoa/Storyboard.html</url>
+      <content type="html"><![CDATA[<p>This article introduces how to build status bar app on Mac OS X using Cocoa with Swift. The source code can be downloaded <a href="https://github.com/atjason/LearnCocoaWithSwift/tree/master/32_Storyboards/MirrorChatter" target="_blank" rel="external">here</a>.</p>
+<p>Development environment:</p>
+<ul>
+<li>OS X: 10.11.4</li>
+<li>XCode: 7.3</li>
+<li>Swift: 2.2</li>
+</ul>
+<p>After it’s finished, the app looks like:</p>
+<p><img src="../media/Mirror Chatter.jpg" alt=""></p>
+<h1 id="Storyboard-introduction"><a href="#Storyboard-introduction" class="headerlink" title="Storyboard introduction"></a>Storyboard introduction</h1><p>With storyboards, you can combine as much (or as little) of your application as you want in one canvas, as well as visualize how the parts relate to each other.<br>Storyboards are organized by scenes (windows and views), which are connected to each other by segues. Segues describe the scenes’ relationships to one another. Storyboards can be used to describe a window and its popover or sheet – or a complicated graph of nested views, each with its own view controller, which previously would have necessitated programmatic construction.<br>Storyboards were added to OS X in 10.10 Yosemite and to iOS in version 5.</p>
+<p>To create the relationship segue between the window controller and the split view controller, control-drag from the blue Window Controller icon in the border on top of the window controller down to the split view controller. In the pop-up Relationship Segue window that appears, select window content.</p>
+<p><img src="../media/Create segue.jpg" alt=""></p>
+<a id="more"></a>
+<p>#How is the Storyboard Loaded?</p>
+<p>Just like with MainMenu.xib, the answer is in the Info.plist.<br>If you check the Info.plist for this project you will see that the key NSMainStoryboardFile is set to Main.</p>
+<p><img src="../media/Main Storyboard.jpg" alt=""></p>
+<p>Scenes can also be loaded from storyboards programmatically. The NSStoryboard class provides this, much like NSBundle does for NIB loading. Within a storyboard, one scene can be designated as the <strong>initial controller</strong>. This is used in the application’s Main.storyboard to designate the application window to be opened at launch.</p>
+<p><img src="../media/Storyboard initial controller.jpg" alt=""></p>
+<p>Controllers within a storyboard can also be instantiated by their identifier, which is set in the identity inspector. If you had a view controller with an identifier of Palette, you could instantiate the view controller and show it in a window using the following code:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="keyword">let</span> storyboard = <span class="type">NSStoryboard</span>(name: <span class="string">"Main"</span>, bundle: <span class="literal">nil</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> vc = storyboard.instantiateControllerWithIdentifier(<span class="string">"Palette"</span>)</span><br><span class="line">            <span class="keyword">as</span>? <span class="type">NSViewController</span> &#123;</span><br><span class="line">        paletteWindow = <span class="type">NSWindow</span>(contentViewController: vc)</span><br><span class="line">        paletteWindow.makeKeyAndOrderFront(<span class="literal">nil</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Status Bar App]]></title>
+      <url>http://atjason.com/en/en/Cocoa/Status%20Bar%20App.html</url>
+      <content type="html"><![CDATA[<p>This article introduces how to build status bar app on Mac OS X using Cocoa with Swift. The source code can be downloaded <a href="https://github.com/atjason/CocoaDemoWithSwift/tree/master/StatusBarApp/StatusBarApp" target="_blank" rel="external">here</a>.</p>
+<p>Development environment:</p>
+<ul>
+<li>OS X: 10.11.4</li>
+<li>XCode: 7.3</li>
+<li>Swift: 2.2</li>
+</ul>
+<p>After it’s finished, the app looks like:</p>
+<p><img src="../media/Status App.jpg" alt=""></p>
+<p>#How to Run as Status Bar App?<br>In another word, how to make the application not show a dock icon? The key point is to modify the application’s Info.plist file and indicate that it’s an agent. “Agent” is Apple’s term for a background application that doesn’t present a dock icon.<br>Select the project at the top of the project navigator. Open the Info tab at the top of the main editor. Add a new entry of <strong>Application is agent (UIElement)</strong> and set the value of this entry to YES.</p>
+<p><img src="../media/Application is agent.jpg" alt=""></p>
+<a id="more"></a>
+<p>#How to Let Status App Start?<br>It’s better don’t write much code in AppDelegate or other single class. To do it, I split main code in these 2 controllers:</p>
+<ol>
+<li><p>StatusItemController<br>This controller is mainly to ‘start’ the app, i.e., init the status bar item. And also set the menu for status bar item.</p>
+</li>
+<li><p>StatusMenuController<br>This controller mainly works as the delegate of status bar item’s menu. E.g., implement the actions of menu items.</p>
+</li>
+</ol>
+<p>Then, how to let the app start? Steps:</p>
+<ul>
+<li>Open ‘MainMenu.xib’.</li>
+<li>Create Menu and sub-menus.</li>
+</ul>
+<p><img src="../media/Create Menu.jpg" alt=""></p>
+<ul>
+<li>Add an Object. Set its class to ‘StatusMenuController’.</li>
+</ul>
+<p><img src="../media/Add Object.jpg" alt=""></p>
+<p><img src="../media/Set Object Class.jpg" alt=""></p>
+<ul>
+<li>Add another Object of ‘StatusItemController’.</li>
+<li>Connect Menu object to StatusMenuController’s ‘menu’ outlet.</li>
+</ul>
+<p><img src="../media/Connect Menu.jpg" alt=""></p>
+<ul>
+<li>Connect StatusMenuController to StatusItemController’s ‘menuController’ outlet.</li>
+</ul>
+<p><img src="../media/Connect Menu Controller.jpg" alt=""></p>
+<ul>
+<li>Open StatusItemController.swift, init the status bar item in ‘awakeFromNib’.<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">StatusItemController</span>: <span class="title">NSObject</span> </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> statusItem: <span class="type">NSStatusItem</span>!</span><br><span class="line">  <span class="meta">@IBOutlet</span> <span class="keyword">weak</span> <span class="keyword">var</span> menuController: <span class="type">StatusMenuController</span>!  </span><br><span class="line">  <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">awakeFromNib</span><span class="params">()</span></span> &#123;</span><br><span class="line">    statusItem = <span class="type">NSStatusBar</span>.systemStatusBar()</span><br><span class="line">      .statusItemWithLength(<span class="type">NSVariableStatusItemLength</span>)</span><br><span class="line">    statusItem.title = <span class="string">"App"</span></span><br><span class="line">    statusItem.highlightMode = <span class="literal">true</span></span><br><span class="line">    statusItem.menu = menuController.menu</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>That’s it. Now the app should be able to correctly start. As you can see, the key point is, app will init the ‘MainMenu.xib’ (as defined in Info.plist &gt; ‘Main nib file base name’), then all the objects in ‘MainMenu.xib” will be created. So, the menu and controllers you added in ‘MainMenu.xib” will be created. Clear?</p>
+<p>In this case, the AppDelegate could even keep empty. Cool, right?<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@NSApplicationMain</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AppDelegate</span>: <span class="title">NSObject</span>, <span class="title">NSApplicationDelegate</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>#How to Show Percent in Status Bar?<br>There’s class of <code>NSProgressIndicator</code>. The fact of it is a view. Thus the problem becomes how to add this view to status bar.</p>
+<p>You will find, the <code>NSStatusItem.view</code> is <code>nil</code>, thus you can’t add to its subview. From the API of <code>NSStatusItem</code> we can found, it’s suggested to use <code>NSStatusItem.button</code> to customize. OK, we can add view to subviews of the <code>button</code>.<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/// The button that is displayed in the status bar. This is created automatically on the creation of the StatusItem. Behavior customization for the button, such as image, target/action, tooltip, can be set with this property.</span></span><br><span class="line"><span class="meta">@available</span>(<span class="type">OSX</span> <span class="number">10.10</span>, *)</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">var</span> button: <span class="type">NSStatusBarButton</span>? &#123; <span class="keyword">get</span> &#125;</span><br></pre></td></tr></table></figure></p>
+<p>That’s not finished. Using this code could show the percent in status bar, but the size of status bar item is incorrect. How to deal with it? To be honest, I didn’t find a good way, but find a walkaround way, i.e., add an <strong>empty</strong> image to the status bar item. And then add <code>NSProgressIndicator</code> to the <code>button</code>. It’s not good, but works. The code is as following:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">if</span> <span class="keyword">let</span> button = statusItem.button &#123;</span><br><span class="line">        <span class="comment">// <span class="doctag">FIXME:</span> it works, but obviously not good.</span></span><br><span class="line">        <span class="keyword">let</span> frame = <span class="type">NSRect</span>(x: <span class="number">6</span>, y: <span class="number">2</span>, width: <span class="number">18</span>, height: <span class="number">18</span>)</span><br><span class="line">        <span class="keyword">let</span> progressIndicator = <span class="type">NSProgressIndicator</span>(frame: frame)</span><br><span class="line">        progressIndicator.style = .<span class="type">SpinningStyle</span></span><br><span class="line">        progressIndicator.indeterminate = <span class="literal">false</span></span><br><span class="line">        progressIndicator.doubleValue = <span class="number">30</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// Use empty image to extand the status item's size</span></span><br><span class="line">        statusItem.image = <span class="type">NSImage</span>(named: <span class="string">"EmptyIconImage"</span>)</span><br><span class="line">        button.addSubview(progressIndicator)</span><br><span class="line">  &#125;</span><br><span class="line">``` </span><br><span class="line"><span class="type">And</span> the percent looks like:</span><br><span class="line"></span><br><span class="line">![](../media/<span class="type">Percent</span>.jpg)</span><br><span class="line">![](../media/<span class="type">Percent_Dark</span>.jpg)</span><br><span class="line"></span><br><span class="line">#<span class="type">How</span> to <span class="type">Disable</span> a <span class="type">Menu</span> <span class="type">Item</span>?</span><br><span class="line"><span class="type">It</span> sounds very easy. <span class="type">Just</span> <span class="keyword">set</span> the `<span class="type">NSMenuItem</span>.enabled = <span class="literal">false</span>`. <span class="type">But</span> the fact <span class="keyword">is</span> not. <span class="type">Read</span> the description <span class="keyword">for</span> `<span class="type">NSMenuItem</span>.autoenablesItems`:</span><br><span class="line"></span><br><span class="line">```swift</span><br><span class="line">    <span class="comment">/* Set and get whether the menu autoenables items.  If a menu autoenables items, then calls to -[NSMenuItem setEnabled:] are ignored, and the enabled state is computed via the NSMenuValidation informal protocol below.  Autoenabling is on by default. */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">var</span> autoenablesItems: <span class="type">Bool</span></span><br></pre></td></tr></table></figure></p>
+<p>As you can see, <code>NSMenuItem.autoenablesItems</code> is enabled by default. And if it’s enabled, the set of <code>NSMenuItem.enabled</code> property will be ignored. Thus, if you want to manually control the <code>NSMenuItem.enabled</code> property, first disable the <code>NSMenuItem.autoenablesItems</code> property.</p>
+<p>#How to Support Dark Mode?<br>There’re 2 key points needed to support dark mode of OS X.</p>
+<ol>
+<li>The icon itself should support. To be exactly, the background of the icon should be transparent.</li>
+<li>Set the <code>NSMenuItem.image?.template = true</code></li>
+</ol>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* The 'template' property is metadata that allows clients to be smarter about image processing.  An image should be marked as a template if it is basic glpyh-like black and white art that is intended to be processed into derived images for use on screen.</span><br><span class="line"> </span><br><span class="line"> NSButtonCell applies effects to images based on the state of the button.  For example, images are shaded darker when the button is pressed.  If a template image is set on a cell, the cell can apply more sophisticated effects.  For example, it may be processed into an image that looks engraved when drawn into a cell whose interiorBackgroundStyle is NSBackgroundStyleRaised, like on a textured button.</span><br><span class="line"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">var</span> template: <span class="type">Bool</span></span><br></pre></td></tr></table></figure>
+<p>The normal and dark status bar items look like:</p>
+<p><img src="../media/Icon.jpg" alt=""><br><img src="../media/Icon_Dark.jpg" alt=""></p>
+<p>#How to Support Indentation Level?<br>Easy. Just set the <code>NSMenuItem.indentationLevel</code>.</p>
+<p><img src="../media/Indentation.jpg" alt=""></p>
+<p>#How to Pop Over?<br>It’s easy to pop over status item. Check the following code:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="keyword">let</span> button = statusItem.button &#123;</span><br><span class="line">  popover.showRelativeToRect(button.bounds, ofView: button, preferredEdge: .<span class="type">MinY</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>But it’s hard to pop over menu item, as menu item’s view is nil by default. And then no view or bound to show popover relatively. Ever see some other app like <a href="http://www.clipmenu.com/blog/2014/11/11/clipmenu-1-0-0a1-released/" target="_blank" rel="external">ClipMenu</a> could implement this feature, but hasn’t found how to do it.</p>
+<p>Another walkaground is to use <code>NSMenuItem.toolTip</code> to show additional information of a menu item.</p>
+<p>#What Left?</p>
+<ul>
+<li>tag and representedObject</li>
+<li>action</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Use NSOutlineView With NSTreeController]]></title>
+      <url>http://atjason.com/en/en/Cocoa/Outline%20With%20Controller.html</url>
+      <content type="html"><![CDATA[<p>This article describes the steps to use NSOutlineView With NSTreeController. The source code can be downloaded <a href="https://github.com/atjason/CocoaDemoWithSwift/tree/master/Outline/OutlineWithController" target="_blank" rel="external">here</a>.</p>
+<p>Development environment:</p>
+<ul>
+<li>OS X: 10.11.4</li>
+<li>XCode: 7.3</li>
+<li>Swift: 2.2</li>
+</ul>
+<p>#Steps</p>
+<p>##Create Basic Project<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/40ccec2db2584251483fe4dc0b9cc02746aebde3" target="_blank" rel="external">#40ccec2</a>.</p>
+<p>##Add UI Controls<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/2853186db767c0790c1ef3b99de53338818e39c6" target="_blank" rel="external">#2853186</a>.<br>After done, the UI looks like:</p>
+<p><img src="../media/UI_1.jpg" alt=""></p>
+<a id="more"></a>
+<p>##Add Model Class of “Node”<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/516acc4b6363a7d28862473ff464c33ef0b17a48" target="_blank" rel="external">#516acc4</a>.<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span>: <span class="title">NSObject</span> </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> title = <span class="string">"Node"</span></span><br><span class="line">  <span class="keyword">var</span> children = [<span class="type">Node</span>]()</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">override</span> <span class="keyword">init</span>() &#123;</span><br><span class="line">    <span class="keyword">super</span>.<span class="keyword">init</span>()</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">init</span>(title: <span class="type">String</span>) &#123;</span><br><span class="line">    <span class="keyword">self</span>.title = title</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Prepare-Demo-Nodes-Data"><a href="#Prepare-Demo-Nodes-Data" class="headerlink" title="Prepare Demo Nodes Data"></a>Prepare Demo Nodes Data</h2><p>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/f9148114ec25db9a10e654f776396d1b2a2952a0" target="_blank" rel="external">#f914811</a>.<br>Node structure:<br>- Node<br>- Group<br>-– Node A<br>-– Node B</p>
+<p>##Add and Configure NSTreeController<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/06b01a8ffcbe39dc07403ea74f89b8a8ef420015" target="_blank" rel="external">#06b01a8</a>.<br>Steps</p>
+<ul>
+<li>Add NSTreeController in the .xib and select it.</li>
+<li>Go to “Attricutes Inspector”.<ul>
+<li>Set the “Key Paths &gt; Children” to “children”.  </li>
+<li>Choose “Mode” Class and set “Class Name” to “OutlineWithController.Node”.</li>
+<li>Select “Prepares Content”</li>
+</ul>
+</li>
+</ul>
+<p><img src="../media/NSTreeController Attricutes Inspector.jpg" alt=""></p>
+<ul>
+<li>Go to “Binding Inspector”.<ul>
+<li>Bind “Content Array” to self.nodes (which was created in previous step).</li>
+</ul>
+</li>
+</ul>
+<p><img src="../media/NSTreeController Binding Inspector.jpg" alt=""></p>
+<p>##Bind NSOutlineView<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/f941f7be8e87ec8d99e67aaae4e059892b56e897" target="_blank" rel="external">#f941f7b</a>.<br>Steps</p>
+<ul>
+<li>Select “Outline View”.</li>
+<li><p>Go to “Binding Inspector”.</p>
+<ul>
+<li>Bind “Content” to “Tree Controller”‘s “arrangedObjects”. Ignore the warning in “Model Key Path”.</li>
+<li>Bind “Selection Index Paths” to Tree Controller’s “selectionIndexPaths”.</li>
+</ul>
+<p><img src="../media/Outline View Binding Inspector.jpg" alt=""></p>
+</li>
+<li><p>Select “Table View Cell”.</p>
+</li>
+<li>Go to “Binding Inspector”.<ul>
+<li>Bind “Content” to “Tree Cell View”‘s “objectValue.title”. Node: here the “objectValue” is the class Node as you defined it in the tree controller.</li>
+</ul>
+</li>
+</ul>
+<p><img src="../media/Table View Cell Binding Inspector.jpg" alt=""></p>
+<ul>
+<li>Go to “Attributes Inspector”.<ul>
+<li>Set “Behavior” to “Editable”.</li>
+</ul>
+</li>
+</ul>
+<p><img src="../media/Table View Cell Attributes Inspector.jpg" alt=""></p>
+<p>Run the app, you should see the app like:</p>
+<p><img src="../media/UI_2.jpg" alt=""></p>
+<p>##Add Node and Remove It<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/d9b71976817eb248db1c19e404e8db16e96187a2" target="_blank" rel="external">#d9b7197</a>.<br>Steps</p>
+<ul>
+<li>Right click on the tree controller.</li>
+<li>Connect “add:” to “Add Node” menu item.</li>
+<li>Connect “addChild:” to “Add Child Node” menu item.</li>
+<li>Connect “remove:” to edit button.</li>
+</ul>
+<p><img src="../media/Connect Tree Controller.jpg" alt=""></p>
+<p>That’s it. Run the app. You should be able to add node or remove it.</p>
+<p><img src="../media/UI_3.jpg" alt=""></p>
+<p>##Edit Selected Node<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/22e2c073297d8887b13c97d9030ae5dee30e12c6" target="_blank" rel="external">#22e2c07</a>.<br>The key code is here:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@IBAction</span> <span class="function"><span class="keyword">func</span> <span class="title">editNode</span><span class="params">(sender: NSObject)</span></span> &#123;</span><br><span class="line">  <span class="keyword">let</span> row = outlineView.selectedRow</span><br><span class="line">  <span class="keyword">if</span> row != -<span class="number">1</span> &#123;</span><br><span class="line">    outlineView.editColumn(<span class="number">0</span>, row: row, withEvent: <span class="literal">nil</span>, select: <span class="literal">true</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>##Disable Remove and Edit Controls if no Node Selected<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/eb7decdf6a2baeb60f6883e287899ab61d825af8" target="_blank" rel="external">#eb7decd</a>.<br>The key point is to bind the “Enabled” attribute to tree controller’s “canRemove” controller key.<br>Another point is, when app starts maybe nothing was selected. In this case, disable the Outline’s “Attributes &gt; Selection &gt; Empty”, and select the Tree Controller’s “Attributes &gt; Avoid Empty Selection”.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Use NSOutlineView With DataSource and Delegate]]></title>
+      <url>http://atjason.com/en/en/Cocoa/Outline.html</url>
+      <content type="html"><![CDATA[<p>This article describes the steps to use NSOutlineView With NSOutlineViewDataSource and NSOutlineViewDelegate. The source code can be downloaded<a href="https://github.com/atjason/CocoaDemoWithSwift/tree/master/Outline/Outline" target="_blank" rel="external">here</a>.</p>
+<p>Development environment:</p>
+<ul>
+<li>OS X: 10.11.4</li>
+<li>XCode: 7.3</li>
+<li>Swift: 2.2</li>
+</ul>
+<p>#Steps</p>
+<p>##Create Basic Project<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/fa626ee5f880da924a1c7fd7b8b988015020f2e6" target="_blank" rel="external">#fa626ee</a>.</p>
+<p>##Add Model Class of “Node”<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/e302b91f3d4268714323fd3d94c21a781ed135fb" target="_blank" rel="external">#e302b91</a>.<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span>: <span class="title">NSObject</span> </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> title = <span class="string">"Node"</span></span><br><span class="line">  <span class="keyword">var</span> isGroup = <span class="literal">false</span></span><br><span class="line">  <span class="keyword">var</span> children = [<span class="type">Node</span>]()</span><br><span class="line">  <span class="keyword">weak</span> <span class="keyword">var</span> parent: <span class="type">Node</span>?</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">override</span> <span class="keyword">init</span>() &#123;</span><br><span class="line">    <span class="keyword">super</span>.<span class="keyword">init</span>()</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">init</span>(title: <span class="type">String</span>) &#123;</span><br><span class="line">    <span class="keyword">self</span>.title = title</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">func</span> <span class="title">isLeaf</span><span class="params">()</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> children.isEmpty</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>##Add UI Controls<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/5dee8d160650624d55333808b7fa5e9fba6e0b9c" target="_blank" rel="external">#5dee8d1</a>.<br>After done, the UI looks like:</p>
+<p><img src="../media/UI_11.jpg" alt=""></p>
+<p>##Implement NSOutlineViewDataSource<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/c467d0b36a58994dca5f376d668777d8484a72fd" target="_blank" rel="external">#c467d0b</a>.<br>Notes:</p>
+<ul>
+<li><p>Set NSOutlineView’s dataSource to File’s Owner.<br><img src="../media/Data Source.jpg" alt=""></p>
+</li>
+<li><p>Bind value “Table Cell View” to “Table Cell View” &gt; Model Key Path: objectValue.title.<br><img src="../media/BindTableView.jpg" alt=""></p>
+</li>
+</ul>
+<p>After done, the UI looks like:</p>
+<p><img src="../media/UI_12.jpg" alt=""></p>
+<p>##Implement NSOutlineViewDelegate<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/300948eaabd9afe72c1addcb0438102bc21c2783" target="_blank" rel="external">#300948e</a>.</p>
+<p>Notes:</p>
+<ul>
+<li>Set NSOutlineView’s delegate to File’s Owner.<br><img src="../media/Delegate.jpg" alt=""></li>
+</ul>
+<p>##Add Node and Group<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/f18c61f94bd813f0ae2c0d2d33dbc6054f530d61" target="_blank" rel="external">#f18c61f</a>.</p>
+<p>Notes:</p>
+<ul>
+<li>The logic to add node or group in correct position is very boring. That’s why binding will be  a good friend.</li>
+<li>There’re 2 ways to insert item in outline view. One is update the data modal, then call <code>NSOutlineView.reloadData()</code>. But this will let UI flash. So it’s better to manually insert item in outline view (e.g., use <code>NSOutlineView.insertItemsAtIndexes</code>). Another benefit is could use animation during inserting.</li>
+</ul>
+<p>After done, you can add node or group. The UI looks like:</p>
+<p><img src="../media/Group.jpg" alt=""></p>
+<p>##Implement other UI Operations<br>The operations include remove, edit, move up and move down. It’s not hard. But the logic is complex and boring. Be careful.<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/3f7ffaa8efb62b5e08d2f53da693da05055a80cf" target="_blank" rel="external">#3f7ffaa</a>.</p>
+<p>Notes</p>
+<ul>
+<li><p>Could create a <strong>dynamic</strong> property (e.g., <code>dynamic var removeButtonEnabled = false</code>), and then bind a control’s enable property to it. e.g.,<br><img src="../media/Bind Enabled.jpg" alt=""></p>
+</li>
+<li><p>Should set table view cell’s behavior as “Editable” to edit it.<br><img src="../media/Editable.jpg" alt=""></p>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+  
+  
+</search>
