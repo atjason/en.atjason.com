@@ -5,7 +5,7 @@
   <link href="/en/atom.xml" rel="self"/>
   
   <link href="http://atjason.com/en/"/>
-  <updated>2016-05-07T05:12:25.000Z</updated>
+  <updated>2016-05-07T05:14:50.000Z</updated>
   <id>http://atjason.com/en/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://atjason.com/en/Cocoa/Action%20When%20Enter-key%20is%20Pressed%20on%20NSTextField.html"/>
     <id>http://atjason.com/en/Cocoa/Action When Enter-key is Pressed on NSTextField.html</id>
     <published>2016-04-17T03:45:00.000Z</published>
-    <updated>2016-05-07T05:12:25.000Z</updated>
+    <updated>2016-05-07T05:14:50.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;Add-Action-in-NSTextField’s-Delegate&quot;&gt;&lt;a href=&quot;#Add-Action-in-NSTextField’s-Delegate&quot; class=&quot;headerlink&quot; title=&quot;Add Action in NSTextField’s Delegate&quot;&gt;&lt;/a&gt;Add Action in NSTextField’s Delegate&lt;/h1&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@IBAction&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;textFieldAction&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(sender: NSTextField)&lt;/span&gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(sender.stringValue)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h1 id=&quot;Connect-NSTextField’s-Action-to-Delegate’s-One&quot;&gt;&lt;a href=&quot;#Connect-NSTextField’s-Action-to-Delegate’s-One&quot; class=&quot;headerlink&quot; title=&quot;Connect NSTextField’s Action to Delegate’s One&quot;&gt;&lt;/a&gt;Connect NSTextField’s Action to Delegate’s One&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;../media/Connect.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
