@@ -26,7 +26,7 @@
     
     <entry>
       <title><![CDATA[Swift & Cocoa: Localization]]></title>
-      <url>http://atjason.com/en/en/Cocoa/Swift%20&%20Cocoa:%20Localization.html</url>
+      <url>http://atjason.com/en/en/Cocoa/SwiftCocoa_Localization.html</url>
       <content type="html"><![CDATA[<p>This article records the detailed steps to add localizations for a project. The project could be downloaded <a href="https://github.com/atjason/LearnCocoaWithSwift/tree/master/26_LocalizationAndBundles/LocalizationDemo" target="_blank" rel="external">here</a>.</p>
 <p>Development environment:</p>
 <ul>
@@ -122,7 +122,7 @@
     
     <entry>
       <title><![CDATA[Swift & Cocoa: Auto Launch at Login]]></title>
-      <url>http://atjason.com/en/en/Cocoa/Swift%20&%20Cocoa:%20Auto%20Launch%20at%20Login.html</url>
+      <url>http://atjason.com/en/en/Cocoa/SwiftCocoa_Auto%20Launch%20at%20Login.html</url>
       <content type="html"><![CDATA[<p>This article is based on this <a href="http://martiancraft.com/blog/2015/01/login-items/" target="_blank" rel="external">blog</a>. I adjust and implement using Swift. The project could be downloaded <a href="https://github.com/atjason/CocoaDemoWithSwift/tree/master/AutoLaunch" target="_blank" rel="external">here</a>.</p>
 <p>Development environment:</p>
 <ul>

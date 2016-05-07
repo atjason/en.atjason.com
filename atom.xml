@@ -66,10 +66,10 @@
   
   <entry>
     <title>Swift &amp; Cocoa: Localization</title>
-    <link href="http://atjason.com/en/Cocoa/Swift%20&%20Cocoa:%20Localization.html"/>
-    <id>http://atjason.com/en/Cocoa/Swift & Cocoa: Localization.html</id>
+    <link href="http://atjason.com/en/Cocoa/SwiftCocoa_Localization.html"/>
+    <id>http://atjason.com/en/Cocoa/SwiftCocoa_Localization.html</id>
     <published>2016-04-15T04:20:00.000Z</published>
-    <updated>2016-05-07T05:14:48.000Z</updated>
+    <updated>2016-05-07T15:12:57.000Z</updated>
     
     <content type="html">&lt;p&gt;This article records the detailed steps to add localizations for a project. The project could be downloaded &lt;a href=&quot;https://github.com/atjason/LearnCocoaWithSwift/tree/master/26_LocalizationAndBundles/LocalizationDemo&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Development environment:&lt;/p&gt;
@@ -196,10 +196,10 @@
   
   <entry>
     <title>Swift &amp; Cocoa: Auto Launch at Login</title>
-    <link href="http://atjason.com/en/Cocoa/Swift%20&%20Cocoa:%20Auto%20Launch%20at%20Login.html"/>
-    <id>http://atjason.com/en/Cocoa/Swift & Cocoa: Auto Launch at Login.html</id>
+    <link href="http://atjason.com/en/Cocoa/SwiftCocoa_Auto%20Launch%20at%20Login.html"/>
+    <id>http://atjason.com/en/Cocoa/SwiftCocoa_Auto Launch at Login.html</id>
     <published>2016-04-14T08:50:00.000Z</published>
-    <updated>2016-05-07T05:14:40.000Z</updated>
+    <updated>2016-05-07T15:13:11.000Z</updated>
     
     <content type="html">&lt;p&gt;This article is based on this &lt;a href=&quot;http://martiancraft.com/blog/2015/01/login-items/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;blog&lt;/a&gt;. I adjust and implement using Swift. The project could be downloaded &lt;a href=&quot;https://github.com/atjason/CocoaDemoWithSwift/tree/master/AutoLaunch&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Development environment:&lt;/p&gt;
