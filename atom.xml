@@ -5,7 +5,7 @@
   <link href="/en/atom.xml" rel="self"/>
   
   <link href="http://atjason.com/en/"/>
-  <updated>2016-05-13T13:40:25.000Z</updated>
+  <updated>2016-05-13T13:41:36.000Z</updated>
   <id>http://atjason.com/en/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://atjason.com/en/Swift/MacGoogleAnalytics.html"/>
     <id>http://atjason.com/en/Swift/MacGoogleAnalytics.html</id>
     <published>2016-05-13T14:48:21.000Z</published>
-    <updated>2016-05-13T13:40:25.000Z</updated>
+    <updated>2016-05-13T13:41:36.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/atjason/MacGoogleAnalytics&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MacGoogleAnalytics&lt;/a&gt; is an open source library to use Google Analytics on Mac OS X.&lt;/p&gt;
 &lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;p&gt;As we know, Google Analytics is perfect for user data collection and analytics. But unfortunately, there’s no official SDK for Mac OS X.&lt;/p&gt;
@@ -35,11 +35,10 @@
 &lt;li&gt;&lt;p&gt;Mac OS X Part&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;In Mac OS X side, it loads the html file just mentioned. Send data like event to the html file as parameters. And then these data will be send in the html file through the JavaScript API.&lt;/li&gt;
-&lt;li&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h1 id=&quot;HTML-File&quot;&gt;&lt;a href=&quot;#HTML-File&quot; class=&quot;headerlink&quot; title=&quot;HTML File&quot;&gt;&lt;/a&gt;HTML File&lt;/h1&gt;&lt;p&gt;You can find the html file in &lt;code&gt;source &amp;gt; html &amp;gt; gapp.html&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;Parameter-of-HTML-File&quot;&gt;&lt;a href=&quot;#Parameter-of-HTML-File&quot; class=&quot;headerlink&quot; title=&quot;Parameter of HTML File&quot;&gt;&lt;/a&gt;Parameter of HTML File&lt;/h2&gt;&lt;p&gt;The parameter of the html file is exactly the same with normal html file.&lt;/p&gt;
 &lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/gapp.html?param1=paramValue1&amp;amp;param2=paramValue2&amp;amp;...&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -137,7 +136,9 @@
 &lt;li&gt;&lt;p&gt;Mac OS X Part&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;In Mac OS X side, it loads the html file just mentioned. Send data like event to the html file as parameters. And then these data will be send in the html file through the JavaScript API.&lt;/li&gt;
-&lt;li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
