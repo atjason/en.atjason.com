@@ -19,6 +19,8 @@
 <li><p>Mac OS X Part</p>
 <ul>
 <li>In Mac OS X side, it loads the html file just mentioned. Send data like event to the html file as parameters. And then these data will be send in the html file through the JavaScript API.</li>
+<li><a id="more"></a>
+</li>
 </ul>
 </li>
 </ul>

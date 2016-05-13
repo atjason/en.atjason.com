@@ -5,7 +5,7 @@
   <link href="/en/atom.xml" rel="self"/>
   
   <link href="http://atjason.com/en/"/>
-  <updated>2016-05-13T13:35:41.000Z</updated>
+  <updated>2016-05-13T13:40:25.000Z</updated>
   <id>http://atjason.com/en/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://atjason.com/en/Swift/MacGoogleAnalytics.html"/>
     <id>http://atjason.com/en/Swift/MacGoogleAnalytics.html</id>
     <published>2016-05-13T14:48:21.000Z</published>
-    <updated>2016-05-13T13:35:41.000Z</updated>
+    <updated>2016-05-13T13:40:25.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/atjason/MacGoogleAnalytics&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MacGoogleAnalytics&lt;/a&gt; is an open source library to use Google Analytics on Mac OS X.&lt;/p&gt;
 &lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;p&gt;As we know, Google Analytics is perfect for user data collection and analytics. But unfortunately, there’s no official SDK for Mac OS X.&lt;/p&gt;
@@ -35,6 +35,8 @@
 &lt;li&gt;&lt;p&gt;Mac OS X Part&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;In Mac OS X side, it loads the html file just mentioned. Send data like event to the html file as parameters. And then these data will be send in the html file through the JavaScript API.&lt;/li&gt;
+&lt;li&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -122,7 +124,20 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;https://github.com/atjason/MacGoogleAnalytics&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MacGoogleAnalytics&lt;/a&gt; is an open source library t
+      &lt;p&gt;&lt;a href=&quot;https://github.com/atjason/MacGoogleAnalytics&quot;&gt;MacGoogleAnalytics&lt;/a&gt; is an open source library to use Google Analytics on Mac OS X.&lt;/p&gt;
+&lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;p&gt;As we know, Google Analytics is perfect for user data collection and analytics. But unfortunately, there’s no official SDK for Mac OS X.&lt;/p&gt;
+&lt;p&gt;But still, there’re several ways to use Google Analytics on Mac OS X. MacGoogleAnalytics may be what you found.&lt;/p&gt;
+&lt;p&gt;Overall, there’re 2 parts work together to use Google Analytics.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;HTML File&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This is the real place to send data to Google Analytics server. It uses Google Analytics’s standard JavaScript API.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Mac OS X Part&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In Mac OS X side, it loads the html file just mentioned. Send data like event to the html file as parameters. And then these data will be send in the html file through the JavaScript API.&lt;/li&gt;
+&lt;li&gt;
     
     </summary>
     
