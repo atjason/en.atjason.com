@@ -5,7 +5,7 @@
   <link href="/en/atom.xml" rel="self"/>
   
   <link href="http://atjason.com/en/"/>
-  <updated>2016-05-14T04:57:14.000Z</updated>
+  <updated>2016-05-14T09:54:14.000Z</updated>
   <id>http://atjason.com/en/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://atjason.com/en/Cocoa/MacGoogleAnalytics.html"/>
     <id>http://atjason.com/en/Cocoa/MacGoogleAnalytics.html</id>
     <published>2016-05-13T14:48:21.000Z</published>
-    <updated>2016-05-14T04:57:14.000Z</updated>
+    <updated>2016-05-14T09:54:14.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/atjason/MacGoogleAnalytics&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MacGoogleAnalytics&lt;/a&gt; is an open source library to use Google Analytics on Mac OS X.&lt;/p&gt;
 &lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;p&gt;As we know, Google Analytics is perfect for user data collection and analytics. But unfortunately, there’s no official SDK for Mac OS X.&lt;/p&gt;
@@ -111,6 +111,12 @@
 &lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;key&amp;gt;&lt;span class=&quot;type&quot;&gt;NSAppTransportSecurity&lt;/span&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;dict&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;key&amp;gt;&lt;span class=&quot;type&quot;&gt;NSAllowsArbitraryLoads&lt;/span&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;&lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/dict&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;Please keep in mind that this solution should be your last resort. You’d ideally want to enable HTTPS on your service, or next, whitelist domains on which you want HTTP and if none of this is possible, then use this approach.&lt;/p&gt;
 &lt;h1 id=&quot;Demo-Project-Using-Objective-C&quot;&gt;&lt;a href=&quot;#Demo-Project-Using-Objective-C&quot; class=&quot;headerlink&quot; title=&quot;Demo Project Using Objective C&quot;&gt;&lt;/a&gt;Demo Project Using Objective C&lt;/h1&gt;&lt;p&gt;TODO&lt;/p&gt;
+&lt;h1 id=&quot;View-Data-in-Google-Analytics-Site&quot;&gt;&lt;a href=&quot;#View-Data-in-Google-Analytics-Site&quot; class=&quot;headerlink&quot; title=&quot;View Data in Google Analytics Site&quot;&gt;&lt;/a&gt;View Data in Google Analytics Site&lt;/h1&gt;&lt;p&gt;After data are collected, you can view them in Google Analytics as normal: &lt;a href=&quot;https://analytics.google.com/analytics/web/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://analytics.google.com/analytics/web/&lt;/a&gt;. During debug, you can also check whether it works or not in ‘Real-Time’.&lt;/p&gt;
+&lt;p&gt;Just give a tip for OS X version. In the demo app using swift, it collect event of &lt;code&gt;options &amp;gt; option_a &amp;gt; yes or no&lt;/code&gt;. You may want to know, how many users enable this option in OS X 10.10 and how many for 10.11. How to do it?&lt;/p&gt;
+&lt;p&gt;Open the &lt;code&gt;Behavior &amp;gt; Events &amp;gt; Top Events&lt;/code&gt;, select &lt;code&gt;options &amp;gt; option_a&lt;/code&gt;. Here you should be able to see all the events. Then add a new custom Segment, in &lt;code&gt;Technology &amp;gt; Operating System Version&lt;/code&gt;, add &lt;em&gt;contains&lt;/em&gt; ‘10.10’, save it as ‘OS X 10.10’. Add another Segment for ‘OS X 10.11’.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://p.appsites.io/2016-05-14-1747211.jpg&quot; alt=&quot;1747211&quot;&gt;&lt;/p&gt;
+&lt;p&gt;And then, apply the Segments, it could distinguish the data of OS X 10.10 or 10.11.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://p.appsites.io/2016-05-14-1750021.jpg&quot; alt=&quot;1750021&quot;&gt;&lt;/p&gt;
 &lt;h1 id=&quot;Release-on-Mac-App-Store&quot;&gt;&lt;a href=&quot;#Release-on-Mac-App-Store&quot; class=&quot;headerlink&quot; title=&quot;Release on Mac App Store&quot;&gt;&lt;/a&gt;Release on Mac App Store&lt;/h1&gt;&lt;p&gt;Yes, this way could be released on Mac App Store. In fact, these of my apps have already released on Mac App Store.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://ex.toolinbox.net/ga/url.html?utm_medium=ihosts&amp;amp;utm_source=GitHub&amp;amp;id=UA-26569268-10&amp;amp;url=https%3a%2f%2fitunes.apple.com%2fapp%2fid1102004240%3fls%3d1%26mt%3d12&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iHosts&lt;/a&gt;&lt;/li&gt;
