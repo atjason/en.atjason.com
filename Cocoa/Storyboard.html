@@ -104,11 +104,11 @@ XCode: 7.3
 Swift: 2.2
 
 After it’">
-<meta property="og:image" content="http://atjason.com/en/../media/Mirror Chatter.jpg">
-<meta property="og:image" content="http://atjason.com/en/../media/Create segue.jpg">
-<meta property="og:image" content="http://atjason.com/en/../media/Main Storyboard.jpg">
-<meta property="og:image" content="http://atjason.com/en/../media/Storyboard initial controller.jpg">
-<meta property="og:updated_time" content="2016-05-07T05:14:31.000Z">
+<meta property="og:image" content="http://p.appsites.io/2016-05-14-Mirror Chatter.jpg">
+<meta property="og:image" content="http://p.appsites.io/2016-05-14-Create segue.jpg">
+<meta property="og:image" content="http://p.appsites.io/2016-05-14-Main Storyboard.jpg">
+<meta property="og:image" content="http://p.appsites.io/2016-05-14-Storyboard initial controller.jpg">
+<meta property="og:updated_time" content="2016-05-14T05:05:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Storyboard">
 <meta name="twitter:description" content="This article introduces how to build status bar app on Mac OS X using Cocoa with Swift. The source code can be downloaded here.
@@ -119,7 +119,7 @@ XCode: 7.3
 Swift: 2.2
 
 After it’">
-<meta name="twitter:image" content="http://atjason.com/en/../media/Mirror Chatter.jpg">
+<meta name="twitter:image" content="http://p.appsites.io/2016-05-14-Mirror Chatter.jpg">
 
 
 
@@ -343,16 +343,16 @@ After it’">
 <li>Swift: 2.2</li>
 </ul>
 <p>After it’s finished, the app looks like:</p>
-<p><img src="../media/Mirror Chatter.jpg" alt=""></p>
+<p><img src="http://p.appsites.io/2016-05-14-Mirror Chatter.jpg" alt=""></p>
 <h1 id="Storyboard-introduction"><a href="#Storyboard-introduction" class="headerlink" title="Storyboard introduction"></a>Storyboard introduction</h1><p>With storyboards, you can combine as much (or as little) of your application as you want in one canvas, as well as visualize how the parts relate to each other.<br>Storyboards are organized by scenes (windows and views), which are connected to each other by segues. Segues describe the scenes’ relationships to one another. Storyboards can be used to describe a window and its popover or sheet – or a complicated graph of nested views, each with its own view controller, which previously would have necessitated programmatic construction.<br>Storyboards were added to OS X in 10.10 Yosemite and to iOS in version 5.</p>
 <p>To create the relationship segue between the window controller and the split view controller, control-drag from the blue Window Controller icon in the border on top of the window controller down to the split view controller. In the pop-up Relationship Segue window that appears, select window content.</p>
-<p><img src="../media/Create segue.jpg" alt=""></p>
+<p><img src="http://p.appsites.io/2016-05-14-Create segue.jpg" alt=""></p>
 <a id="more"></a>
 <p>#How is the Storyboard Loaded?</p>
 <p>Just like with MainMenu.xib, the answer is in the Info.plist.<br>If you check the Info.plist for this project you will see that the key NSMainStoryboardFile is set to Main.</p>
-<p><img src="../media/Main Storyboard.jpg" alt=""></p>
+<p><img src="http://p.appsites.io/2016-05-14-Main Storyboard.jpg" alt=""></p>
 <p>Scenes can also be loaded from storyboards programmatically. The NSStoryboard class provides this, much like NSBundle does for NIB loading. Within a storyboard, one scene can be designated as the <strong>initial controller</strong>. This is used in the application’s Main.storyboard to designate the application window to be opened at launch.</p>
-<p><img src="../media/Storyboard initial controller.jpg" alt=""></p>
+<p><img src="http://p.appsites.io/2016-05-14-Storyboard initial controller.jpg" alt=""></p>
 <p>Controllers within a storyboard can also be instantiated by their identifier, which is set in the identity inspector. If you had a view controller with an identifier of Palette, you could instantiate the view controller and show it in a window using the following code:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="keyword">let</span> storyboard = <span class="type">NSStoryboard</span>(name: <span class="string">"Main"</span>, bundle: <span class="literal">nil</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> vc = storyboard.instantiateControllerWithIdentifier(<span class="string">"Palette"</span>)</span><br><span class="line">            <span class="keyword">as</span>? <span class="type">NSViewController</span> &#123;</span><br><span class="line">        paletteWindow = <span class="type">NSWindow</span>(contentViewController: vc)</span><br><span class="line">        paletteWindow.makeKeyAndOrderFront(<span class="literal">nil</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       

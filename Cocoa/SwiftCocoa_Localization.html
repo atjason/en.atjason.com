@@ -104,23 +104,23 @@ XCode: 7.3
 Swift: 2.2
 
 #Auto Layout and Double">
-<meta property="og:image" content="http://atjason.com/en/../media/SelectPreview.jpg">
-<meta property="og:image" content="http://atjason.com/en/../media/SelectPseudolanguage.jpg">
-<meta property="og:image" content="http://atjason.com/en/../media/ProjectAddLanguage.jpg">
-<meta property="og:image" content="http://atjason.com/en/../media/ProjectAddLanguageSelectBase.jpg">
-<meta property="og:image" content="http://atjason.com/en/../media/MainStoryboardWithLocalization.jpg">
-<meta property="og:image" content="http://atjason.com/en/../media/AddStringsFile.jpg">
-<meta property="og:image" content="http://atjason.com/en/../media/LocalizationFileWithoutString.jpg">
-<meta property="og:image" content="http://atjason.com/en/../media/FinderFileTree.jpg">
-<meta property="og:image" content="http://atjason.com/en/../media/ExportLocalization1.jpg">
-<meta property="og:image" content="http://atjason.com/en/../media/ImportLocalization1.jpg">
-<meta property="og:image" content="http://atjason.com/en/../media/ImportLocalization2.jpg">
-<meta property="og:image" content="http://atjason.com/en/../media/LocalizationFileWithString.jpg">
-<meta property="og:image" content="http://atjason.com/en/../media/ChangeSystemLanguage.jpg">
-<meta property="og:image" content="http://atjason.com/en/../media/DuplicateScheme.jpg">
-<meta property="og:image" content="http://atjason.com/en/../media/SelectChineseInScheme.jpg">
-<meta property="og:image" content="http://atjason.com/en/../media/LocalizedApp.jpg">
-<meta property="og:updated_time" content="2016-05-07T15:12:57.000Z">
+<meta property="og:image" content="http://p.appsites.io/2016-05-14-SelectPreview.jpg">
+<meta property="og:image" content="http://p.appsites.io/2016-05-14-SelectPseudolanguage.jpg">
+<meta property="og:image" content="http://p.appsites.io/2016-05-14-ProjectAddLanguage.jpg">
+<meta property="og:image" content="http://p.appsites.io/2016-05-14-ProjectAddLanguageSelectBase.jpg">
+<meta property="og:image" content="http://p.appsites.io/2016-05-14-MainStoryboardWithLocalization.jpg">
+<meta property="og:image" content="http://p.appsites.io/2016-05-14-AddStringsFile.jpg">
+<meta property="og:image" content="http://p.appsites.io/2016-05-14-LocalizationFileWithoutString.jpg">
+<meta property="og:image" content="http://p.appsites.io/2016-05-14-FinderFileTree.jpg">
+<meta property="og:image" content="http://p.appsites.io/2016-05-14-ExportLocalization1.jpg">
+<meta property="og:image" content="http://p.appsites.io/2016-05-14-ImportLocalization1.jpg">
+<meta property="og:image" content="http://p.appsites.io/2016-05-14-ImportLocalization2.jpg">
+<meta property="og:image" content="http://p.appsites.io/2016-05-14-LocalizationFileWithString.jpg">
+<meta property="og:image" content="http://p.appsites.io/2016-05-14-ChangeSystemLanguage.jpg">
+<meta property="og:image" content="http://p.appsites.io/2016-05-14-DuplicateScheme.jpg">
+<meta property="og:image" content="http://p.appsites.io/2016-05-14-SelectChineseInScheme.jpg">
+<meta property="og:image" content="http://p.appsites.io/2016-05-14-LocalizedApp.jpg">
+<meta property="og:updated_time" content="2016-05-14T05:04:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift & Cocoa: Localization">
 <meta name="twitter:description" content="This article records the detailed steps to add localizations for a project. The project could be downloaded here.
@@ -131,7 +131,7 @@ XCode: 7.3
 Swift: 2.2
 
 #Auto Layout and Double">
-<meta name="twitter:image" content="http://atjason.com/en/../media/SelectPreview.jpg">
+<meta name="twitter:image" content="http://p.appsites.io/2016-05-14-SelectPreview.jpg">
 
 
 
@@ -362,11 +362,11 @@ Swift: 2.2
 <li>Choose View &gt; Assistant Editor &gt; Show Assistant Editor.</li>
 <li>In the assistant editor jump bar, open the Assistant pop-up menu, scroll to and choose the Preview item, and choose the <code>.storyboard</code> or <code>.xib</code> file from the submenu.<br>If a preview of the app’s user interface doesn’t appear in the assistant editor, select the window or view you want to preview in the icon or outline view.</li>
 </ul>
-<p><img src="../media/SelectPreview.jpg" alt=""></p>
+<p><img src="http://p.appsites.io/2016-05-14-SelectPreview.jpg" alt=""></p>
 <ul>
 <li>In the assistant editor, choose the localization you want to preview from the language pop-up menu in the lower-right corner.</li>
 </ul>
-<p><img src="../media/SelectPseudolanguage.jpg" alt=""></p>
+<p><img src="http://p.appsites.io/2016-05-14-SelectPseudolanguage.jpg" alt=""></p>
 <p>Now, a preview of the localization appears in the assistant editor. If you choose a real language, strings that do not need to be localized or need to be localized, but currently are not, appear in uppercase.</p>
 <a id="more"></a>
 <p>#Use Localized String in Code<br>The key is to use <code>NSLocalizedString</code> function. It could load localized text from the localized string file.</p>
@@ -378,15 +378,15 @@ Swift: 2.2
 <li>Select the project in the project navigator.<br>Note: It’s <strong>PROJECT</strong>, but not targets.</li>
 <li>Add the new localization.<br>Scroll down to the Localizations section. Click the + button, and select ‘Chinese (Simplified)’ from the menu that appears</li>
 </ul>
-<p><img src="../media/ProjectAddLanguage.jpg" alt=""></p>
+<p><img src="http://p.appsites.io/2016-05-14-ProjectAddLanguage.jpg" alt=""></p>
 <ul>
 <li>Select the files you want to localize.<br>Xcode will ask you which files you want to translate into the new language. At this stage, there will only be a single file: the app’s interface, stored in MainMenu.xib. It’s selected by default, so click Finish.<br>Note: select “Locializable Strings”, but not ‘Interface Builder Story’.</li>
 </ul>
-<p><img src="../media/ProjectAddLanguageSelectBase.jpg" alt=""></p>
+<p><img src="http://p.appsites.io/2016-05-14-ProjectAddLanguageSelectBase.jpg" alt=""></p>
 <ul>
 <li>A new file will be created: a strings file for the storyboard file. It’ll appear as an item inside the storyboard file, in the project navigator.</li>
 </ul>
-<p><img src="../media/MainStoryboardWithLocalization.jpg" alt=""></p>
+<p><img src="http://p.appsites.io/2016-05-14-MainStoryboardWithLocalization.jpg" alt=""></p>
 <p>#Add Localizations Files</p>
 <p>To well organize the localized strings, it’s better we manually add 2 string files here: ‘<strong>Localizable.strings</strong>‘ and ‘<strong>InfoPlist.strings</strong>‘. ‘Localizable.strings’ will store the strings in app. For ‘InfoPlist.strings’, please check the following introduction.</p>
 <p>##Localizing Property List Values<br>The values for many keys in an information property list file are human-readable strings that are displayed to the user by the Finder or your own app. When you localize your app, you should be sure to localize the values for these strings in addition to the rest of your app’s content.</p>
@@ -396,24 +396,24 @@ Swift: 2.2
 <ul>
 <li>Create a new file in the project: a strings file. You’ll find this in the Resource section of the file templates. Name the file as ‘Localizable.strings’, save in the ‘Localizations’ folder.</li>
 </ul>
-<p><img src="../media/AddStringsFile.jpg" alt=""></p>
+<p><img src="http://p.appsites.io/2016-05-14-AddStringsFile.jpg" alt=""></p>
 <ul>
 <li>Select the ‘Localizable.strings’ file. Open the ‘File Inspector’ and scroll down to Localizations.<br>Click the Localize button. A menu will appear; choose Base and click Localize.</li>
 </ul>
 <p>Now the localization option has changed, with three small checkboxes, one for Base, one for English, and the last for Chinese Simplified. Select Base and Chinese Simplified. In fact the Base is just English as we choose English as development language.</p>
-<p><img src="../media/LocalizationFileWithoutString.jpg" alt=""></p>
+<p><img src="http://p.appsites.io/2016-05-14-LocalizationFileWithoutString.jpg" alt=""></p>
 <p>Now create ‘InfoPlist.strings’ and did same settings as ‘Localizable.strings’. The difference is, save the ‘InfoPlist.strings’ in same level of ‘Localizations’ in Finder, but still in the ‘Localizations’ group in project. After set it as localization, it will auto matically be moved to ‘Base.lproj’ and ‘zh-Hans.lproj’ in Finder.</p>
 <p>How to localize the app’s name displayed with app icon in Finder? Add this string in Base version of ‘InfoPlist.strings’:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* App Name */</span></span><br><span class="line"><span class="string">"CFBundleDisplayName"</span> =<span class="string">"Localization Demo"</span>;</span><br></pre></td></tr></table></figure></p>
 <p>And add this for the Chinese Simplified version:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* App Name */</span></span><br><span class="line"><span class="string">"CFBundleDisplayName"</span> =<span class="string">"本地化示例"</span>;</span><br></pre></td></tr></table></figure></p>
 <p><strong>NOTE</strong><br>It’s important to use the file names of ‘InfoPlist.strings’ and ‘Localizable.strings’, as the app will look for the files with these names.</p>
 <p>After added, the files in Finder will looks like:</p>
-<p><img src="../media/FinderFileTree.jpg" alt=""></p>
+<p><img src="http://p.appsites.io/2016-05-14-FinderFileTree.jpg" alt=""></p>
 <p>#Edit Localization Files<br>There’re 2 ways to edit the localization files: Direclty Edit and Using .xliff Files. Now let’s introduce the .xliff files.</p>
 <p>Normally, you don’t translate the app by yourself, but let some others who are expert for the language to do it. How to cooperate with them? Use .xliff file.</p>
 <p>##Export .xliff Files</p>
 <ul>
 <li>Select the root of the project.</li>
-<li>Select ‘Editor’ menu &gt; ‘Export for localization…’. In the popup dialog, select where to store the files. Need to select ‘Chinese (Simplied)’ in languages. This means export the .xliff file for the languages selected. Click ‘Save’.<br><img src="../media/ExportLocalization1.jpg" alt=""></li>
+<li>Select ‘Editor’ menu &gt; ‘Export for localization…’. In the popup dialog, select where to store the files. Need to select ‘Chinese (Simplied)’ in languages. This means export the .xliff file for the languages selected. Click ‘Save’.<br><img src="http://p.appsites.io/2016-05-14-ExportLocalization1.jpg" alt=""></li>
 <li>Open the ‘zh-Hans.xliff’ you just saved. You can see it’s like a xml file.</li>
 </ul>
 <p>Edit parts for ‘Localizable.strings’. Find the following part, add <code>&lt;target&gt;...&lt;/target&gt;</code> under the <code>&lt;source&gt;A: It&#39;s %@.&lt;/source&gt;</code>. This is just the core of ‘localization’.</p>
@@ -423,20 +423,20 @@ Swift: 2.2
 <li>Select the root of the project.</li>
 <li>Select ‘Editor’ menu &gt; ‘Import localization…’. In the popup dialog, select the ‘zh-Hans.xliff’ you just modified. It should pop up a dialog to show the difference between the files in project and the one you just modified. Click ‘Import’ if it’s fine.</li>
 </ul>
-<p><img src="../media/ImportLocalization1.jpg" alt=""></p>
-<p><img src="../media/ImportLocalization2.jpg" alt=""></p>
+<p><img src="http://p.appsites.io/2016-05-14-ImportLocalization1.jpg" alt=""></p>
+<p><img src="http://p.appsites.io/2016-05-14-ImportLocalization2.jpg" alt=""></p>
 <p>After it’s done, open the ‘InfoPlist.strings’ or ‘Localizable.strings’, you should be able to say the new translated strings. Did you remember I just said there’re 2 ways to edit the string files, and another one is directly edit it? Here it is, you can directly edit the files and add the strings like you added through .xliff.</p>
-<p><img src="../media/LocalizationFileWithString.jpg" alt=""></p>
+<p><img src="http://p.appsites.io/2016-05-14-LocalizationFileWithString.jpg" alt=""></p>
 <p><strong>Special Tips</strong><br>Seems XCode has issue. If you project has test or other target, if you import the modified strings for the first, the XCode may crash.<br>The solution is, export strings, don’t change it and import again.<br>I guess this mainly let the test or other project be localized. Even you don’t need to localize them, but have to do it to walk around XCode’s issue (again, it’s what I guess).</p>
 <p>#Test Localization<br>There’re 2 ways to test the localization.</p>
 <p>##1. Change System’s Language<br>Open ‘System Preferences’ &gt; ‘Language &amp; Region’, you can drag Chinese Simplied to top of the list to activate it. You can also change the ragion.</p>
-<p><img src="../media/ChangeSystemLanguage.jpg" alt=""></p>
+<p><img src="http://p.appsites.io/2016-05-14-ChangeSystemLanguage.jpg" alt=""></p>
 <p>The disadvantage of this way is, you need to reboot to let the change work. And the entire system’s language will be changed. How only change the language for the app? Check the following way.</p>
 <p>##2. Use XCode’s Scheme<br>You can make Xcode launch the application using the special langauge or region.<br>To do this, you can duplicate current scheme, name it as ‘Chinese (Simplified)’. Open the Options panel. Change the Application Language from System Language to ‘Chinese (Simplified)’.</p>
-<p><img src="../media/DuplicateScheme.jpg" alt=""></p>
-<p><img src="../media/SelectChineseInScheme.jpg" alt=""></p>
+<p><img src="http://p.appsites.io/2016-05-14-DuplicateScheme.jpg" alt=""></p>
+<p><img src="http://p.appsites.io/2016-05-14-SelectChineseInScheme.jpg" alt=""></p>
 <p>Now, run the app, it should look like:</p>
-<p><img src="../media/LocalizedApp.jpg" alt=""></p>
+<p><img src="http://p.appsites.io/2016-05-14-LocalizedApp.jpg" alt=""></p>
 
       
     </div>
