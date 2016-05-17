@@ -6,7 +6,8 @@
     <entry>
       <title><![CDATA[Google Analytics for Mac]]></title>
       <url>http://atjason.com/en/en/Cocoa/MacGoogleAnalytics.html</url>
-      <content type="html"><![CDATA[<p><a href="https://github.com/atjason/MacGoogleAnalytics" target="_blank" rel="external">MacGoogleAnalytics</a> is an open source library to use Google Analytics on Mac OS X.</p>
+      <content type="html"><![CDATA[<p><img src="http://ww2.sinaimg.cn/large/a15b4afegw1f3z6w5n74yj20rs0go0vm" alt="07:34:46 AM"></p>
+<p><a href="https://github.com/atjason/MacGoogleAnalytics" target="_blank" rel="external">MacGoogleAnalytics</a> is an open source library to use Google Analytics on Mac OS X.</p>
 <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>As we know, Google Analytics is perfect for user data collection and analytics. But unfortunately, there’s no official SDK for Mac OS X.</p>
 <p>But still, there’re several ways to use Google Analytics on Mac OS X. MacGoogleAnalytics may be what you found.</p>
 <p>Overall, there’re 2 parts work together to use Google Analytics.</p>
