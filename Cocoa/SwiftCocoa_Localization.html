@@ -91,7 +91,7 @@ OS X: 10.11.4
 XCode: 7.3
 Swift: 2.2
 
-#Auto Layout and Double">
+Auto Layout and Double-">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Swift & Cocoa: Localization">
 <meta property="og:url" content="http://atjason.com/en/Cocoa/SwiftCocoa_Localization.html">
@@ -103,7 +103,7 @@ OS X: 10.11.4
 XCode: 7.3
 Swift: 2.2
 
-#Auto Layout and Double">
+Auto Layout and Double-">
 <meta property="og:image" content="http://p.appsites.io/2016-05-14-SelectPreview.jpg">
 <meta property="og:image" content="http://p.appsites.io/2016-05-14-SelectPseudolanguage.jpg">
 <meta property="og:image" content="http://p.appsites.io/2016-05-14-ProjectAddLanguage.jpg">
@@ -120,7 +120,7 @@ Swift: 2.2
 <meta property="og:image" content="http://p.appsites.io/2016-05-14-DuplicateScheme.jpg">
 <meta property="og:image" content="http://p.appsites.io/2016-05-14-SelectChineseInScheme.jpg">
 <meta property="og:image" content="http://p.appsites.io/2016-05-14-LocalizedApp.jpg">
-<meta property="og:updated_time" content="2016-05-14T05:04:41.000Z">
+<meta property="og:updated_time" content="2016-05-17T12:26:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift & Cocoa: Localization">
 <meta name="twitter:description" content="This article records the detailed steps to add localizations for a project. The project could be downloaded here.
@@ -130,7 +130,7 @@ OS X: 10.11.4
 XCode: 7.3
 Swift: 2.2
 
-#Auto Layout and Double">
+Auto Layout and Double-">
 <meta name="twitter:image" content="http://p.appsites.io/2016-05-14-SelectPreview.jpg">
 
 
@@ -354,7 +354,7 @@ Swift: 2.2
 <li>XCode: 7.3</li>
 <li>Swift: 2.2</li>
 </ul>
-<p>#Auto Layout and Double-Length Pseudolanguage<br>For localized app, typically you need to set the UI to ‘<strong>Auto Layout</strong>‘. As the same string in different languages may have very different length, the ‘auto layout’ could let each language corecttly display.</p>
+<h1 id="Auto-Layout-and-Double-Length-Pseudolanguage"><a href="#Auto-Layout-and-Double-Length-Pseudolanguage" class="headerlink" title="Auto Layout and Double-Length Pseudolanguage"></a>Auto Layout and Double-Length Pseudolanguage</h1><p>For localized app, typically you need to set the UI to ‘<strong>Auto Layout</strong>‘. As the same string in different languages may have very different length, the ‘auto layout’ could let each language corecttly display.</p>
 <p>How to test the auto layout correclty work or not? Beside really test the app with different language, you can also use ‘<strong>Double-Length Pseudolanguage</strong>‘. This localization simply takes the text of your development language, and doubles it. So, for example, “Tell the World” becomes “Tell the World Tell the World.” While many pieces of text won’t actually double in length when translated to another langauge, it serves as a great way to test to see whether your interface can handle the wide variation in length.</p>
 <p>Steps to preview a localization in Interface Builder:</p>
 <ul>
@@ -369,11 +369,11 @@ Swift: 2.2
 <p><img src="http://p.appsites.io/2016-05-14-SelectPseudolanguage.jpg" alt=""></p>
 <p>Now, a preview of the localization appears in the assistant editor. If you choose a real language, strings that do not need to be localized or need to be localized, but currently are not, appear in uppercase.</p>
 <a id="more"></a>
-<p>#Use Localized String in Code<br>The key is to use <code>NSLocalizedString</code> function. It could load localized text from the localized string file.</p>
+<h1 id="Use-Localized-String-in-Code"><a href="#Use-Localized-String-in-Code" class="headerlink" title="Use Localized String in Code"></a>Use Localized String in Code</h1><p>The key is to use <code>NSLocalizedString</code> function. It could load localized text from the localized string file.</p>
 <p>To explicit ordering of tokens in format strings, could use <code>%1$@</code>, <code>%2$@</code>, etc.</p>
 <p>The related code is:</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">setLabelStrings</span><span class="params">()</span></span> &#123;</span><br><span class="line">  <span class="keyword">let</span> dateFormatter = <span class="type">NSDateFormatter</span>()</span><br><span class="line">  dateFormatter.dateStyle = .<span class="type">NoStyle</span></span><br><span class="line">  dateFormatter.timeStyle = .<span class="type">ShortStyle</span></span><br><span class="line">  <span class="keyword">let</span> dateString = dateFormatter.stringFromDate(<span class="type">NSDate</span>())</span><br><span class="line">  </span><br><span class="line">  question = <span class="type">NSLocalizedString</span>(<span class="string">"Q: What's the time now?"</span>, comment: <span class="string">"Question"</span>)</span><br><span class="line">  answer = <span class="type">String</span>(format: <span class="type">NSLocalizedString</span>(<span class="string">"A: It's %@."</span>, comment: <span class="string">"Answer"</span>), dateString)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>#Add Localization Language for Project<br>Add a new localization to the project could make Xcode aware that you want to start translating files into that language, which means you can do things like select that language in the Preview assistant.</p>
+<h1 id="Add-Localization-Language-for-Project"><a href="#Add-Localization-Language-for-Project" class="headerlink" title="Add Localization Language for Project"></a>Add Localization Language for Project</h1><p>Add a new localization to the project could make Xcode aware that you want to start translating files into that language, which means you can do things like select that language in the Preview assistant.</p>
 <ul>
 <li>Select the project in the project navigator.<br>Note: It’s <strong>PROJECT</strong>, but not targets.</li>
 <li>Add the new localization.<br>Scroll down to the Localizations section. Click the + button, and select ‘Chinese (Simplified)’ from the menu that appears</li>
@@ -387,11 +387,10 @@ Swift: 2.2
 <li>A new file will be created: a strings file for the storyboard file. It’ll appear as an item inside the storyboard file, in the project navigator.</li>
 </ul>
 <p><img src="http://p.appsites.io/2016-05-14-MainStoryboardWithLocalization.jpg" alt=""></p>
-<p>#Add Localizations Files</p>
-<p>To well organize the localized strings, it’s better we manually add 2 string files here: ‘<strong>Localizable.strings</strong>‘ and ‘<strong>InfoPlist.strings</strong>‘. ‘Localizable.strings’ will store the strings in app. For ‘InfoPlist.strings’, please check the following introduction.</p>
-<p>##Localizing Property List Values<br>The values for many keys in an information property list file are human-readable strings that are displayed to the user by the Finder or your own app. When you localize your app, you should be sure to localize the values for these strings in addition to the rest of your app’s content.</p>
+<h1 id="Add-Localizations-Files"><a href="#Add-Localizations-Files" class="headerlink" title="Add Localizations Files"></a>Add Localizations Files</h1><p>To well organize the localized strings, it’s better we manually add 2 string files here: ‘<strong>Localizable.strings</strong>‘ and ‘<strong>InfoPlist.strings</strong>‘. ‘Localizable.strings’ will store the strings in app. For ‘InfoPlist.strings’, please check the following introduction.</p>
+<h2 id="Localizing-Property-List-Values"><a href="#Localizing-Property-List-Values" class="headerlink" title="Localizing Property List Values"></a>Localizing Property List Values</h2><p>The values for many keys in an information property list file are human-readable strings that are displayed to the user by the Finder or your own app. When you localize your app, you should be sure to localize the values for these strings in addition to the rest of your app’s content.</p>
 <p>Localized values are not stored in the Info.plist file itself. Instead, you store the values for a particular localization in a strings file with the name ‘<strong>InfoPlist.strings</strong>‘. You place this file in the same language-specific project directory that you use to store other resources for the same localization. The contents of the InfoPlist.strings file are the individual keys you want localized and the appropriately translated value. The routines that look up key values in the Info.plist file take the user’s language preferences into account and return the localized version of the key (from the appropriate InfoPlist.strings file) when one exists. If a localized version of a key does not exist, the routines return the value stored in the Info.plist file.</p>
-<p>##Add ‘Localizable.strings’ and ‘InfoPlist.strings’<br>Before add the strings files, it’s better to add a ‘Localizations’ group in project. And it’s also better to create the corresponding folder in Finder.</p>
+<h2 id="Add-‘Localizable-strings’-and-‘InfoPlist-strings’"><a href="#Add-‘Localizable-strings’-and-‘InfoPlist-strings’" class="headerlink" title="Add ‘Localizable.strings’ and ‘InfoPlist.strings’"></a>Add ‘Localizable.strings’ and ‘InfoPlist.strings’</h2><p>Before add the strings files, it’s better to add a ‘Localizations’ group in project. And it’s also better to create the corresponding folder in Finder.</p>
 <p>Now it’s time really add the string files.</p>
 <ul>
 <li>Create a new file in the project: a strings file. You’ll find this in the Resource section of the file templates. Name the file as ‘Localizable.strings’, save in the ‘Localizations’ folder.</li>
@@ -408,18 +407,16 @@ Swift: 2.2
 <p><strong>NOTE</strong><br>It’s important to use the file names of ‘InfoPlist.strings’ and ‘Localizable.strings’, as the app will look for the files with these names.</p>
 <p>After added, the files in Finder will looks like:</p>
 <p><img src="http://p.appsites.io/2016-05-14-FinderFileTree.jpg" alt=""></p>
-<p>#Edit Localization Files<br>There’re 2 ways to edit the localization files: Direclty Edit and Using .xliff Files. Now let’s introduce the .xliff files.</p>
+<h1 id="Edit-Localization-Files"><a href="#Edit-Localization-Files" class="headerlink" title="Edit Localization Files"></a>Edit Localization Files</h1><p>There’re 2 ways to edit the localization files: Direclty Edit and Using .xliff Files. Now let’s introduce the .xliff files.</p>
 <p>Normally, you don’t translate the app by yourself, but let some others who are expert for the language to do it. How to cooperate with them? Use .xliff file.</p>
-<p>##Export .xliff Files</p>
-<ul>
+<h2 id="Export-xliff-Files"><a href="#Export-xliff-Files" class="headerlink" title="Export .xliff Files"></a>Export .xliff Files</h2><ul>
 <li>Select the root of the project.</li>
 <li>Select ‘Editor’ menu &gt; ‘Export for localization…’. In the popup dialog, select where to store the files. Need to select ‘Chinese (Simplied)’ in languages. This means export the .xliff file for the languages selected. Click ‘Save’.<br><img src="http://p.appsites.io/2016-05-14-ExportLocalization1.jpg" alt=""></li>
 <li>Open the ‘zh-Hans.xliff’ you just saved. You can see it’s like a xml file.</li>
 </ul>
 <p>Edit parts for ‘Localizable.strings’. Find the following part, add <code>&lt;target&gt;...&lt;/target&gt;</code> under the <code>&lt;source&gt;A: It&#39;s %@.&lt;/source&gt;</code>. This is just the core of ‘localization’.</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">file</span> <span class="attr">original</span>=<span class="string">"LocalizationDemo/Localizable.strings"</span> <span class="attr">source-language</span>=<span class="string">"en"</span> <span class="attr">datatype</span>=<span class="string">"plaintext"</span> <span class="attr">target-language</span>=<span class="string">"zh-Hans"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tool</span> <span class="attr">tool-id</span>=<span class="string">"com.apple.dt.xcode"</span> <span class="attr">tool-name</span>=<span class="string">"Xcode"</span> <span class="attr">tool-version</span>=<span class="string">"7.3"</span> <span class="attr">build-num</span>=<span class="string">"7D175"</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">trans-unit</span> <span class="attr">id</span>=<span class="string">"A: It's %@."</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">source</span>&gt;</span>A: It's %@.<span class="tag">&lt;/<span class="name">source</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">target</span>&gt;</span>答：现在是 %@。<span class="tag">&lt;/<span class="name">target</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">note</span>&gt;</span>Answer<span class="tag">&lt;/<span class="name">note</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">trans-unit</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">trans-unit</span> <span class="attr">id</span>=<span class="string">"Q: What's the time now?"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">source</span>&gt;</span>Q: What's the time now?<span class="tag">&lt;/<span class="name">source</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">target</span>&gt;</span>问：现在几点了？<span class="tag">&lt;/<span class="name">target</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">note</span>&gt;</span>Question<span class="tag">&lt;/<span class="name">note</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">trans-unit</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>##Import .xliff Files</p>
-<ul>
+<h2 id="Import-xliff-Files"><a href="#Import-xliff-Files" class="headerlink" title="Import .xliff Files"></a>Import .xliff Files</h2><ul>
 <li>Select the root of the project.</li>
 <li>Select ‘Editor’ menu &gt; ‘Import localization…’. In the popup dialog, select the ‘zh-Hans.xliff’ you just modified. It should pop up a dialog to show the difference between the files in project and the one you just modified. Click ‘Import’ if it’s fine.</li>
 </ul>
@@ -428,11 +425,11 @@ Swift: 2.2
 <p>After it’s done, open the ‘InfoPlist.strings’ or ‘Localizable.strings’, you should be able to say the new translated strings. Did you remember I just said there’re 2 ways to edit the string files, and another one is directly edit it? Here it is, you can directly edit the files and add the strings like you added through .xliff.</p>
 <p><img src="http://p.appsites.io/2016-05-14-LocalizationFileWithString.jpg" alt=""></p>
 <p><strong>Special Tips</strong><br>Seems XCode has issue. If you project has test or other target, if you import the modified strings for the first, the XCode may crash.<br>The solution is, export strings, don’t change it and import again.<br>I guess this mainly let the test or other project be localized. Even you don’t need to localize them, but have to do it to walk around XCode’s issue (again, it’s what I guess).</p>
-<p>#Test Localization<br>There’re 2 ways to test the localization.</p>
-<p>##1. Change System’s Language<br>Open ‘System Preferences’ &gt; ‘Language &amp; Region’, you can drag Chinese Simplied to top of the list to activate it. You can also change the ragion.</p>
+<h1 id="Test-Localization"><a href="#Test-Localization" class="headerlink" title="Test Localization"></a>Test Localization</h1><p>There’re 2 ways to test the localization.</p>
+<h2 id="1-Change-System’s-Language"><a href="#1-Change-System’s-Language" class="headerlink" title="1. Change System’s Language"></a>1. Change System’s Language</h2><p>Open ‘System Preferences’ &gt; ‘Language &amp; Region’, you can drag Chinese Simplied to top of the list to activate it. You can also change the ragion.</p>
 <p><img src="http://p.appsites.io/2016-05-14-ChangeSystemLanguage.jpg" alt=""></p>
 <p>The disadvantage of this way is, you need to reboot to let the change work. And the entire system’s language will be changed. How only change the language for the app? Check the following way.</p>
-<p>##2. Use XCode’s Scheme<br>You can make Xcode launch the application using the special langauge or region.<br>To do this, you can duplicate current scheme, name it as ‘Chinese (Simplified)’. Open the Options panel. Change the Application Language from System Language to ‘Chinese (Simplified)’.</p>
+<h2 id="2-Use-XCode’s-Scheme"><a href="#2-Use-XCode’s-Scheme" class="headerlink" title="2. Use XCode’s Scheme"></a>2. Use XCode’s Scheme</h2><p>You can make Xcode launch the application using the special langauge or region.<br>To do this, you can duplicate current scheme, name it as ‘Chinese (Simplified)’. Open the Options panel. Change the Application Language from System Language to ‘Chinese (Simplified)’.</p>
 <p><img src="http://p.appsites.io/2016-05-14-DuplicateScheme.jpg" alt=""></p>
 <p><img src="http://p.appsites.io/2016-05-14-SelectChineseInScheme.jpg" alt=""></p>
 <p>Now, run the app, it should look like:</p>
@@ -635,7 +632,7 @@ Swift: 2.2
               
             
             
-              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Auto-Layout-and-Double-Length-Pseudolanguage"><span class="nav-number">1.</span> <span class="nav-text">Auto Layout and Double-Length Pseudolanguage</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Use-Localized-String-in-Code"><span class="nav-number">2.</span> <span class="nav-text">Use Localized String in Code</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Add-Localization-Language-for-Project"><span class="nav-number">3.</span> <span class="nav-text">Add Localization Language for Project</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Add-Localizations-Files"><span class="nav-number">4.</span> <span class="nav-text">Add Localizations Files</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Localizing-Property-List-Values"><span class="nav-number">4.1.</span> <span class="nav-text">Localizing Property List Values</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Add-‘Localizable-strings’-and-‘InfoPlist-strings’"><span class="nav-number">4.2.</span> <span class="nav-text">Add ‘Localizable.strings’ and ‘InfoPlist.strings’</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Edit-Localization-Files"><span class="nav-number">5.</span> <span class="nav-text">Edit Localization Files</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Export-xliff-Files"><span class="nav-number">5.1.</span> <span class="nav-text">Export .xliff Files</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Import-xliff-Files"><span class="nav-number">5.2.</span> <span class="nav-text">Import .xliff Files</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Test-Localization"><span class="nav-number">6.</span> <span class="nav-text">Test Localization</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Change-System’s-Language"><span class="nav-number">6.1.</span> <span class="nav-text">1. Change System’s Language</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Use-XCode’s-Scheme"><span class="nav-number">6.2.</span> <span class="nav-text">2. Use XCode’s Scheme</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

@@ -91,7 +91,7 @@ OS X: 10.11.4
 XCode: 7.3
 Swift: 2.2
 
-#Enable ‘launch at login’ i">
+Enable ‘launch at login’ in">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Swift & Cocoa: Auto Launch at Login">
 <meta property="og:url" content="http://atjason.com/en/Cocoa/SwiftCocoa_Auto Launch at Login.html">
@@ -103,14 +103,14 @@ OS X: 10.11.4
 XCode: 7.3
 Swift: 2.2
 
-#Enable ‘launch at login’ i">
+Enable ‘launch at login’ in">
 <meta property="og:image" content="http://p.appsites.io/2016-05-14-AutoLaunchApp.jpg">
 <meta property="og:image" content="http://p.appsites.io/2016-05-14-Add Helper Target.jpg">
 <meta property="og:image" content="http://p.appsites.io/2016-05-14-Helper in Background.jpg">
 <meta property="og:image" content="http://p.appsites.io/2016-05-14-HelperSkipInstall.jpg">
 <meta property="og:image" content="http://p.appsites.io/2016-05-14-Strip Debug Symbols During Copy.jpg">
 <meta property="og:image" content="http://p.appsites.io/2016-05-14-Copy Helper Files.jpg">
-<meta property="og:updated_time" content="2016-05-14T05:05:17.000Z">
+<meta property="og:updated_time" content="2016-05-17T12:26:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift & Cocoa: Auto Launch at Login">
 <meta name="twitter:description" content="This article is based on this blog. I adjust and implement using Swift. The project could be downloaded here.
@@ -120,7 +120,7 @@ OS X: 10.11.4
 XCode: 7.3
 Swift: 2.2
 
-#Enable ‘launch at login’ i">
+Enable ‘launch at login’ in">
 <meta name="twitter:image" content="http://p.appsites.io/2016-05-14-AutoLaunchApp.jpg">
 
 
@@ -344,15 +344,15 @@ Swift: 2.2
 <li>XCode: 7.3</li>
 <li>Swift: 2.2</li>
 </ul>
-<p>#Enable ‘launch at login’ in Mac App Store<br>Beside works in sandbox mode, to enable ‘launch at login’ in Mac App Store, should mee this requirement:</p>
+<h1 id="Enable-‘launch-at-login’-in-Mac-App-Store"><a href="#Enable-‘launch-at-login’-in-Mac-App-Store" class="headerlink" title="Enable ‘launch at login’ in Mac App Store"></a>Enable ‘launch at login’ in Mac App Store</h1><p>Beside works in sandbox mode, to enable ‘launch at login’ in Mac App Store, should mee this requirement:</p>
 <blockquote>
 <p>2.26 Apps that are set to auto-launch or to have other code automatically run at startup or login without user consent will be rejected.</p>
 </blockquote>
 <p>How to deal with it?<br>Easy, just add a checkbox in Preferences to let user choose auto launch or not. And, make sure, do <strong>NOT</strong> enable it by default. Otherwise Apple will reject it (I was ever rejected for this reason).</p>
 <p><img src="http://p.appsites.io/2016-05-14-AutoLaunchApp.jpg" alt=""></p>
 <a id="more"></a>
-<p>#Steps<br>The precondition is, you already setup your normal project.</p>
-<p>##Add New Target of Helper<br>Add a new target of your project. You can name the target as “XHelper”, and “X” is your main project.<br>Note: to reduce app’s size, choose the Language of ‘Objective-C’. No worry, only a few code is needed.</p>
+<h1 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h1><p>The precondition is, you already setup your normal project.</p>
+<h2 id="Add-New-Target-of-Helper"><a href="#Add-New-Target-of-Helper" class="headerlink" title="Add New Target of Helper"></a>Add New Target of Helper</h2><p>Add a new target of your project. You can name the target as “XHelper”, and “X” is your main project.<br>Note: to reduce app’s size, choose the Language of ‘Objective-C’. No worry, only a few code is needed.</p>
 <p><img src="http://p.appsites.io/2016-05-14-Add Helper Target.jpg" alt=""></p>
 <h2 id="Settings-for-Helper-Target"><a href="#Settings-for-Helper-Target" class="headerlink" title="Settings for Helper Target"></a>Settings for Helper Target</h2><p>Let the helper works in the background and doesn’t display a Dock icon.<br>Open the <strong>Info</strong> tab for the helper target.</p>
 <ul>
@@ -590,7 +590,7 @@ Swift: 2.2
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Settings-for-Helper-Target"><span class="nav-number">1.</span> <span class="nav-text">Settings for Helper Target</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Settings-for-Main-Target"><span class="nav-number">2.</span> <span class="nav-text">Settings for Main Target</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-for-Helper-Target"><span class="nav-number">3.</span> <span class="nav-text">Code for Helper Target</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-for-Main-Target"><span class="nav-number">4.</span> <span class="nav-text">Code for Main Target</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Add-Preferences"><span class="nav-number">4.1.</span> <span class="nav-text">Add Preferences</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Set-Auto-Launch"><span class="nav-number">4.2.</span> <span class="nav-text">Set Auto Launch</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Test-Auto-Launch"><span class="nav-number"></span> <span class="nav-text">Test Auto Launch</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Enable-‘launch-at-login’-in-Mac-App-Store"><span class="nav-number">1.</span> <span class="nav-text">Enable ‘launch at login’ in Mac App Store</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Steps"><span class="nav-number">2.</span> <span class="nav-text">Steps</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Add-New-Target-of-Helper"><span class="nav-number">2.1.</span> <span class="nav-text">Add New Target of Helper</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Settings-for-Helper-Target"><span class="nav-number">2.2.</span> <span class="nav-text">Settings for Helper Target</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Settings-for-Main-Target"><span class="nav-number">2.3.</span> <span class="nav-text">Settings for Main Target</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-for-Helper-Target"><span class="nav-number">2.4.</span> <span class="nav-text">Code for Helper Target</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-for-Main-Target"><span class="nav-number">2.5.</span> <span class="nav-text">Code for Main Target</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Add-Preferences"><span class="nav-number">2.5.1.</span> <span class="nav-text">Add Preferences</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Set-Auto-Launch"><span class="nav-number">2.5.2.</span> <span class="nav-text">Set Auto Launch</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Test-Auto-Launch"><span class="nav-number">3.</span> <span class="nav-text">Test Auto Launch</span></a></li></ol></div>
             
           </div>
         </section>

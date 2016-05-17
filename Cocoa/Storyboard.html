@@ -108,7 +108,7 @@ After it’">
 <meta property="og:image" content="http://p.appsites.io/2016-05-14-Create segue.jpg">
 <meta property="og:image" content="http://p.appsites.io/2016-05-14-Main Storyboard.jpg">
 <meta property="og:image" content="http://p.appsites.io/2016-05-14-Storyboard initial controller.jpg">
-<meta property="og:updated_time" content="2016-05-14T05:05:41.000Z">
+<meta property="og:updated_time" content="2016-05-17T12:27:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Storyboard">
 <meta name="twitter:description" content="This article introduces how to build status bar app on Mac OS X using Cocoa with Swift. The source code can be downloaded here.
@@ -348,8 +348,7 @@ After it’">
 <p>To create the relationship segue between the window controller and the split view controller, control-drag from the blue Window Controller icon in the border on top of the window controller down to the split view controller. In the pop-up Relationship Segue window that appears, select window content.</p>
 <p><img src="http://p.appsites.io/2016-05-14-Create segue.jpg" alt=""></p>
 <a id="more"></a>
-<p>#How is the Storyboard Loaded?</p>
-<p>Just like with MainMenu.xib, the answer is in the Info.plist.<br>If you check the Info.plist for this project you will see that the key NSMainStoryboardFile is set to Main.</p>
+<h1 id="How-is-the-Storyboard-Loaded"><a href="#How-is-the-Storyboard-Loaded" class="headerlink" title="How is the Storyboard Loaded?"></a>How is the Storyboard Loaded?</h1><p>Just like with MainMenu.xib, the answer is in the Info.plist.<br>If you check the Info.plist for this project you will see that the key NSMainStoryboardFile is set to Main.</p>
 <p><img src="http://p.appsites.io/2016-05-14-Main Storyboard.jpg" alt=""></p>
 <p>Scenes can also be loaded from storyboards programmatically. The NSStoryboard class provides this, much like NSBundle does for NIB loading. Within a storyboard, one scene can be designated as the <strong>initial controller</strong>. This is used in the application’s Main.storyboard to designate the application window to be opened at launch.</p>
 <p><img src="http://p.appsites.io/2016-05-14-Storyboard initial controller.jpg" alt=""></p>
@@ -552,7 +551,7 @@ After it’">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Storyboard-introduction"><span class="nav-number">1.</span> <span class="nav-text">Storyboard introduction</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Storyboard-introduction"><span class="nav-number">1.</span> <span class="nav-text">Storyboard introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#How-is-the-Storyboard-Loaded"><span class="nav-number">2.</span> <span class="nav-text">How is the Storyboard Loaded?</span></a></li></ol></div>
             
           </div>
         </section>
