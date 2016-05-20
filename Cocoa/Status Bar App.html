@@ -114,7 +114,7 @@ After it’">
 <meta property="og:image" content="http://p.appsites.io/2016-05-14-Icon.jpg">
 <meta property="og:image" content="http://p.appsites.io/2016-05-14-Icon_Dark.jpg">
 <meta property="og:image" content="http://p.appsites.io/2016-05-14-Indentation.jpg">
-<meta property="og:updated_time" content="2016-05-17T12:27:23.000Z">
+<meta property="og:updated_time" content="2016-05-20T09:34:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Status Bar App">
 <meta name="twitter:description" content="This article introduces how to build status bar app on Mac OS X using Cocoa with Swift. The source code can be downloaded here.
@@ -402,7 +402,7 @@ After it’">
 <p><img src="http://p.appsites.io/2016-05-14-Indentation.jpg" alt=""></p>
 <h1 id="How-to-Pop-Over"><a href="#How-to-Pop-Over" class="headerlink" title="How to Pop Over?"></a>How to Pop Over?</h1><p>It’s easy to pop over status item. Check the following code:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="keyword">let</span> button = statusItem.button &#123;</span><br><span class="line">  popover.showRelativeToRect(button.bounds, ofView: button, preferredEdge: .<span class="type">MinY</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>But it’s hard to pop over menu item, as menu item’s view is nil by default. And then no view or bound to show popover relatively. Ever see some other app like <a href="http://www.clipmenu.com/blog/2014/11/11/clipmenu-1-0-0a1-released/" target="_blank" rel="external">ClipMenu</a> could implement this feature, but hasn’t found how to do it.</p>
-<p>Another walkaground is to use <code>NSMenuItem.toolTip</code> to show additional information of a menu item.</p>
+<p>Another walkaround is to use <code>NSMenuItem.toolTip</code> to show additional information of a menu item.</p>
 <h1 id="What-Left"><a href="#What-Left" class="headerlink" title="What Left?"></a>What Left?</h1><ul>
 <li>tag and representedObject</li>
 <li>action</li>

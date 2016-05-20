@@ -526,7 +526,7 @@
     <link href="http://atjason.com/en/Cocoa/Status%20Bar%20App.html"/>
     <id>http://atjason.com/en/Cocoa/Status Bar App.html</id>
     <published>2016-04-08T04:56:00.000Z</published>
-    <updated>2016-05-17T12:27:23.000Z</updated>
+    <updated>2016-05-20T09:34:30.000Z</updated>
     
     <content type="html">&lt;p&gt;This article introduces how to build status bar app on Mac OS X using Cocoa with Swift. The source code can be downloaded &lt;a href=&quot;https://github.com/atjason/CocoaDemoWithSwift/tree/master/StatusBarApp/StatusBarApp&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Development environment:&lt;/p&gt;
@@ -589,7 +589,7 @@
 &lt;p&gt;&lt;img src=&quot;http://p.appsites.io/2016-05-14-Indentation.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h1 id=&quot;How-to-Pop-Over&quot;&gt;&lt;a href=&quot;#How-to-Pop-Over&quot; class=&quot;headerlink&quot; title=&quot;How to Pop Over?&quot;&gt;&lt;/a&gt;How to Pop Over?&lt;/h1&gt;&lt;p&gt;It’s easy to pop over status item. Check the following code:&lt;br&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; button = statusItem.button &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  popover.showRelativeToRect(button.bounds, ofView: button, preferredEdge: .&lt;span class=&quot;type&quot;&gt;MinY&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;But it’s hard to pop over menu item, as menu item’s view is nil by default. And then no view or bound to show popover relatively. Ever see some other app like &lt;a href=&quot;http://www.clipmenu.com/blog/2014/11/11/clipmenu-1-0-0a1-released/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ClipMenu&lt;/a&gt; could implement this feature, but hasn’t found how to do it.&lt;/p&gt;
-&lt;p&gt;Another walkaground is to use &lt;code&gt;NSMenuItem.toolTip&lt;/code&gt; to show additional information of a menu item.&lt;/p&gt;
+&lt;p&gt;Another walkaround is to use &lt;code&gt;NSMenuItem.toolTip&lt;/code&gt; to show additional information of a menu item.&lt;/p&gt;
 &lt;h1 id=&quot;What-Left&quot;&gt;&lt;a href=&quot;#What-Left&quot; class=&quot;headerlink&quot; title=&quot;What Left?&quot;&gt;&lt;/a&gt;What Left?&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;tag and representedObject&lt;/li&gt;
 &lt;li&gt;action&lt;/li&gt;
@@ -723,9 +723,9 @@
     <link href="http://atjason.com/en/Cocoa/Outline.html"/>
     <id>http://atjason.com/en/Cocoa/Outline.html</id>
     <published>2016-04-06T05:11:00.000Z</published>
-    <updated>2016-05-17T12:27:40.000Z</updated>
+    <updated>2016-05-20T09:33:33.000Z</updated>
     
-    <content type="html">&lt;p&gt;This article describes the steps to use NSOutlineView With NSOutlineViewDataSource and NSOutlineViewDelegate. The source code can be downloaded&lt;a href=&quot;https://github.com/atjason/CocoaDemoWithSwift/tree/master/Outline/Outline&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+    <content type="html">&lt;p&gt;This article describes the steps to use NSOutlineView With NSOutlineViewDataSource and NSOutlineViewDelegate. The source code can be downloaded &lt;a href=&quot;https://github.com/atjason/CocoaDemoWithSwift/tree/master/Outline/Outline&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Development environment:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;OS X: 10.11.4&lt;/li&gt;
@@ -771,7 +771,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;This article describes the steps to use NSOutlineView With NSOutlineViewDataSource and NSOutlineViewDelegate. The source code can be downloaded&lt;a href=&quot;https://github.com/atjason/CocoaDemoWithSwift/tree/master/Outline/Outline&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+      &lt;p&gt;This article describes the steps to use NSOutlineView With NSOutlineViewDataSource and NSOutlineViewDelegate. The source code can be downloaded &lt;a href=&quot;https://github.com/atjason/CocoaDemoWithSwift/tree/master/Outline/Outline&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Development environment:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;OS X: 10.11.4&lt;/li&gt;
