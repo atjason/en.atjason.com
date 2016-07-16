@@ -84,42 +84,15 @@
 
 
 
-<meta name="description" content="This article introduces how to build status bar app on Mac OS X using Cocoa with Swift. The source code can be downloaded here.
-Development environment:
-
-OS X: 10.11.4
-XCode: 7.3
-Swift: 2.2
-
-After it’">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Storyboard">
-<meta property="og:url" content="http://atjason.com/en/Cocoa/Storyboard.html">
+<meta name="description" content="Digital Nomad, Mac Developer">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jason">
+<meta property="og:url" content="http://atjason.com/en/categories/IT/index.html">
 <meta property="og:site_name" content="Jason">
-<meta property="og:description" content="This article introduces how to build status bar app on Mac OS X using Cocoa with Swift. The source code can be downloaded here.
-Development environment:
-
-OS X: 10.11.4
-XCode: 7.3
-Swift: 2.2
-
-After it’">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-Mirror Chatter.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-Create segue.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-Main Storyboard.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-Storyboard initial controller.jpg">
-<meta property="og:updated_time" content="2016-05-17T12:27:02.000Z">
+<meta property="og:description" content="Digital Nomad, Mac Developer">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Storyboard">
-<meta name="twitter:description" content="This article introduces how to build status bar app on Mac OS X using Cocoa with Swift. The source code can be downloaded here.
-Development environment:
-
-OS X: 10.11.4
-XCode: 7.3
-Swift: 2.2
-
-After it’">
-<meta name="twitter:image" content="http://p.appsites.io/2016-05-14-Mirror Chatter.jpg">
+<meta name="twitter:title" content="Jason">
+<meta name="twitter:description" content="Digital Nomad, Mac Developer">
 
 
 
@@ -137,7 +110,7 @@ After it’">
   };
 </script>
 
-  <title> Storyboard | Jason </title>
+  <title> Category: IT | Jason </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -167,7 +140,7 @@ After it’">
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -248,162 +221,47 @@ After it’">
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Storyboard
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-13T09:50:00+08:00" content="2016-04-13">
-              2016-04-13
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/en/categories/Cocoa/" itemprop="url" rel="index">
-                    <span itemprop="name">Cocoa</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/en/Cocoa/Storyboard.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Cocoa/Storyboard.html" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>This article introduces how to build status bar app on Mac OS X using Cocoa with Swift. The source code can be downloaded <a href="https://github.com/atjason/LearnCocoaWithSwift/tree/master/32_Storyboards/MirrorChatter" target="_blank" rel="external">here</a>.</p>
-<p>Development environment:</p>
-<ul>
-<li>OS X: 10.11.4</li>
-<li>XCode: 7.3</li>
-<li>Swift: 2.2</li>
-</ul>
-<p>After it’s finished, the app looks like:</p>
-<p><img src="http://p.appsites.io/2016-05-14-Mirror Chatter.jpg" alt=""></p>
-<h1 id="Storyboard-introduction"><a href="#Storyboard-introduction" class="headerlink" title="Storyboard introduction"></a>Storyboard introduction</h1><p>With storyboards, you can combine as much (or as little) of your application as you want in one canvas, as well as visualize how the parts relate to each other.<br>Storyboards are organized by scenes (windows and views), which are connected to each other by segues. Segues describe the scenes’ relationships to one another. Storyboards can be used to describe a window and its popover or sheet – or a complicated graph of nested views, each with its own view controller, which previously would have necessitated programmatic construction.<br>Storyboards were added to OS X in 10.10 Yosemite and to iOS in version 5.</p>
-<p>To create the relationship segue between the window controller and the split view controller, control-drag from the blue Window Controller icon in the border on top of the window controller down to the split view controller. In the pop-up Relationship Segue window that appears, select window content.</p>
-<p><img src="http://p.appsites.io/2016-05-14-Create segue.jpg" alt=""></p>
-<a id="more"></a>
-<h1 id="How-is-the-Storyboard-Loaded"><a href="#How-is-the-Storyboard-Loaded" class="headerlink" title="How is the Storyboard Loaded?"></a>How is the Storyboard Loaded?</h1><p>Just like with MainMenu.xib, the answer is in the Info.plist.<br>If you check the Info.plist for this project you will see that the key NSMainStoryboardFile is set to Main.</p>
-<p><img src="http://p.appsites.io/2016-05-14-Main Storyboard.jpg" alt=""></p>
-<p>Scenes can also be loaded from storyboards programmatically. The NSStoryboard class provides this, much like NSBundle does for NIB loading. Within a storyboard, one scene can be designated as the <strong>initial controller</strong>. This is used in the application’s Main.storyboard to designate the application window to be opened at launch.</p>
-<p><img src="http://p.appsites.io/2016-05-14-Storyboard initial controller.jpg" alt=""></p>
-<p>Controllers within a storyboard can also be instantiated by their identifier, which is set in the identity inspector. If you had a view controller with an identifier of Palette, you could instantiate the view controller and show it in a window using the following code:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="keyword">let</span> storyboard = <span class="type">NSStoryboard</span>(name: <span class="string">"Main"</span>, bundle: <span class="literal">nil</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> vc = storyboard.instantiateControllerWithIdentifier(<span class="string">"Palette"</span>)</span><br><span class="line">            <span class="keyword">as</span>? <span class="type">NSViewController</span> &#123;</span><br><span class="line">        paletteWindow = <span class="type">NSWindow</span>(contentViewController: vc)</span><br><span class="line">        paletteWindow.makeKeyAndOrderFront(<span class="literal">nil</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-      
+  <section id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        IT
+        <small>Category</small>
+      </h2>
     </div>
 
-    <div>
+    
       
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-      
-    </div>
-
-    <div>
-      
+            <a class="post-title-link" href="/en/IT/iptables.html" itemprop="url">
+              
+                <span itemprop="name">iptables</span>
+              
+            </a>
         
+      </h1>
 
-      
-    </div>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-07-16T11:49:56+08:00"
+              content="2016-07-16" >
+          07-16
+        </time>
+      </div>
 
-    <footer class="post-footer">
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/en/Cocoa/Status Bar App.html" rel="next" title="Status Bar App">
-                <i class="fa fa-chevron-left"></i> Status Bar App
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/en/Cocoa/Preferences Window.html" rel="prev" title="Preferences Window">
-                Preferences Window <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+    </header>
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+
 
 
           </div>
@@ -411,17 +269,6 @@ After it’">
 
 
           
-  <div class="comments" id="comments">
-    
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -441,17 +288,8 @@ After it’">
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://ww3.sinaimg.cn/large/006ghf8igw1f3lxt6lgnsj30lc0jygn8.jpg"
@@ -544,17 +382,6 @@ After it’">
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Storyboard-introduction"><span class="nav-number">1.</span> <span class="nav-text">Storyboard introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#How-is-the-Storyboard-Loaded"><span class="nav-number">2.</span> <span class="nav-text">How is the Storyboard Loaded?</span></a></li></ol></div>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -651,10 +478,6 @@ After it’">
   
 
   
-  <script type="text/javascript" src="/en/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/en/js/src/post-details.js?v=5.0.1"></script>
-
-
 
   
 
@@ -671,9 +494,9 @@ After it’">
 
     <script type="text/javascript">
       var disqus_shortname = 'atjason';
-      var disqus_identifier = 'Cocoa/Storyboard.html';
-      var disqus_title = 'Storyboard';
-      var disqus_url = 'http://atjason.com/en/en/Cocoa/Storyboard.html';
+      var disqus_identifier = 'categories/IT/index.html';
+      var disqus_title = '';
+      var disqus_url = '';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
@@ -684,8 +507,6 @@ After it’">
       }
 
       run_disqus_script('count.js');
-      
-        run_disqus_script('embed.js');
       
     </script>
   
