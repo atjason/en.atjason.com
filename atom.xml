@@ -5,7 +5,7 @@
   <link href="/en/atom.xml" rel="self"/>
   
   <link href="http://atjason.com/en/"/>
-  <updated>2016-07-16T08:24:35.000Z</updated>
+  <updated>2016-07-16T13:56:20.000Z</updated>
   <id>http://atjason.com/en/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="http://atjason.com/en/IT/iptables.html"/>
     <id>http://atjason.com/en/IT/iptables.html</id>
     <published>2016-07-16T03:49:56.000Z</published>
-    <updated>2016-07-16T08:24:35.000Z</updated>
+    <updated>2016-07-16T13:56:20.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;How-iptables-Works&quot;&gt;&lt;a href=&quot;#How-iptables-Works&quot; class=&quot;headerlink&quot; title=&quot;How iptables Works&quot;&gt;&lt;/a&gt;How iptables Works&lt;/h1&gt;&lt;p&gt;&lt;code&gt;iptables&lt;/code&gt; works by matching each packet that crosses the networking interface against a set of &lt;code&gt;rules&lt;/code&gt; (grouped by &lt;code&gt;chains&lt;/code&gt;) to decide what to do (called &lt;code&gt;target&lt;/code&gt;).&lt;/p&gt;
 &lt;h2 id=&quot;rules&quot;&gt;&lt;a href=&quot;#rules&quot; class=&quot;headerlink&quot; title=&quot;rules&quot;&gt;&lt;/a&gt;rules&lt;/h2&gt;&lt;p&gt;The iptables firewall operates by comparing network traffic against a set of &lt;code&gt;rules&lt;/code&gt;. The rules define the characteristics that a packet must have to match the rule, and the action that should be taken for matching packets.&lt;/p&gt;
-&lt;h2 id=&quot;chains&quot;&gt;&lt;a href=&quot;#chains&quot; class=&quot;headerlink&quot; title=&quot;chains&quot;&gt;&lt;/a&gt;chains&lt;/h2&gt;&lt;p&gt;These rules are organized into groups called &lt;code&gt;chains&lt;/code&gt;. A chain is a set of rules that a packet is checked against sequentially. When the packet matches one of the rules, it executes the associated action and is not checked against the remaining rules in the chain.&lt;br&gt;A user can create chains as needed. There are three chains defined by default. They are:&lt;br&gt;    ·    &lt;strong&gt;INPUT&lt;/strong&gt;: This chain handles all packets that are addressed to your server.&lt;br&gt;    ·    &lt;strong&gt;OUTPUT&lt;/strong&gt;: This chain contains rules for traffic created by your server.&lt;br&gt;    ·    &lt;strong&gt;FORWARD&lt;/strong&gt;: This chain is used to deal with traffic destined for other servers that are not created on your server.&lt;/p&gt;
+&lt;h2 id=&quot;chains&quot;&gt;&lt;a href=&quot;#chains&quot; class=&quot;headerlink&quot; title=&quot;chains&quot;&gt;&lt;/a&gt;chains&lt;/h2&gt;&lt;p&gt;These rules are organized into groups called &lt;code&gt;chains&lt;/code&gt;. A chain is a set of rules that a packet is checked against sequentially. When the packet matches one of the rules, it executes the associated action and is not checked against the remaining rules in the chain.&lt;br&gt;A user can create chains as needed. There are three chains defined by default. They are:&lt;br&gt;    ·    &lt;strong&gt;INPUT&lt;/strong&gt;: This chain handles all packets that are addressed to your server.&lt;br&gt;    ·    &lt;strong&gt;OUTPUT&lt;/strong&gt;: This chain contains rules for traffic created by your server.&lt;br&gt;    ·    &lt;strong&gt;FORWARD&lt;/strong&gt;: This chain is used to deal with traffic destined for other servers that are not created on your server.&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;policy&quot;&gt;&lt;a href=&quot;#policy&quot; class=&quot;headerlink&quot; title=&quot;policy&quot;&gt;&lt;/a&gt;policy&lt;/h3&gt;&lt;p&gt;Each chain can contain zero or more rules, and has a default &lt;code&gt;policy&lt;/code&gt;. The policy determines what happens when a packet does not match any rule. So policy could also be treated as the last rule in chain.&lt;/p&gt;
 &lt;h2 id=&quot;target&quot;&gt;&lt;a href=&quot;#target&quot; class=&quot;headerlink&quot; title=&quot;target&quot;&gt;&lt;/a&gt;target&lt;/h2&gt;&lt;p&gt;When the defined pattern matches, the action that takes place is called a &lt;code&gt;target&lt;/code&gt;.&lt;/p&gt;
 &lt;ul&gt;
@@ -170,7 +170,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;How-iptables-Works&quot;&gt;&lt;a href=&quot;#How-iptables-Works&quot; class=&quot;headerlink&quot; title=&quot;How iptables Works&quot;&gt;&lt;/a&gt;How iptables Works&lt;/h1&gt;&lt;p&gt;&lt;code&gt;
+      &lt;h1 id=&quot;How-iptables-Works&quot;&gt;&lt;a href=&quot;#How-iptables-Works&quot; class=&quot;headerlink&quot; title=&quot;How iptables Works&quot;&gt;&lt;/a&gt;How iptables Works&lt;/h1&gt;&lt;p&gt;&lt;code&gt;iptables&lt;/code&gt; works by matching each packet that crosses the networking interface against a set of &lt;code&gt;rules&lt;/code&gt; (grouped by &lt;code&gt;chains&lt;/code&gt;) to decide what to do (called &lt;code&gt;target&lt;/code&gt;).&lt;/p&gt;
+&lt;h2 id=&quot;rules&quot;&gt;&lt;a href=&quot;#rules&quot; class=&quot;headerlink&quot; title=&quot;rules&quot;&gt;&lt;/a&gt;rules&lt;/h2&gt;&lt;p&gt;The iptables firewall operates by comparing network traffic against a set of &lt;code&gt;rules&lt;/code&gt;. The rules define the characteristics that a packet must have to match the rule, and the action that should be taken for matching packets.&lt;/p&gt;
+&lt;h2 id=&quot;chains&quot;&gt;&lt;a href=&quot;#chains&quot; class=&quot;headerlink&quot; title=&quot;chains&quot;&gt;&lt;/a&gt;chains&lt;/h2&gt;&lt;p&gt;These rules are organized into groups called &lt;code&gt;chains&lt;/code&gt;. A chain is a set of rules that a packet is checked against sequentially. When the packet matches one of the rules, it executes the associated action and is not checked against the remaining rules in the chain.&lt;br&gt;A user can create chains as needed. There are three chains defined by default. They are:&lt;br&gt;    ·    &lt;strong&gt;INPUT&lt;/strong&gt;: This chain handles all packets that are addressed to your server.&lt;br&gt;    ·    &lt;strong&gt;OUTPUT&lt;/strong&gt;: This chain contains rules for traffic created by your server.&lt;br&gt;    ·    &lt;strong&gt;FORWARD&lt;/strong&gt;: This chain is used to deal with traffic destined for other servers that are not created on your server.&lt;br&gt;
     
     </summary>
     
