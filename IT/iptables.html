@@ -92,7 +92,7 @@ rulesThe iptables firewa">
 <meta property="og:site_name" content="Jason">
 <meta property="og:description" content="How iptables Worksiptables works by matching each packet that crosses the networking interface against a set of rules (grouped by chains) to decide what to do (called target).
 rulesThe iptables firewa">
-<meta property="og:updated_time" content="2016-07-16T13:56:20.000Z">
+<meta property="og:updated_time" content="2016-07-29T13:12:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iptables">
 <meta name="twitter:description" content="How iptables Worksiptables works by matching each packet that crosses the networking interface against a set of rules (grouped by chains) to decide what to do (called target).
@@ -400,7 +400,7 @@ rulesThe iptables firewa">
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install iptables-persistent</span><br></pre></td></tr></table></figure>
 <p>Once the installation is complete, you will have a new service called <code>iptables-persistent</code> that is configured to run at boot. This service will load in your rules and apply them when the server is started.</p>
 <p>If you ever update your firewall and want to preserve the changes, you must save your iptables rules for them to be persistent.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service iptables-persistent save</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service netfilter-persistent save</span><br></pre></td></tr></table></figure>
 <p>This will overwrite your /etc/iptables/rules.v4 and /etc/iptables/rules.v6 files with the policies you crafted on the command line.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/etc/iptables.rules </span><br><span class="line">/etc/iptables/rules.v4</span><br><span class="line">/etc/iptables/rules.v6</span><br></pre></td></tr></table></figure>
 <h1 id="Create-Your-Own-Firewall-by-iptables"><a href="#Create-Your-Own-Firewall-by-iptables" class="headerlink" title="Create Your Own Firewall by iptables"></a>Create Your Own Firewall by iptables</h1><p>Pre-condititions:</p>
