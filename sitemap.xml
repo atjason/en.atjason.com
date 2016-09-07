@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://atjason.com/en/en/Cocoa/Preferences%20Window.html</loc>
+    
+    <lastmod>2016-09-07T07:06:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://atjason.com/en/en/Cocoa/IAPHelper.html</loc>
     
     <lastmod>2016-08-26T04:12:47.000Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>http://atjason.com/en/en/Cocoa/Storyboard.html</loc>
     
     <lastmod>2016-05-17T12:27:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://atjason.com/en/en/Cocoa/Preferences%20Window.html</loc>
-    
-    <lastmod>2016-05-17T12:26:57.000Z</lastmod>
     
   </url>
   

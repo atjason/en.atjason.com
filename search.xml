@@ -473,7 +473,7 @@
     <entry>
       <title><![CDATA[Preferences Window]]></title>
       <url>http://atjason.com/en/en/Cocoa/Preferences%20Window.html</url>
-      <content type="html"><![CDATA[<p>This article introduces how to build preferences window on Mac OS X using Cocoa with Swift. The source code can be downloaded <a href="https://github.com/atjason/CocoaDemoWithSwift/tree/master/Preferences" target="_blank" rel="external">here</a>.</p>
+      <content type="html"><![CDATA[<p>This article introduces how to build preferences window on Mac OS X using Cocoa with Swift. The source code can be downloaded <a href="https://github.com/atjason/CocoaDemoWithSwift/tree/master/==~~~~==Preferences" target="_blank" rel="external">here</a>.</p>
 <p>Development environment:</p>
 <ul>
 <li>OS X: 10.11.4</li>
