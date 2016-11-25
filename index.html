@@ -27,7 +27,7 @@
 
   
   
-  <link href="/en/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -61,9 +61,9 @@
 
 
 
-<link href="/en/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/en/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Jason, Blog" />
@@ -72,12 +72,12 @@
 
 
 
-  <link rel="alternate" href="/en/atom.xml" title="Jason" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="Jason" type="application/atom+xml" />
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/en/favicon.ico?v=5.0.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
 
@@ -87,7 +87,7 @@
 <meta name="description" content="Digital Nomad, Mac Developer">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Jason">
-<meta property="og:url" content="http://atjason.com/en/index.html">
+<meta property="og:url" content="http://en.atjason.com/index.html">
 <meta property="og:site_name" content="Jason">
 <meta property="og:description" content="Digital Nomad, Mac Developer">
 <meta name="twitter:card" content="summary">
@@ -150,7 +150,7 @@
   
 
   <div class="custom-logo-site-title">
-    <a href="/en/"  class="brand" rel="start">
+    <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">Jason</span>
       <span class="logo-line-after"><i></i></span>
@@ -175,7 +175,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/en/categories" rel="section">
+          <a href="/categories" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -245,7 +245,7 @@
             
               
                 
-                <a class="post-title-link" href="/en/Cocoa/IAPHelper.html" itemprop="url">
+                <a class="post-title-link" href="/Cocoa/IAPHelper.html" itemprop="url">
                   In-App Purchase Helper
                 </a>
               
@@ -273,7 +273,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/en/categories/Cocoa/" itemprop="url" rel="index">
+                  <a href="/categories/Cocoa/" itemprop="url" rel="index">
                     <span itemprop="name">Cocoa</span>
                   </a>
                 </span>
@@ -289,7 +289,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/en/Cocoa/IAPHelper.html#comments" itemprop="discussionUrl">
+                <a href="/Cocoa/IAPHelper.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Cocoa/IAPHelper.html" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -318,7 +318,7 @@
 <p><a href="https://github.com/atjason/IAPHelper">IAPHelper opens source and welcome to improve it.</a></p>
 <h1 id="IAPHelper-Usage"><a href="#IAPHelper-Usage" class="headerlink" title="IAPHelper Usage"></a>IAPHelper Usage</h1><h2 id="Request-Product-List"><a href="#Request-Product-List" class="headerlink" title="Request Product List"></a>Request Product List</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> productIdentifiers = <span class="type">Set</span>&lt;<span class="type">ProductIdentifier</span>&gt;()</span><br><span class="line">productIdentifiers.insert(<span class="string">"product_id_1"</span>)</span><br><span class="line">productIdentifiers.insert(<span class="string">"product_id_2"</span>)</span><br><span class="line"></span><br><span class="line"><span class="type">IAP</span>.requestProducts(productIdentifiers) &#123; (response, error) <span class="keyword">in</span></span><br><span class="line">	<span class="keyword">if</span> <span class="keyword">let</span> products = response?.products <span class="keyword">where</span> !products.isEmpty &#123;</span><br><span class="line">		<span class="comment">// Get the valid products</span></span><br><span class="line">	   </span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> <span class="keyword">let</span> invalidProductIdentifiers = response?.invalidProductIdentifiers &#123;</span><br><span class="line">		<span class="comment">// Some products id are invalid</span></span><br><span class="line">	   </span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> error?.code == <span class="type">SKErrorPaymentCancelled</span> &#123;</span><br><span class="line">		<span class="comment">// User cancelled</span></span><br><span class="line">	   </span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="comment">// Some error happened</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
-            <a class="btn" href="/en/Cocoa/IAPHelper.html#more" rel="contents">
+            <a class="btn" href="/Cocoa/IAPHelper.html#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -369,7 +369,7 @@
             
               
                 
-                <a class="post-title-link" href="/en/IT/iptables.html" itemprop="url">
+                <a class="post-title-link" href="/IT/iptables.html" itemprop="url">
                   iptables
                 </a>
               
@@ -397,7 +397,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/en/categories/IT/" itemprop="url" rel="index">
+                  <a href="/categories/IT/" itemprop="url" rel="index">
                     <span itemprop="name">IT</span>
                   </a>
                 </span>
@@ -413,7 +413,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/en/IT/iptables.html#comments" itemprop="discussionUrl">
+                <a href="/IT/iptables.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="IT/iptables.html" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -442,7 +442,7 @@
 <h2 id="rules"><a href="#rules" class="headerlink" title="rules"></a>rules</h2><p>The iptables firewall operates by comparing network traffic against a set of <code>rules</code>. The rules define the characteristics that a packet must have to match the rule, and the action that should be taken for matching packets.</p>
 <h2 id="chains"><a href="#chains" class="headerlink" title="chains"></a>chains</h2><p>These rules are organized into groups called <code>chains</code>. A chain is a set of rules that a packet is checked against sequentially. When the packet matches one of the rules, it executes the associated action and is not checked against the remaining rules in the chain.<br>A user can create chains as needed. There are three chains defined by default. They are:<br>    ·    <strong>INPUT</strong>: This chain handles all packets that are addressed to your server.<br>    ·    <strong>OUTPUT</strong>: This chain contains rules for traffic created by your server.<br>    ·    <strong>FORWARD</strong>: This chain is used to deal with traffic destined for other servers that are not created on your server.<br>
           <div class="post-more-link text-center">
-            <a class="btn" href="/en/IT/iptables.html#more" rel="contents">
+            <a class="btn" href="/IT/iptables.html#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -493,7 +493,7 @@
             
               
                 
-                <a class="post-title-link" href="/en/Cocoa/MacGoogleAnalytics.html" itemprop="url">
+                <a class="post-title-link" href="/Cocoa/MacGoogleAnalytics.html" itemprop="url">
                   Google Analytics for Mac
                 </a>
               
@@ -521,7 +521,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/en/categories/Cocoa/" itemprop="url" rel="index">
+                  <a href="/categories/Cocoa/" itemprop="url" rel="index">
                     <span itemprop="name">Cocoa</span>
                   </a>
                 </span>
@@ -537,7 +537,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/en/Cocoa/MacGoogleAnalytics.html#comments" itemprop="discussionUrl">
+                <a href="/Cocoa/MacGoogleAnalytics.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Cocoa/MacGoogleAnalytics.html" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -580,7 +580,7 @@
 </li>
 </ul>
           <div class="post-more-link text-center">
-            <a class="btn" href="/en/Cocoa/MacGoogleAnalytics.html#more" rel="contents">
+            <a class="btn" href="/Cocoa/MacGoogleAnalytics.html#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -631,7 +631,7 @@
             
               
                 
-                <a class="post-title-link" href="/en/Cocoa/Action When Enter-key is Pressed on NSTextField.html" itemprop="url">
+                <a class="post-title-link" href="/Cocoa/Action When Enter-key is Pressed on NSTextField.html" itemprop="url">
                   Action When Enter-key is Pressed on NSTextField
                 </a>
               
@@ -659,7 +659,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/en/categories/Cocoa/" itemprop="url" rel="index">
+                  <a href="/categories/Cocoa/" itemprop="url" rel="index">
                     <span itemprop="name">Cocoa</span>
                   </a>
                 </span>
@@ -675,7 +675,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/en/Cocoa/Action When Enter-key is Pressed on NSTextField.html#comments" itemprop="discussionUrl">
+                <a href="/Cocoa/Action When Enter-key is Pressed on NSTextField.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Cocoa/Action When Enter-key is Pressed on NSTextField.html" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -753,7 +753,7 @@
             
               
                 
-                <a class="post-title-link" href="/en/Cocoa/XCode Debug Flag for Swift.html" itemprop="url">
+                <a class="post-title-link" href="/Cocoa/XCode Debug Flag for Swift.html" itemprop="url">
                   XCode Debug Flag for Swift
                 </a>
               
@@ -781,7 +781,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/en/categories/Cocoa/" itemprop="url" rel="index">
+                  <a href="/categories/Cocoa/" itemprop="url" rel="index">
                     <span itemprop="name">Cocoa</span>
                   </a>
                 </span>
@@ -797,7 +797,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/en/Cocoa/XCode Debug Flag for Swift.html#comments" itemprop="discussionUrl">
+                <a href="/Cocoa/XCode Debug Flag for Swift.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Cocoa/XCode Debug Flag for Swift.html" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -878,7 +878,7 @@
             
               
                 
-                <a class="post-title-link" href="/en/Cocoa/SwiftCocoa_Localization.html" itemprop="url">
+                <a class="post-title-link" href="/Cocoa/SwiftCocoa_Localization.html" itemprop="url">
                   Swift & Cocoa: Localization
                 </a>
               
@@ -906,7 +906,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/en/categories/Cocoa/" itemprop="url" rel="index">
+                  <a href="/categories/Cocoa/" itemprop="url" rel="index">
                     <span itemprop="name">Cocoa</span>
                   </a>
                 </span>
@@ -922,7 +922,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/en/Cocoa/SwiftCocoa_Localization.html#comments" itemprop="discussionUrl">
+                <a href="/Cocoa/SwiftCocoa_Localization.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Cocoa/SwiftCocoa_Localization.html" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -969,7 +969,7 @@
 <p><img src="http://p.appsites.io/2016-05-14-SelectPseudolanguage.jpg" alt=""></p>
 <p>Now, a preview of the localization appears in the assistant editor. If you choose a real language, strings that do not need to be localized or need to be localized, but currently are not, appear in uppercase.</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/en/Cocoa/SwiftCocoa_Localization.html#more" rel="contents">
+            <a class="btn" href="/Cocoa/SwiftCocoa_Localization.html#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1020,7 +1020,7 @@
             
               
                 
-                <a class="post-title-link" href="/en/Cocoa/SwiftCocoa_Auto Launch at Login.html" itemprop="url">
+                <a class="post-title-link" href="/Cocoa/SwiftCocoa_Auto Launch at Login.html" itemprop="url">
                   Swift & Cocoa: Auto Launch at Login
                 </a>
               
@@ -1048,7 +1048,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/en/categories/Cocoa/" itemprop="url" rel="index">
+                  <a href="/categories/Cocoa/" itemprop="url" rel="index">
                     <span itemprop="name">Cocoa</span>
                   </a>
                 </span>
@@ -1064,7 +1064,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/en/Cocoa/SwiftCocoa_Auto Launch at Login.html#comments" itemprop="discussionUrl">
+                <a href="/Cocoa/SwiftCocoa_Auto Launch at Login.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Cocoa/SwiftCocoa_Auto Launch at Login.html" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -1103,7 +1103,7 @@
 <p>How to deal with it?<br>Easy, just add a checkbox in Preferences to let user choose auto launch or not. And, make sure, do <strong>NOT</strong> enable it by default. Otherwise Apple will reject it (I was ever rejected for this reason).</p>
 <p><img src="http://p.appsites.io/2016-05-14-AutoLaunchApp.jpg" alt=""></p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/en/Cocoa/SwiftCocoa_Auto Launch at Login.html#more" rel="contents">
+            <a class="btn" href="/Cocoa/SwiftCocoa_Auto Launch at Login.html#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1154,7 +1154,7 @@
             
               
                 
-                <a class="post-title-link" href="/en/Cocoa/Preferences Window.html" itemprop="url">
+                <a class="post-title-link" href="/Cocoa/Preferences Window.html" itemprop="url">
                   Preferences Window
                 </a>
               
@@ -1182,7 +1182,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/en/categories/Cocoa/" itemprop="url" rel="index">
+                  <a href="/categories/Cocoa/" itemprop="url" rel="index">
                     <span itemprop="name">Cocoa</span>
                   </a>
                 </span>
@@ -1198,7 +1198,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/en/Cocoa/Preferences Window.html#comments" itemprop="discussionUrl">
+                <a href="/Cocoa/Preferences Window.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Cocoa/Preferences Window.html" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -1234,7 +1234,7 @@
 <p><img src="http://p.appsites.io/2016-05-14-Preferences Window.jpg" alt=""></p>
 <h1 id="NSTabViewController"><a href="#NSTabViewController" class="headerlink" title="NSTabViewController"></a>NSTabViewController</h1><p>The mainly used class is <a href="https://developer.apple.com/library/mac/documentation/AppKit/Reference/NSTabViewController_Class/"><code>NSTabViewController</code></a>.<br>An <code>NSTabViewController</code> object is a container view controller that manages a tab view interface, which organizes multiple pages of content but displays only one of those pages at a time. Each page of content is managed by a separate child view controller. Navigation between child view controllers is accomplished with the help of an NSTabView object, which the tab view controller manages. When the user selects a new tab, the tab view controller displays the content associated with the associated child view controller, replacing the previous content.</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/en/Cocoa/Preferences Window.html#more" rel="contents">
+            <a class="btn" href="/Cocoa/Preferences Window.html#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1285,7 +1285,7 @@
             
               
                 
-                <a class="post-title-link" href="/en/Cocoa/Storyboard.html" itemprop="url">
+                <a class="post-title-link" href="/Cocoa/Storyboard.html" itemprop="url">
                   Storyboard
                 </a>
               
@@ -1313,7 +1313,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/en/categories/Cocoa/" itemprop="url" rel="index">
+                  <a href="/categories/Cocoa/" itemprop="url" rel="index">
                     <span itemprop="name">Cocoa</span>
                   </a>
                 </span>
@@ -1329,7 +1329,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/en/Cocoa/Storyboard.html#comments" itemprop="discussionUrl">
+                <a href="/Cocoa/Storyboard.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Cocoa/Storyboard.html" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -1367,7 +1367,7 @@
 <p>To create the relationship segue between the window controller and the split view controller, control-drag from the blue Window Controller icon in the border on top of the window controller down to the split view controller. In the pop-up Relationship Segue window that appears, select window content.</p>
 <p><img src="http://p.appsites.io/2016-05-14-Create segue.jpg" alt=""></p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/en/Cocoa/Storyboard.html#more" rel="contents">
+            <a class="btn" href="/Cocoa/Storyboard.html#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1418,7 +1418,7 @@
             
               
                 
-                <a class="post-title-link" href="/en/Cocoa/Status Bar App.html" itemprop="url">
+                <a class="post-title-link" href="/Cocoa/Status Bar App.html" itemprop="url">
                   Status Bar App
                 </a>
               
@@ -1446,7 +1446,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/en/categories/Cocoa/" itemprop="url" rel="index">
+                  <a href="/categories/Cocoa/" itemprop="url" rel="index">
                     <span itemprop="name">Cocoa</span>
                   </a>
                 </span>
@@ -1462,7 +1462,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/en/Cocoa/Status Bar App.html#comments" itemprop="discussionUrl">
+                <a href="/Cocoa/Status Bar App.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Cocoa/Status Bar App.html" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -1499,7 +1499,7 @@
 <h1 id="How-to-Run-as-Status-Bar-App"><a href="#How-to-Run-as-Status-Bar-App" class="headerlink" title="How to Run as Status Bar App?"></a>How to Run as Status Bar App?</h1><p>In another word, how to make the application not show a dock icon? The key point is to modify the application’s Info.plist file and indicate that it’s an agent. “Agent” is Apple’s term for a background application that doesn’t present a dock icon.<br>Select the project at the top of the project navigator. Open the Info tab at the top of the main editor. Add a new entry of <strong>Application is agent (UIElement)</strong> and set the value of this entry to YES.</p>
 <p><img src="http://p.appsites.io/2016-05-14-Application is agent.jpg" alt=""></p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/en/Cocoa/Status Bar App.html#more" rel="contents">
+            <a class="btn" href="/Cocoa/Status Bar App.html#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1533,7 +1533,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/en/page/2/">2</a><a class="extend next" rel="next" href="/en/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1573,7 +1573,7 @@
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/en/">
+            <a href="/">
               <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">posts</span>
             </a>
@@ -1581,7 +1581,7 @@
 
           
             <div class="site-state-item site-state-categories">
-              <a href="/en/categories">
+              <a href="/categories">
                 <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">categories</span>
               </a>
@@ -1594,7 +1594,7 @@
 
         
           <div class="feed-link motion-element">
-            <a href="/en/atom.xml" rel="alternate">
+            <a href="/atom.xml" rel="alternate">
               <i class="fa fa-rss"></i>
               RSS
             </a>
@@ -1721,42 +1721,42 @@
 
 
   
-  <script type="text/javascript" src="/en/lib/jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  <script type="text/javascript" src="/en/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  <script type="text/javascript" src="/en/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  <script type="text/javascript" src="/en/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/en/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/en/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-
-  
-
-
-  <script type="text/javascript" src="/en/js/src/utils.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/en/js/src/motion.js?v=5.0.1"></script>
-
-
-
-  
-  
-
-  
 
   
 
 
-  <script type="text/javascript" src="/en/js/src/bootstrap.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
 
 
 
@@ -1797,7 +1797,7 @@
     if (search_path.length == 0) {
        search_path = "search.xml";
     }
-    var path = "/en/" + search_path;
+    var path = "/" + search_path;
     // monitor main search box;
 
     function proceedsearch() {

@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Jason</title>
   
-  <link href="/en/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
-  <link href="http://atjason.com/en/"/>
+  <link href="http://en.atjason.com/"/>
   <updated>2016-08-26T04:12:47.000Z</updated>
-  <id>http://atjason.com/en/</id>
+  <id>http://en.atjason.com/</id>
   
   <author>
     <name>Jason</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>In-App Purchase Helper</title>
-    <link href="http://atjason.com/en/Cocoa/IAPHelper.html"/>
-    <id>http://atjason.com/en/Cocoa/IAPHelper.html</id>
+    <link href="http://en.atjason.com/Cocoa/IAPHelper.html"/>
+    <id>http://en.atjason.com/Cocoa/IAPHelper.html</id>
     <published>2016-08-26T04:10:27.000Z</published>
     <updated>2016-08-26T04:12:47.000Z</updated>
     
@@ -54,15 +54,15 @@
     
     </summary>
     
-      <category term="Cocoa" scheme="http://atjason.com/en/categories/Cocoa/"/>
+      <category term="Cocoa" scheme="http://en.atjason.com/categories/Cocoa/"/>
     
     
   </entry>
   
   <entry>
     <title>iptables</title>
-    <link href="http://atjason.com/en/IT/iptables.html"/>
-    <id>http://atjason.com/en/IT/iptables.html</id>
+    <link href="http://en.atjason.com/IT/iptables.html"/>
+    <id>http://en.atjason.com/IT/iptables.html</id>
     <published>2016-07-16T03:49:56.000Z</published>
     <updated>2016-08-06T08:56:44.000Z</updated>
     
@@ -220,15 +220,15 @@
     
     </summary>
     
-      <category term="IT" scheme="http://atjason.com/en/categories/IT/"/>
+      <category term="IT" scheme="http://en.atjason.com/categories/IT/"/>
     
     
   </entry>
   
   <entry>
     <title>Google Analytics for Mac</title>
-    <link href="http://atjason.com/en/Cocoa/MacGoogleAnalytics.html"/>
-    <id>http://atjason.com/en/Cocoa/MacGoogleAnalytics.html</id>
+    <link href="http://en.atjason.com/Cocoa/MacGoogleAnalytics.html"/>
+    <id>http://en.atjason.com/Cocoa/MacGoogleAnalytics.html</id>
     <published>2016-05-13T14:48:21.000Z</published>
     <updated>2016-05-17T23:38:05.000Z</updated>
     
@@ -306,7 +306,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;code&gt;PingURL&lt;/code&gt;&lt;ul&gt;
-&lt;li&gt;The full url of gapp.html, e.g., ‘&lt;a href=&quot;http://atjason.com/MacGoogleAnalytics/gapp.html&quot;&gt;http://atjason.com/MacGoogleAnalytics/gapp.html&lt;/a&gt;‘ mentioned above, or the url you deployed.&lt;/li&gt;
+&lt;li&gt;The full url of gapp.html, e.g., ‘&lt;a href=&quot;http://atjason.com/MacGoogleAnalytics/gapp.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://atjason.com/MacGoogleAnalytics/gapp.html&lt;/a&gt;‘ mentioned above, or the url you deployed.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;code&gt;PingTimeInterval&lt;/code&gt;&lt;ul&gt;
@@ -364,15 +364,15 @@
     
     </summary>
     
-      <category term="Cocoa" scheme="http://atjason.com/en/categories/Cocoa/"/>
+      <category term="Cocoa" scheme="http://en.atjason.com/categories/Cocoa/"/>
     
     
   </entry>
   
   <entry>
     <title>Action When Enter-key is Pressed on NSTextField</title>
-    <link href="http://atjason.com/en/Cocoa/Action%20When%20Enter-key%20is%20Pressed%20on%20NSTextField.html"/>
-    <id>http://atjason.com/en/Cocoa/Action When Enter-key is Pressed on NSTextField.html</id>
+    <link href="http://en.atjason.com/Cocoa/Action%20When%20Enter-key%20is%20Pressed%20on%20NSTextField.html"/>
+    <id>http://en.atjason.com/Cocoa/Action When Enter-key is Pressed on NSTextField.html</id>
     <published>2016-04-17T03:45:00.000Z</published>
     <updated>2016-05-14T05:03:53.000Z</updated>
     
@@ -387,15 +387,15 @@
     
     </summary>
     
-      <category term="Cocoa" scheme="http://atjason.com/en/categories/Cocoa/"/>
+      <category term="Cocoa" scheme="http://en.atjason.com/categories/Cocoa/"/>
     
     
   </entry>
   
   <entry>
     <title>XCode Debug Flag for Swift</title>
-    <link href="http://atjason.com/en/Cocoa/XCode%20Debug%20Flag%20for%20Swift.html"/>
-    <id>http://atjason.com/en/Cocoa/XCode Debug Flag for Swift.html</id>
+    <link href="http://en.atjason.com/Cocoa/XCode%20Debug%20Flag%20for%20Swift.html"/>
+    <id>http://en.atjason.com/Cocoa/XCode Debug Flag for Swift.html</id>
     <published>2016-04-16T12:34:00.000Z</published>
     <updated>2016-05-14T05:04:15.000Z</updated>
     
@@ -413,15 +413,15 @@
     
     </summary>
     
-      <category term="Cocoa" scheme="http://atjason.com/en/categories/Cocoa/"/>
+      <category term="Cocoa" scheme="http://en.atjason.com/categories/Cocoa/"/>
     
     
   </entry>
   
   <entry>
     <title>Swift &amp; Cocoa: Localization</title>
-    <link href="http://atjason.com/en/Cocoa/SwiftCocoa_Localization.html"/>
-    <id>http://atjason.com/en/Cocoa/SwiftCocoa_Localization.html</id>
+    <link href="http://en.atjason.com/Cocoa/SwiftCocoa_Localization.html"/>
+    <id>http://en.atjason.com/Cocoa/SwiftCocoa_Localization.html</id>
     <published>2016-04-15T04:20:00.000Z</published>
     <updated>2016-05-17T12:26:28.000Z</updated>
     
@@ -540,15 +540,15 @@
     
     </summary>
     
-      <category term="Cocoa" scheme="http://atjason.com/en/categories/Cocoa/"/>
+      <category term="Cocoa" scheme="http://en.atjason.com/categories/Cocoa/"/>
     
     
   </entry>
   
   <entry>
     <title>Swift &amp; Cocoa: Auto Launch at Login</title>
-    <link href="http://atjason.com/en/Cocoa/SwiftCocoa_Auto%20Launch%20at%20Login.html"/>
-    <id>http://atjason.com/en/Cocoa/SwiftCocoa_Auto Launch at Login.html</id>
+    <link href="http://en.atjason.com/Cocoa/SwiftCocoa_Auto%20Launch%20at%20Login.html"/>
+    <id>http://en.atjason.com/Cocoa/SwiftCocoa_Auto Launch at Login.html</id>
     <published>2016-04-14T08:50:00.000Z</published>
     <updated>2016-05-17T12:26:42.000Z</updated>
     
@@ -627,15 +627,15 @@
     
     </summary>
     
-      <category term="Cocoa" scheme="http://atjason.com/en/categories/Cocoa/"/>
+      <category term="Cocoa" scheme="http://en.atjason.com/categories/Cocoa/"/>
     
     
   </entry>
   
   <entry>
     <title>Preferences Window</title>
-    <link href="http://atjason.com/en/Cocoa/Preferences%20Window.html"/>
-    <id>http://atjason.com/en/Cocoa/Preferences Window.html</id>
+    <link href="http://en.atjason.com/Cocoa/Preferences%20Window.html"/>
+    <id>http://en.atjason.com/Cocoa/Preferences Window.html</id>
     <published>2016-04-13T07:42:00.000Z</published>
     <updated>2016-09-07T07:06:00.000Z</updated>
     
@@ -677,15 +677,15 @@
     
     </summary>
     
-      <category term="Cocoa" scheme="http://atjason.com/en/categories/Cocoa/"/>
+      <category term="Cocoa" scheme="http://en.atjason.com/categories/Cocoa/"/>
     
     
   </entry>
   
   <entry>
     <title>Storyboard</title>
-    <link href="http://atjason.com/en/Cocoa/Storyboard.html"/>
-    <id>http://atjason.com/en/Cocoa/Storyboard.html</id>
+    <link href="http://en.atjason.com/Cocoa/Storyboard.html"/>
+    <id>http://en.atjason.com/Cocoa/Storyboard.html</id>
     <published>2016-04-13T01:50:00.000Z</published>
     <updated>2016-05-17T12:27:02.000Z</updated>
     
@@ -726,15 +726,15 @@
     
     </summary>
     
-      <category term="Cocoa" scheme="http://atjason.com/en/categories/Cocoa/"/>
+      <category term="Cocoa" scheme="http://en.atjason.com/categories/Cocoa/"/>
     
     
   </entry>
   
   <entry>
     <title>Status Bar App</title>
-    <link href="http://atjason.com/en/Cocoa/Status%20Bar%20App.html"/>
-    <id>http://atjason.com/en/Cocoa/Status Bar App.html</id>
+    <link href="http://en.atjason.com/Cocoa/Status%20Bar%20App.html"/>
+    <id>http://en.atjason.com/Cocoa/Status Bar App.html</id>
     <published>2016-04-08T04:56:00.000Z</published>
     <updated>2016-05-20T09:34:30.000Z</updated>
     
@@ -822,15 +822,15 @@
     
     </summary>
     
-      <category term="Cocoa" scheme="http://atjason.com/en/categories/Cocoa/"/>
+      <category term="Cocoa" scheme="http://en.atjason.com/categories/Cocoa/"/>
     
     
   </entry>
   
   <entry>
     <title>Use NSOutlineView With NSTreeController</title>
-    <link href="http://atjason.com/en/Cocoa/Outline%20With%20Controller.html"/>
-    <id>http://atjason.com/en/Cocoa/Outline With Controller.html</id>
+    <link href="http://en.atjason.com/Cocoa/Outline%20With%20Controller.html"/>
+    <id>http://en.atjason.com/Cocoa/Outline With Controller.html</id>
     <published>2016-04-06T12:38:00.000Z</published>
     <updated>2016-05-14T05:06:19.000Z</updated>
     
@@ -923,15 +923,15 @@
     
     </summary>
     
-      <category term="Cocoa" scheme="http://atjason.com/en/categories/Cocoa/"/>
+      <category term="Cocoa" scheme="http://en.atjason.com/categories/Cocoa/"/>
     
     
   </entry>
   
   <entry>
     <title>Use NSOutlineView With DataSource and Delegate</title>
-    <link href="http://atjason.com/en/Cocoa/Outline.html"/>
-    <id>http://atjason.com/en/Cocoa/Outline.html</id>
+    <link href="http://en.atjason.com/Cocoa/Outline.html"/>
+    <id>http://en.atjason.com/Cocoa/Outline.html</id>
     <published>2016-04-06T05:11:00.000Z</published>
     <updated>2016-05-21T09:59:02.000Z</updated>
     
@@ -993,7 +993,7 @@
     
     </summary>
     
-      <category term="Cocoa" scheme="http://atjason.com/en/categories/Cocoa/"/>
+      <category term="Cocoa" scheme="http://en.atjason.com/categories/Cocoa/"/>
     
     
   </entry>

@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[In-App Purchase Helper]]></title>
-      <url>http://atjason.com/en/en/Cocoa/IAPHelper.html</url>
+      <url>http://en.atjason.com/Cocoa/IAPHelper.html</url>
       <content type="html"><![CDATA[<h1 id="What’s-IAPHelper"><a href="#What’s-IAPHelper" class="headerlink" title="What’s IAPHelper"></a>What’s IAPHelper</h1><p>IAPHelper simply wraps the API of Apple’s In-App Purchase using Swift. Very lightweight and easy to use.</p>
 <p><a href="https://github.com/atjason/IAPHelper" target="_blank" rel="external">IAPHelper opens source and welcome to improve it.</a></p>
 <h1 id="IAPHelper-Usage"><a href="#IAPHelper-Usage" class="headerlink" title="IAPHelper Usage"></a>IAPHelper Usage</h1><h2 id="Request-Product-List"><a href="#Request-Product-List" class="headerlink" title="Request Product List"></a>Request Product List</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> productIdentifiers = <span class="type">Set</span>&lt;<span class="type">ProductIdentifier</span>&gt;()</span><br><span class="line">productIdentifiers.insert(<span class="string">"product_id_1"</span>)</span><br><span class="line">productIdentifiers.insert(<span class="string">"product_id_2"</span>)</span><br><span class="line"></span><br><span class="line"><span class="type">IAP</span>.requestProducts(productIdentifiers) &#123; (response, error) <span class="keyword">in</span></span><br><span class="line">	<span class="keyword">if</span> <span class="keyword">let</span> products = response?.products <span class="keyword">where</span> !products.isEmpty &#123;</span><br><span class="line">		<span class="comment">// Get the valid products</span></span><br><span class="line">	   </span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> <span class="keyword">let</span> invalidProductIdentifiers = response?.invalidProductIdentifiers &#123;</span><br><span class="line">		<span class="comment">// Some products id are invalid</span></span><br><span class="line">	   </span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> error?.code == <span class="type">SKErrorPaymentCancelled</span> &#123;</span><br><span class="line">		<span class="comment">// User cancelled</span></span><br><span class="line">	   </span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="comment">// Some error happened</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -33,7 +33,7 @@
     
     <entry>
       <title><![CDATA[iptables]]></title>
-      <url>http://atjason.com/en/en/IT/iptables.html</url>
+      <url>http://en.atjason.com/IT/iptables.html</url>
       <content type="html"><![CDATA[<h1 id="How-iptables-Works"><a href="#How-iptables-Works" class="headerlink" title="How iptables Works"></a>How iptables Works</h1><p><code>iptables</code> works by matching each packet that crosses the networking interface against a set of <code>rules</code> (grouped by <code>chains</code>) to decide what to do (called <code>target</code>).</p>
 <h2 id="rules"><a href="#rules" class="headerlink" title="rules"></a>rules</h2><p>The iptables firewall operates by comparing network traffic against a set of <code>rules</code>. The rules define the characteristics that a packet must have to match the rule, and the action that should be taken for matching packets.</p>
 <h2 id="chains"><a href="#chains" class="headerlink" title="chains"></a>chains</h2><p>These rules are organized into groups called <code>chains</code>. A chain is a set of rules that a packet is checked against sequentially. When the packet matches one of the rules, it executes the associated action and is not checked against the remaining rules in the chain.<br>A user can create chains as needed. There are three chains defined by default. They are:<br>    ·    <strong>INPUT</strong>: This chain handles all packets that are addressed to your server.<br>    ·    <strong>OUTPUT</strong>: This chain contains rules for traffic created by your server.<br>    ·    <strong>FORWARD</strong>: This chain is used to deal with traffic destined for other servers that are not created on your server.<br><a id="more"></a></p>
@@ -183,7 +183,7 @@
     
     <entry>
       <title><![CDATA[Google Analytics for Mac]]></title>
-      <url>http://atjason.com/en/en/Cocoa/MacGoogleAnalytics.html</url>
+      <url>http://en.atjason.com/Cocoa/MacGoogleAnalytics.html</url>
       <content type="html"><![CDATA[<p><img src="http://ww2.sinaimg.cn/large/a15b4afegw1f3z6w5n74yj20rs0go0vm" alt="07:34:46 AM"></p>
 <p><a href="https://github.com/atjason/MacGoogleAnalytics" target="_blank" rel="external">MacGoogleAnalytics</a> is an open source library to use Google Analytics on Mac OS X.</p>
 <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>As we know, Google Analytics is perfect for user data collection and analytics. But unfortunately, there’s no official SDK for Mac OS X.</p>
@@ -258,7 +258,7 @@
 </ul>
 </li>
 <li><code>PingURL</code><ul>
-<li>The full url of gapp.html, e.g., ‘<a href="http://atjason.com/MacGoogleAnalytics/gapp.html">http://atjason.com/MacGoogleAnalytics/gapp.html</a>‘ mentioned above, or the url you deployed.</li>
+<li>The full url of gapp.html, e.g., ‘<a href="http://atjason.com/MacGoogleAnalytics/gapp.html" target="_blank" rel="external">http://atjason.com/MacGoogleAnalytics/gapp.html</a>‘ mentioned above, or the url you deployed.</li>
 </ul>
 </li>
 <li><code>PingTimeInterval</code><ul>
@@ -297,7 +297,7 @@
     
     <entry>
       <title><![CDATA[Action When Enter-key is Pressed on NSTextField]]></title>
-      <url>http://atjason.com/en/en/Cocoa/Action%20When%20Enter-key%20is%20Pressed%20on%20NSTextField.html</url>
+      <url>http://en.atjason.com/Cocoa/Action%20When%20Enter-key%20is%20Pressed%20on%20NSTextField.html</url>
       <content type="html"><![CDATA[<h1 id="Add-Action-in-NSTextField’s-Delegate"><a href="#Add-Action-in-NSTextField’s-Delegate" class="headerlink" title="Add Action in NSTextField’s Delegate"></a>Add Action in NSTextField’s Delegate</h1><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@IBAction</span> <span class="function"><span class="keyword">func</span> <span class="title">textFieldAction</span><span class="params">(sender: NSTextField)</span></span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(sender.stringValue)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="Connect-NSTextField’s-Action-to-Delegate’s-One"><a href="#Connect-NSTextField’s-Action-to-Delegate’s-One" class="headerlink" title="Connect NSTextField’s Action to Delegate’s One"></a>Connect NSTextField’s Action to Delegate’s One</h1><p><img src="http://p.appsites.io/2016-05-14-Connect.jpg" alt=""></p>
 <h1 id="Set-NSTextField’s-Action-Type"><a href="#Set-NSTextField’s-Action-Type" class="headerlink" title="Set NSTextField’s Action Type"></a>Set NSTextField’s Action Type</h1><p><img src="http://p.appsites.io/2016-05-14-SelectAction.jpg" alt=""></p>
@@ -306,7 +306,7 @@
     
     <entry>
       <title><![CDATA[XCode Debug Flag for Swift]]></title>
-      <url>http://atjason.com/en/en/Cocoa/XCode%20Debug%20Flag%20for%20Swift.html</url>
+      <url>http://en.atjason.com/Cocoa/XCode%20Debug%20Flag%20for%20Swift.html</url>
       <content type="html"><![CDATA[<h1 id="Set-Debug-Flag-in-XCode-for-Swift"><a href="#Set-Debug-Flag-in-XCode-for-Swift" class="headerlink" title="Set Debug Flag in XCode for Swift"></a>Set Debug Flag in XCode for Swift</h1><ul>
 <li>Open ‘Build Settings’ for Project (not target)</li>
 <li>Search ‘<strong>Swift Compiler - Custom Flags</strong>‘. Add a <code>-D DEBUG</code> entry in <code>Other Swift Flags</code></li>
@@ -318,7 +318,7 @@
     
     <entry>
       <title><![CDATA[Swift & Cocoa: Localization]]></title>
-      <url>http://atjason.com/en/en/Cocoa/SwiftCocoa_Localization.html</url>
+      <url>http://en.atjason.com/Cocoa/SwiftCocoa_Localization.html</url>
       <content type="html"><![CDATA[<p>This article records the detailed steps to add localizations for a project. The project could be downloaded <a href="https://github.com/atjason/LearnCocoaWithSwift/tree/master/26_LocalizationAndBundles/LocalizationDemo" target="_blank" rel="external">here</a>.</p>
 <p>Development environment:</p>
 <ul>
@@ -411,7 +411,7 @@
     
     <entry>
       <title><![CDATA[Swift & Cocoa: Auto Launch at Login]]></title>
-      <url>http://atjason.com/en/en/Cocoa/SwiftCocoa_Auto%20Launch%20at%20Login.html</url>
+      <url>http://en.atjason.com/Cocoa/SwiftCocoa_Auto%20Launch%20at%20Login.html</url>
       <content type="html"><![CDATA[<p>This article is based on this <a href="http://martiancraft.com/blog/2015/01/login-items/" target="_blank" rel="external">blog</a>. I adjust and implement using Swift. The project could be downloaded <a href="https://github.com/atjason/CocoaDemoWithSwift/tree/master/AutoLaunch" target="_blank" rel="external">here</a>.</p>
 <p>Development environment:</p>
 <ul>
@@ -472,7 +472,7 @@
     
     <entry>
       <title><![CDATA[Preferences Window]]></title>
-      <url>http://atjason.com/en/en/Cocoa/Preferences%20Window.html</url>
+      <url>http://en.atjason.com/Cocoa/Preferences%20Window.html</url>
       <content type="html"><![CDATA[<p>This article introduces how to build preferences window on Mac OS X using Cocoa with Swift. The source code can be downloaded <a href="https://github.com/atjason/CocoaDemoWithSwift/tree/master/==~~~~==Preferences" target="_blank" rel="external">here</a>.</p>
 <p>Development environment:</p>
 <ul>
@@ -499,7 +499,7 @@
     
     <entry>
       <title><![CDATA[Storyboard]]></title>
-      <url>http://atjason.com/en/en/Cocoa/Storyboard.html</url>
+      <url>http://en.atjason.com/Cocoa/Storyboard.html</url>
       <content type="html"><![CDATA[<p>This article introduces how to build status bar app on Mac OS X using Cocoa with Swift. The source code can be downloaded <a href="https://github.com/atjason/LearnCocoaWithSwift/tree/master/32_Storyboards/MirrorChatter" target="_blank" rel="external">here</a>.</p>
 <p>Development environment:</p>
 <ul>
@@ -523,7 +523,7 @@
     
     <entry>
       <title><![CDATA[Status Bar App]]></title>
-      <url>http://atjason.com/en/en/Cocoa/Status%20Bar%20App.html</url>
+      <url>http://en.atjason.com/Cocoa/Status%20Bar%20App.html</url>
       <content type="html"><![CDATA[<p>This article introduces how to build status bar app on Mac OS X using Cocoa with Swift. The source code can be downloaded <a href="https://github.com/atjason/CocoaDemoWithSwift/tree/master/StatusBarApp/StatusBarApp" target="_blank" rel="external">here</a>.</p>
 <p>Development environment:</p>
 <ul>
@@ -595,7 +595,7 @@
     
     <entry>
       <title><![CDATA[Use NSOutlineView With NSTreeController]]></title>
-      <url>http://atjason.com/en/en/Cocoa/Outline%20With%20Controller.html</url>
+      <url>http://en.atjason.com/Cocoa/Outline%20With%20Controller.html</url>
       <content type="html"><![CDATA[<p>This article describes the steps to use NSOutlineView With NSTreeController. The source code can be downloaded <a href="https://github.com/atjason/CocoaDemoWithSwift/tree/master/Outline/OutlineWithController" target="_blank" rel="external">here</a>.</p>
 <p>Development environment:</p>
 <ul>
@@ -672,7 +672,7 @@
     
     <entry>
       <title><![CDATA[Use NSOutlineView With DataSource and Delegate]]></title>
-      <url>http://atjason.com/en/en/Cocoa/Outline.html</url>
+      <url>http://en.atjason.com/Cocoa/Outline.html</url>
       <content type="html"><![CDATA[<p>This article describes the steps to use NSOutlineView With NSOutlineViewDataSource and NSOutlineViewDelegate. The source code can be downloaded <a href="https://github.com/atjason/CocoaDemoWithSwift/tree/master/Outline/Outline" target="_blank" rel="external">here</a>.</p>
 <p>Development environment:</p>
 <ul>
