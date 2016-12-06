@@ -832,7 +832,7 @@
     <link href="http://en.atjason.com/Cocoa/Outline%20With%20Controller.html"/>
     <id>http://en.atjason.com/Cocoa/Outline With Controller.html</id>
     <published>2016-04-06T12:38:00.000Z</published>
-    <updated>2016-12-06T01:51:54.000Z</updated>
+    <updated>2016-12-06T11:46:41.000Z</updated>
     
     <content type="html">&lt;p&gt;This article describes the steps to use NSOutlineView With NSTreeController. The source code can be downloaded &lt;a href=&quot;https://github.com/atjason/CocoaDemoWithSwift/tree/master/Outline/OutlineWithController&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Development environment:&lt;/p&gt;
@@ -858,41 +858,41 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5680/31411961046_8b688f8d9d_o.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5708/31411961566_5e43982c53_o.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Go to “Binding Inspector”.&lt;ul&gt;
 &lt;li&gt;Bind “Content Array” to self.nodes (which was created in previous step).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5708/31411961566_5e43982c53_o.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5490/31332915111_4232dc553e_o.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;##Bind NSOutlineView&lt;br&gt;Refer to commit till &lt;a href=&quot;https://github.com/atjason/CocoaDemoWithSwift/commit/f941f7be8e87ec8d99e67aaae4e059892b56e897&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;#f941f7b&lt;/a&gt;.&lt;br&gt;Steps&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Select “Outline View”.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Go to “Binding Inspector”.&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;Go to “Binding Inspector”.&lt;ul&gt;
 &lt;li&gt;Bind “Content” to “Tree Controller”‘s “arrangedObjects”. Ignore the warning in “Model Key Path”.&lt;/li&gt;
 &lt;li&gt;Bind “Selection Index Paths” to Tree Controller’s “selectionIndexPaths”.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5490/31332915111_4232dc553e_o.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Select “Table View Cell”.&lt;/p&gt;
-&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5796/31303410492_050d9a6a17_o.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Select “Table View Cell”.&lt;/li&gt;
 &lt;li&gt;Go to “Binding Inspector”.&lt;ul&gt;
 &lt;li&gt;Bind “Content” to “Tree Cell View”‘s “objectValue.title”. Node: here the “objectValue” is the class Node as you defined it in the tree controller.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5796/31303410492_050d9a6a17_o.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5454/31303411522_280527545a_o.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Go to “Attributes Inspector”.&lt;ul&gt;
 &lt;li&gt;Set “Behavior” to “Editable”.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5454/31303411522_280527545a_o.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Run the app, you should see the app like:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5558/31078296720_261ddc7e6b_o.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Run the app, you should see the app like:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5784/31332917871_a544120ac0_o.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;##Add Node and Remove It&lt;br&gt;Refer to commit till &lt;a href=&quot;https://github.com/atjason/CocoaDemoWithSwift/commit/d9b71976817eb248db1c19e404e8db16e96187a2&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;#d9b7197&lt;/a&gt;.&lt;br&gt;Steps&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Right click on the tree controller.&lt;/li&gt;
@@ -900,9 +900,8 @@
 &lt;li&gt;Connect “addChild:” to “Add Child Node” menu item.&lt;/li&gt;
 &lt;li&gt;Connect “remove:” to edit button.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5784/31332917871_a544120ac0_o.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;That’s it. Run the app. You should be able to add node or remove it.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5653/31303414282_9473713262_o.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;That’s it. Run the app. You should be able to add node or remove it.&lt;/p&gt;
 &lt;p&gt;##Edit Selected Node&lt;br&gt;Refer to commit till &lt;a href=&quot;https://github.com/atjason/CocoaDemoWithSwift/commit/22e2c073297d8887b13c97d9030ae5dee30e12c6&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;#22e2c07&lt;/a&gt;.&lt;br&gt;The key code is here:&lt;br&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@IBAction&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;editNode&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(sender: NSObject)&lt;/span&gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; row = outlineView.selectedRow&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; row != -&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    outlineView.editColumn(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, row: row, withEvent: &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt;, select: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;##Disable Remove and Edit Controls if no Node Selected&lt;br&gt;Refer to commit till &lt;a href=&quot;https://github.com/atjason/CocoaDemoWithSwift/commit/eb7decdf6a2baeb60f6883e287899ab61d825af8&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;#eb7decd&lt;/a&gt;.&lt;br&gt;The key point is to bind the “Enabled” attribute to tree controller’s “canRemove” controller key.&lt;br&gt;Another point is, when app starts maybe nothing was selected. In this case, disable the Outline’s “Attributes &amp;gt; Selection &amp;gt; Empty”, and select the Tree Controller’s “Attributes &amp;gt; Avoid Empty Selection”.&lt;/p&gt;
 </content>
