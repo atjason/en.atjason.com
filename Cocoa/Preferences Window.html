@@ -104,10 +104,10 @@ XCode: 7.3
 Swift: 2.2
 
 After">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-Preferences Window.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-Storyboard.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-Bind.jpg">
-<meta property="og:updated_time" content="2016-09-07T07:06:00.000Z">
+<meta property="og:image" content="https://farm6.staticflickr.com/5596/31078304850_80e40b69d4_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5712/31332931121_7f86a40076_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5753/31448848435_2e6726f29d_o.jpg">
+<meta property="og:updated_time" content="2016-12-06T01:51:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Preferences Window">
 <meta name="twitter:description" content="This article introduces how to build preferences window on Mac OS X using Cocoa with Swift. The source code can be downloaded here.
@@ -118,7 +118,7 @@ XCode: 7.3
 Swift: 2.2
 
 After">
-<meta name="twitter:image" content="http://p.appsites.io/2016-05-14-Preferences Window.jpg">
+<meta name="twitter:image" content="https://farm6.staticflickr.com/5596/31078304850_80e40b69d4_o.jpg">
 
 
 
@@ -342,15 +342,15 @@ After">
 <li>Swift: 2.2</li>
 </ul>
 <p>After it’s finished, the app looks like:</p>
-<p><img src="http://p.appsites.io/2016-05-14-Preferences Window.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5596/31078304850_80e40b69d4_o.jpg" alt=""></p>
 <h1 id="NSTabViewController"><a href="#NSTabViewController" class="headerlink" title="NSTabViewController"></a>NSTabViewController</h1><p>The mainly used class is <a href="https://developer.apple.com/library/mac/documentation/AppKit/Reference/NSTabViewController_Class/" target="_blank" rel="external"><code>NSTabViewController</code></a>.<br>An <code>NSTabViewController</code> object is a container view controller that manages a tab view interface, which organizes multiple pages of content but displays only one of those pages at a time. Each page of content is managed by a separate child view controller. Navigation between child view controllers is accomplished with the help of an NSTabView object, which the tab view controller manages. When the user selects a new tab, the tab view controller displays the content associated with the associated child view controller, replacing the previous content.</p>
 <a id="more"></a>
 <h1 id="Storyboard"><a href="#Storyboard" class="headerlink" title="Storyboard"></a>Storyboard</h1><p>Storyboard isn’t necessary to build preferences window, but it could let the workflow be clear and simple.</p>
-<p><img src="http://p.appsites.io/2016-05-14-Storyboard.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5712/31332931121_7f86a40076_o.jpg" alt=""></p>
 <h1 id="Preference-Manager"><a href="#Preference-Manager" class="headerlink" title="Preference Manager"></a>Preference Manager</h1><p>Typically there’re many settings in preferences. To make it easy to manage all of them, it’s better to use one singleton class to access them, e.g., register factory defaults, read, write, reset, etc.</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PreferenceManager</span> </span>&#123;</span><br><span class="line">  <span class="comment">// Single instance</span></span><br><span class="line">  <span class="keyword">static</span> <span class="keyword">let</span> sharedInstance = <span class="type">PreferenceManager</span>()</span><br><span class="line">    </span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">init</span>() &#123;</span><br><span class="line">    registerFactoryDefaults()</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">let</span> userDefaults = <span class="type">NSUserDefaults</span>.standardUserDefaults()</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">let</span> initializedKey = <span class="string">"Initialized"</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">var</span> startAtLogin: <span class="type">Bool</span> &#123;</span><br><span class="line">    <span class="keyword">get</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> userDefaults.boolForKey(startAtLoginKey)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">set</span> &#123;</span><br><span class="line">      userDefaults.setBool(newValue, forKey: startAtLoginKey)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  <span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">registerFactoryDefaults</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">let</span> factoryDefaults = [</span><br><span class="line">      initializedKey: <span class="type">NSNumber</span>(bool: <span class="literal">false</span>),</span><br><span class="line">    ]</span><br><span class="line">    </span><br><span class="line">    userDefaults.registerDefaults(factoryDefaults)</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">func</span> <span class="title">synchronize</span><span class="params">()</span></span> &#123;</span><br><span class="line">    userDefaults.synchronize()</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">func</span> <span class="title">reset</span><span class="params">()</span></span> &#123;</span><br><span class="line">    userDefaults.removeObjectForKey(initializedKey)    </span><br><span class="line">    synchronize()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="Bind-with-User-Defaults"><a href="#Bind-with-User-Defaults" class="headerlink" title="Bind with User Defaults"></a>Bind with User Defaults</h1><p>Beside using <code>class PreferenceManager</code>, you can also directly bind object’s value to user defaults.</p>
-<p><img src="http://p.appsites.io/2016-05-14-Bind.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5753/31448848435_2e6726f29d_o.jpg" alt=""></p>
 <h1 id="Register-Factory-Defaults"><a href="#Register-Factory-Defaults" class="headerlink" title="Register Factory Defaults"></a>Register Factory Defaults</h1><p>It’s better each setting has default value. <code>NSUserDefaults.registerDefaults</code> works for it.<br><strong>Note</strong>: The contents of the registration domain are not written to disk; you need to call this method each time your application starts. You can place a plist file in the application’s Resources directory and call registerDefaults: with the contents that you read in from that file.</p>
 <h1 id="Archive"><a href="#Archive" class="headerlink" title="Archive"></a>Archive</h1><p>To store data in user defaults, the object need to support archvie. For key based archive, the class need to conform to <code>NSCoding</code>. For more introduction, please refer to <a href="https://github.com/atjason/LearnCocoaWithSwift/tree/master/12_Archiving/RaiseMan" target="_blank" rel="external">here</a>.</p>
 <h1 id="Store-Tab-View’s-Size"><a href="#Store-Tab-View’s-Size" class="headerlink" title="Store Tab View’s Size"></a>Store Tab View’s Size</h1><p>If you allow user to resize the size of each tab view, its better to store them in user defaults, and restore when user access preferences window again. But as the structure of <code>NSSize</code> doesn’t support archive, you need to use a class to archive it.</p>
@@ -456,7 +456,7 @@ After">
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="http://ww3.sinaimg.cn/large/006ghf8igw1f3lxt6lgnsj30lc0jygn8.jpg"
+               src="https://ohpsctde4.qnssl.com/bq0zf.jpg"
                alt="Jason" />
           <p class="site-author-name" itemprop="name">Jason</p>
           <p class="site-description motion-element" itemprop="description">Digital Nomad, Mac Developer</p>

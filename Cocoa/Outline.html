@@ -98,15 +98,15 @@ Development environment:
 
 OS X: 10.11.4
 XCode: 7.3">
-<meta property="og:image" content="http://p.appsites.io/2016-05-20_22_27_35.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-20_22_27_59.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-20_22_28_07.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-20_22_28_15.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-20_22_28_24.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-20_22_28_42.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-20_22_28_51.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-20_22_28_59.jpg">
-<meta property="og:updated_time" content="2016-05-21T09:59:02.000Z">
+<meta property="og:image" content="https://farm6.staticflickr.com/5513/31078297700_fc0e048454_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5445/31303416292_3dbbb9c077_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5661/31303418352_2f985f6a86_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5703/31078299580_c874b3fb94_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5698/30640920653_2b1750cee8_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5344/31303421682_6c97330c0e_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5593/30640925323_2d063c143d_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5529/30640927443_912e4b7e77_o.jpg">
+<meta property="og:updated_time" content="2016-12-06T01:51:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Use NSOutlineView With DataSource and Delegate">
 <meta name="twitter:description" content="This article describes the steps to use NSOutlineView With NSOutlineViewDataSource and NSOutlineViewDelegate. The source code can be downloaded here.
@@ -114,7 +114,7 @@ Development environment:
 
 OS X: 10.11.4
 XCode: 7.3">
-<meta name="twitter:image" content="http://p.appsites.io/2016-05-20_22_27_35.jpg">
+<meta name="twitter:image" content="https://farm6.staticflickr.com/5513/31078297700_fc0e048454_o.jpg">
 
 
 
@@ -341,20 +341,20 @@ XCode: 7.3">
 <h2 id="Add-Model-Class-of-“Node”"><a href="#Add-Model-Class-of-“Node”" class="headerlink" title="Add Model Class of “Node”"></a>Add Model Class of “Node”</h2><p>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/e302b91f3d4268714323fd3d94c21a781ed135fb" target="_blank" rel="external">#e302b91</a>.<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span>: <span class="title">NSObject</span> </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> title = <span class="string">"Node"</span></span><br><span class="line">  <span class="keyword">var</span> isGroup = <span class="literal">false</span></span><br><span class="line">  <span class="keyword">var</span> children = [<span class="type">Node</span>]()</span><br><span class="line">  <span class="keyword">weak</span> <span class="keyword">var</span> parent: <span class="type">Node</span>?</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">override</span> <span class="keyword">init</span>() &#123;</span><br><span class="line">    <span class="keyword">super</span>.<span class="keyword">init</span>()</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">init</span>(title: <span class="type">String</span>) &#123;</span><br><span class="line">    <span class="keyword">self</span>.title = title</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">func</span> <span class="title">isLeaf</span><span class="params">()</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> children.isEmpty</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <h2 id="Add-UI-Controls"><a href="#Add-UI-Controls" class="headerlink" title="Add UI Controls"></a>Add UI Controls</h2><p>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/5dee8d160650624d55333808b7fa5e9fba6e0b9c" target="_blank" rel="external">#5dee8d1</a>.<br>After done, the UI looks like:</p>
-<p><img src="http://p.appsites.io/2016-05-20_22_27_35.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5513/31078297700_fc0e048454_o.jpg" alt=""></p>
 <h2 id="Implement-NSOutlineViewDataSource"><a href="#Implement-NSOutlineViewDataSource" class="headerlink" title="Implement NSOutlineViewDataSource"></a>Implement NSOutlineViewDataSource</h2><p>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/c467d0b36a58994dca5f376d668777d8484a72fd" target="_blank" rel="external">#c467d0b</a>.<br>Notes:</p>
 <ul>
-<li><p>Set NSOutlineView’s dataSource to File’s Owner.<br><img src="http://p.appsites.io/2016-05-20_22_27_59.jpg" alt=""></p>
+<li><p>Set NSOutlineView’s dataSource to File’s Owner.<br><img src="https://farm6.staticflickr.com/5445/31303416292_3dbbb9c077_o.jpg" alt=""></p>
 </li>
-<li><p>Bind value “Table Cell View” to “Table Cell View” &gt; Model Key Path: objectValue.title.<br><img src="http://p.appsites.io/2016-05-20_22_28_07.jpg" alt=""></p>
+<li><p>Bind value “Table Cell View” to “Table Cell View” &gt; Model Key Path: objectValue.title.<br><img src="https://farm6.staticflickr.com/5661/31303418352_2f985f6a86_o.jpg" alt=""></p>
 </li>
 </ul>
 <p>After done, the UI looks like:</p>
-<p><img src="http://p.appsites.io/2016-05-20_22_28_15.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5703/31078299580_c874b3fb94_o.jpg" alt=""></p>
 <h2 id="Implement-NSOutlineViewDelegate"><a href="#Implement-NSOutlineViewDelegate" class="headerlink" title="Implement NSOutlineViewDelegate"></a>Implement NSOutlineViewDelegate</h2><p>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/300948eaabd9afe72c1addcb0438102bc21c2783" target="_blank" rel="external">#300948e</a>.</p>
 <p>Notes:</p>
 <ul>
-<li>Set NSOutlineView’s delegate to File’s Owner.<br><img src="http://p.appsites.io/2016-05-20_22_28_24.jpg" alt=""></li>
+<li>Set NSOutlineView’s delegate to File’s Owner.<br><img src="https://farm6.staticflickr.com/5698/30640920653_2b1750cee8_o.jpg" alt=""></li>
 </ul>
 <h2 id="Add-Node-and-Group"><a href="#Add-Node-and-Group" class="headerlink" title="Add Node and Group"></a>Add Node and Group</h2><p>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/f18c61f94bd813f0ae2c0d2d33dbc6054f530d61" target="_blank" rel="external">#f18c61f</a>.</p>
 <p>Notes:</p>
@@ -363,13 +363,13 @@ XCode: 7.3">
 <li>There’re 2 ways to insert item in outline view. One is update the data modal, then call <code>NSOutlineView.reloadData()</code>. But this will let UI flash. So it’s better to manually insert item in outline view (e.g., use <code>NSOutlineView.insertItemsAtIndexes</code>). Another benefit is could use animation during inserting.</li>
 </ul>
 <p>After done, you can add node or group. The UI looks like:</p>
-<p><img src="http://p.appsites.io/2016-05-20_22_28_42.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5344/31303421682_6c97330c0e_o.jpg" alt=""></p>
 <h2 id="Implement-other-UI-Operations"><a href="#Implement-other-UI-Operations" class="headerlink" title="Implement other UI Operations"></a>Implement other UI Operations</h2><p>The operations include remove, edit, move up and move down. It’s not hard. But the logic is complex and boring. Be careful.<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/3f7ffaa8efb62b5e08d2f53da693da05055a80cf" target="_blank" rel="external">#3f7ffaa</a>.</p>
 <p>Notes</p>
 <ul>
-<li><p>Could create a <strong>dynamic</strong> property (e.g., <code>dynamic var removeButtonEnabled = false</code>), and then bind a control’s enable property to it. e.g.,<br><img src="http://p.appsites.io/2016-05-20_22_28_51.jpg" alt=""></p>
+<li><p>Could create a <strong>dynamic</strong> property (e.g., <code>dynamic var removeButtonEnabled = false</code>), and then bind a control’s enable property to it. e.g.,<br><img src="https://farm6.staticflickr.com/5593/30640925323_2d063c143d_o.jpg" alt=""></p>
 </li>
-<li><p>Should set table view cell’s behavior as “Editable” to edit it.<br><img src="http://p.appsites.io/2016-05-20_22_28_59.jpg" alt=""></p>
+<li><p>Should set table view cell’s behavior as “Editable” to edit it.<br><img src="https://farm6.staticflickr.com/5529/30640927443_912e4b7e77_o.jpg" alt=""></p>
 </li>
 </ul>
 
@@ -469,7 +469,7 @@ XCode: 7.3">
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="http://ww3.sinaimg.cn/large/006ghf8igw1f3lxt6lgnsj30lc0jygn8.jpg"
+               src="https://ohpsctde4.qnssl.com/bq0zf.jpg"
                alt="Jason" />
           <p class="site-author-name" itemprop="name">Jason</p>
           <p class="site-description motion-element" itemprop="description">Digital Nomad, Mac Developer</p>

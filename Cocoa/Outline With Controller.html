@@ -106,16 +106,16 @@ Swift: 2.2
 
 #Steps
 ##Create Basi">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-UI_1.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-NSTreeController Attricutes Inspector.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-NSTreeController Binding Inspector.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-Outline View Binding Inspector.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-Table View Cell Binding Inspector.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-Table View Cell Attributes Inspector.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-UI_2.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-Connect Tree Controller.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-UI_3.jpg">
-<meta property="og:updated_time" content="2016-05-14T05:06:19.000Z">
+<meta property="og:image" content="https://farm6.staticflickr.com/5663/31303406692_2e04a5bdec_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5680/31411961046_8b688f8d9d_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5708/31411961566_5e43982c53_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5490/31332915111_4232dc553e_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5796/31303410492_050d9a6a17_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5454/31303411522_280527545a_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5558/31078296720_261ddc7e6b_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5784/31332917871_a544120ac0_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5653/31303414282_9473713262_o.jpg">
+<meta property="og:updated_time" content="2016-12-06T01:51:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Use NSOutlineView With NSTreeController">
 <meta name="twitter:description" content="This article describes the steps to use NSOutlineView With NSTreeController. The source code can be downloaded here.
@@ -127,7 +127,7 @@ Swift: 2.2
 
 #Steps
 ##Create Basi">
-<meta name="twitter:image" content="http://p.appsites.io/2016-05-14-UI_1.jpg">
+<meta name="twitter:image" content="https://farm6.staticflickr.com/5663/31303406692_2e04a5bdec_o.jpg">
 
 
 
@@ -353,7 +353,7 @@ Swift: 2.2
 <p>#Steps</p>
 <p>##Create Basic Project<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/40ccec2db2584251483fe4dc0b9cc02746aebde3" target="_blank" rel="external">#40ccec2</a>.</p>
 <p>##Add UI Controls<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/2853186db767c0790c1ef3b99de53338818e39c6" target="_blank" rel="external">#2853186</a>.<br>After done, the UI looks like:</p>
-<p><img src="http://p.appsites.io/2016-05-14-UI_1.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5663/31303406692_2e04a5bdec_o.jpg" alt=""></p>
 <a id="more"></a>
 <p>##Add Model Class of “Node”<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/516acc4b6363a7d28862473ff464c33ef0b17a48" target="_blank" rel="external">#516acc4</a>.<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span>: <span class="title">NSObject</span> </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> title = <span class="string">"Node"</span></span><br><span class="line">  <span class="keyword">var</span> children = [<span class="type">Node</span>]()</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">override</span> <span class="keyword">init</span>() &#123;</span><br><span class="line">    <span class="keyword">super</span>.<span class="keyword">init</span>()</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">init</span>(title: <span class="type">String</span>) &#123;</span><br><span class="line">    <span class="keyword">self</span>.title = title</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="Prepare-Demo-Nodes-Data"><a href="#Prepare-Demo-Nodes-Data" class="headerlink" title="Prepare Demo Nodes Data"></a>Prepare Demo Nodes Data</h2><p>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/f9148114ec25db9a10e654f776396d1b2a2952a0" target="_blank" rel="external">#f914811</a>.<br>Node structure:<br>- Node<br>- Group<br>-– Node A<br>-– Node B</p>
@@ -367,14 +367,14 @@ Swift: 2.2
 </ul>
 </li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-NSTreeController Attricutes Inspector.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5680/31411961046_8b688f8d9d_o.jpg" alt=""></p>
 <ul>
 <li>Go to “Binding Inspector”.<ul>
 <li>Bind “Content Array” to self.nodes (which was created in previous step).</li>
 </ul>
 </li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-NSTreeController Binding Inspector.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5708/31411961566_5e43982c53_o.jpg" alt=""></p>
 <p>##Bind NSOutlineView<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/f941f7be8e87ec8d99e67aaae4e059892b56e897" target="_blank" rel="external">#f941f7b</a>.<br>Steps</p>
 <ul>
 <li>Select “Outline View”.</li>
@@ -383,7 +383,7 @@ Swift: 2.2
 <li>Bind “Content” to “Tree Controller”‘s “arrangedObjects”. Ignore the warning in “Model Key Path”.</li>
 <li>Bind “Selection Index Paths” to Tree Controller’s “selectionIndexPaths”.</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-Outline View Binding Inspector.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5490/31332915111_4232dc553e_o.jpg" alt=""></p>
 </li>
 <li><p>Select “Table View Cell”.</p>
 </li>
@@ -392,16 +392,16 @@ Swift: 2.2
 </ul>
 </li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-Table View Cell Binding Inspector.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5796/31303410492_050d9a6a17_o.jpg" alt=""></p>
 <ul>
 <li>Go to “Attributes Inspector”.<ul>
 <li>Set “Behavior” to “Editable”.</li>
 </ul>
 </li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-Table View Cell Attributes Inspector.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5454/31303411522_280527545a_o.jpg" alt=""></p>
 <p>Run the app, you should see the app like:</p>
-<p><img src="http://p.appsites.io/2016-05-14-UI_2.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5558/31078296720_261ddc7e6b_o.jpg" alt=""></p>
 <p>##Add Node and Remove It<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/d9b71976817eb248db1c19e404e8db16e96187a2" target="_blank" rel="external">#d9b7197</a>.<br>Steps</p>
 <ul>
 <li>Right click on the tree controller.</li>
@@ -409,9 +409,9 @@ Swift: 2.2
 <li>Connect “addChild:” to “Add Child Node” menu item.</li>
 <li>Connect “remove:” to edit button.</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-Connect Tree Controller.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5784/31332917871_a544120ac0_o.jpg" alt=""></p>
 <p>That’s it. Run the app. You should be able to add node or remove it.</p>
-<p><img src="http://p.appsites.io/2016-05-14-UI_3.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5653/31303414282_9473713262_o.jpg" alt=""></p>
 <p>##Edit Selected Node<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/22e2c073297d8887b13c97d9030ae5dee30e12c6" target="_blank" rel="external">#22e2c07</a>.<br>The key code is here:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@IBAction</span> <span class="function"><span class="keyword">func</span> <span class="title">editNode</span><span class="params">(sender: NSObject)</span></span> &#123;</span><br><span class="line">  <span class="keyword">let</span> row = outlineView.selectedRow</span><br><span class="line">  <span class="keyword">if</span> row != -<span class="number">1</span> &#123;</span><br><span class="line">    outlineView.editColumn(<span class="number">0</span>, row: row, withEvent: <span class="literal">nil</span>, select: <span class="literal">true</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>##Disable Remove and Edit Controls if no Node Selected<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/eb7decdf6a2baeb60f6883e287899ab61d825af8" target="_blank" rel="external">#eb7decd</a>.<br>The key point is to bind the “Enabled” attribute to tree controller’s “canRemove” controller key.<br>Another point is, when app starts maybe nothing was selected. In this case, disable the Outline’s “Attributes &gt; Selection &gt; Empty”, and select the Tree Controller’s “Attributes &gt; Avoid Empty Selection”.</p>
 
@@ -515,7 +515,7 @@ Swift: 2.2
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="http://ww3.sinaimg.cn/large/006ghf8igw1f3lxt6lgnsj30lc0jygn8.jpg"
+               src="https://ohpsctde4.qnssl.com/bq0zf.jpg"
                alt="Jason" />
           <p class="site-author-name" itemprop="name">Jason</p>
           <p class="site-description motion-element" itemprop="description">Digital Nomad, Mac Developer</p>

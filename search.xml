@@ -184,7 +184,7 @@
     <entry>
       <title><![CDATA[Google Analytics for Mac]]></title>
       <url>http://en.atjason.com/Cocoa/MacGoogleAnalytics.html</url>
-      <content type="html"><![CDATA[<p><img src="http://ww2.sinaimg.cn/large/a15b4afegw1f3z6w5n74yj20rs0go0vm" alt="07:34:46 AM"></p>
+      <content type="html"><![CDATA[<p><img src="https://farm6.staticflickr.com/5480/30640898503_aac74e79f3_o.jpg" alt="07:34:46 AM"></p>
 <p><a href="https://github.com/atjason/MacGoogleAnalytics" target="_blank" rel="external">MacGoogleAnalytics</a> is an open source library to use Google Analytics on Mac OS X.</p>
 <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>As we know, Google Analytics is perfect for user data collection and analytics. But unfortunately, there’s no official SDK for Mac OS X.</p>
 <p>But still, there’re several ways to use Google Analytics on Mac OS X. MacGoogleAnalytics may be what you found.</p>
@@ -215,7 +215,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-1759091.jpg" alt="1759091"></p>
+<p><img src="https://farm6.staticflickr.com/5515/31303401402_e86397a3e5_o.jpg" alt="1759091"></p>
 <ul>
 <li><code>name</code><ul>
 <li>The product name, e.g., ‘ihosts’ for <a href="http://ex.toolinbox.net/ga/url.html?utm_medium=ihosts&amp;utm_source=GitHub&amp;id=UA-26569268-10&amp;url=https%3a%2f%2fitunes.apple.com%2fapp%2fid1102004240%3fls%3d1%26mt%3d12" target="_blank" rel="external">iHosts</a>. You can track different products using same Google Analytics id, even I don’t suggest you do that. </li>
@@ -281,9 +281,9 @@
 <h1 id="View-Data-in-Google-Analytics-Site"><a href="#View-Data-in-Google-Analytics-Site" class="headerlink" title="View Data in Google Analytics Site"></a>View Data in Google Analytics Site</h1><p>After data are collected, you can view them in Google Analytics as normal: <a href="https://analytics.google.com/analytics/web/" target="_blank" rel="external">https://analytics.google.com/analytics/web/</a>. During debug, you can also check whether it works or not in ‘Real-Time’.</p>
 <p>Just give a tip for OS X version. In the demo app using swift, it collect event of <code>options &gt; option_a &gt; yes or no</code>. You may want to know, how many users enable this option in OS X 10.10 and how many for 10.11. How to do it?</p>
 <p>Open the <code>Behavior &gt; Events &gt; Top Events</code>, select <code>options &gt; option_a</code>. Here you should be able to see all the events. Then add a new custom Segment, in <code>Technology &gt; Operating System Version</code>, add <em>contains</em> ‘10.10’, save it as ‘OS X 10.10’. Add another Segment for ‘OS X 10.11’.</p>
-<p><img src="http://p.appsites.io/2016-05-14-1747211.jpg" alt="1747211"></p>
+<p><img src="https://farm6.staticflickr.com/5498/31078292470_a765cb4e35_o.jpg" alt="1747211"></p>
 <p>And then, apply the Segments, it could distinguish the data of OS X 10.10 or 10.11.</p>
-<p><img src="http://p.appsites.io/2016-05-14-1750021.jpg" alt="1750021"></p>
+<p><img src="https://farm6.staticflickr.com/5803/31332912121_210a6b0bd5_o.jpg" alt="1750021"></p>
 <h1 id="Release-on-Mac-App-Store"><a href="#Release-on-Mac-App-Store" class="headerlink" title="Release on Mac App Store"></a>Release on Mac App Store</h1><p>Yes, this way could be released on Mac App Store. In fact, these of my apps have already released on Mac App Store.</p>
 <ul>
 <li><a href="http://ex.toolinbox.net/ga/url.html?utm_medium=ihosts&amp;utm_source=GitHub&amp;id=UA-26569268-10&amp;url=https%3a%2f%2fitunes.apple.com%2fapp%2fid1102004240%3fls%3d1%26mt%3d12" target="_blank" rel="external">iHosts</a></li>
@@ -299,8 +299,8 @@
       <title><![CDATA[Action When Enter-key is Pressed on NSTextField]]></title>
       <url>http://en.atjason.com/Cocoa/Action%20When%20Enter-key%20is%20Pressed%20on%20NSTextField.html</url>
       <content type="html"><![CDATA[<h1 id="Add-Action-in-NSTextField’s-Delegate"><a href="#Add-Action-in-NSTextField’s-Delegate" class="headerlink" title="Add Action in NSTextField’s Delegate"></a>Add Action in NSTextField’s Delegate</h1><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@IBAction</span> <span class="function"><span class="keyword">func</span> <span class="title">textFieldAction</span><span class="params">(sender: NSTextField)</span></span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(sender.stringValue)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="Connect-NSTextField’s-Action-to-Delegate’s-One"><a href="#Connect-NSTextField’s-Action-to-Delegate’s-One" class="headerlink" title="Connect NSTextField’s Action to Delegate’s One"></a>Connect NSTextField’s Action to Delegate’s One</h1><p><img src="http://p.appsites.io/2016-05-14-Connect.jpg" alt=""></p>
-<h1 id="Set-NSTextField’s-Action-Type"><a href="#Set-NSTextField’s-Action-Type" class="headerlink" title="Set NSTextField’s Action Type"></a>Set NSTextField’s Action Type</h1><p><img src="http://p.appsites.io/2016-05-14-SelectAction.jpg" alt=""></p>
+<h1 id="Connect-NSTextField’s-Action-to-Delegate’s-One"><a href="#Connect-NSTextField’s-Action-to-Delegate’s-One" class="headerlink" title="Connect NSTextField’s Action to Delegate’s One"></a>Connect NSTextField’s Action to Delegate’s One</h1><p><img src="https://farm6.staticflickr.com/5590/31332905111_a99db6b132_o.jpg" alt=""></p>
+<h1 id="Set-NSTextField’s-Action-Type"><a href="#Set-NSTextField’s-Action-Type" class="headerlink" title="Set NSTextField’s Action Type"></a>Set NSTextField’s Action Type</h1><p><img src="https://farm6.staticflickr.com/5718/31078290500_78ea9682e5_o.jpg" alt=""></p>
 ]]></content>
     </entry>
     
@@ -311,7 +311,7 @@
 <li>Open ‘Build Settings’ for Project (not target)</li>
 <li>Search ‘<strong>Swift Compiler - Custom Flags</strong>‘. Add a <code>-D DEBUG</code> entry in <code>Other Swift Flags</code></li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-DebugFlag.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5572/31412018886_aa02727ba9_o.jpg" alt=""></p>
 <h1 id="Use-Debug-Flag-in-Swift"><a href="#Use-Debug-Flag-in-Swift" class="headerlink" title="Use Debug Flag in Swift"></a>Use Debug Flag in Swift</h1><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#<span class="keyword">if</span> <span class="type">DEBUG</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"I'm running in DEBUG mode"</span>)</span><br><span class="line">#<span class="keyword">else</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"I'm running in a non-DEBUG mode"</span>)</span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
@@ -334,11 +334,11 @@
 <li>Choose View &gt; Assistant Editor &gt; Show Assistant Editor.</li>
 <li>In the assistant editor jump bar, open the Assistant pop-up menu, scroll to and choose the Preview item, and choose the <code>.storyboard</code> or <code>.xib</code> file from the submenu.<br>If a preview of the app’s user interface doesn’t appear in the assistant editor, select the window or view you want to preview in the icon or outline view.</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-SelectPreview.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5492/31332955981_38d0c95ea2_o.jpg" alt=""></p>
 <ul>
 <li>In the assistant editor, choose the localization you want to preview from the language pop-up menu in the lower-right corner.</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-SelectPseudolanguage.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5478/31332957421_18d7c7e146_o.jpg" alt=""></p>
 <p>Now, a preview of the localization appears in the assistant editor. If you choose a real language, strings that do not need to be localized or need to be localized, but currently are not, appear in uppercase.</p>
 <a id="more"></a>
 <h1 id="Use-Localized-String-in-Code"><a href="#Use-Localized-String-in-Code" class="headerlink" title="Use Localized String in Code"></a>Use Localized String in Code</h1><p>The key is to use <code>NSLocalizedString</code> function. It could load localized text from the localized string file.</p>
@@ -350,15 +350,15 @@
 <li>Select the project in the project navigator.<br>Note: It’s <strong>PROJECT</strong>, but not targets.</li>
 <li>Add the new localization.<br>Scroll down to the Localizations section. Click the + button, and select ‘Chinese (Simplified)’ from the menu that appears</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-ProjectAddLanguage.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5679/31303446882_c1012c8d8a_o.jpg" alt=""></p>
 <ul>
 <li>Select the files you want to localize.<br>Xcode will ask you which files you want to translate into the new language. At this stage, there will only be a single file: the app’s interface, stored in MainMenu.xib. It’s selected by default, so click Finish.<br>Note: select “Locializable Strings”, but not ‘Interface Builder Story’.</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-ProjectAddLanguageSelectBase.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5490/31332962201_b2a8d2bcf7_o.jpg" alt=""></p>
 <ul>
 <li>A new file will be created: a strings file for the storyboard file. It’ll appear as an item inside the storyboard file, in the project navigator.</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-MainStoryboardWithLocalization.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5767/30640950723_98e5a10244_o.jpg" alt=""></p>
 <h1 id="Add-Localizations-Files"><a href="#Add-Localizations-Files" class="headerlink" title="Add Localizations Files"></a>Add Localizations Files</h1><p>To well organize the localized strings, it’s better we manually add 2 string files here: ‘<strong>Localizable.strings</strong>‘ and ‘<strong>InfoPlist.strings</strong>‘. ‘Localizable.strings’ will store the strings in app. For ‘InfoPlist.strings’, please check the following introduction.</p>
 <h2 id="Localizing-Property-List-Values"><a href="#Localizing-Property-List-Values" class="headerlink" title="Localizing Property List Values"></a>Localizing Property List Values</h2><p>The values for many keys in an information property list file are human-readable strings that are displayed to the user by the Finder or your own app. When you localize your app, you should be sure to localize the values for these strings in addition to the rest of your app’s content.</p>
 <p>Localized values are not stored in the Info.plist file itself. Instead, you store the values for a particular localization in a strings file with the name ‘<strong>InfoPlist.strings</strong>‘. You place this file in the same language-specific project directory that you use to store other resources for the same localization. The contents of the InfoPlist.strings file are the individual keys you want localized and the appropriately translated value. The routines that look up key values in the Info.plist file take the user’s language preferences into account and return the localized version of the key (from the appropriate InfoPlist.strings file) when one exists. If a localized version of a key does not exist, the routines return the value stored in the Info.plist file.</p>
@@ -367,23 +367,23 @@
 <ul>
 <li>Create a new file in the project: a strings file. You’ll find this in the Resource section of the file templates. Name the file as ‘Localizable.strings’, save in the ‘Localizations’ folder.</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-AddStringsFile.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5469/30640952433_455ecfa8a2_o.jpg" alt=""></p>
 <ul>
 <li>Select the ‘Localizable.strings’ file. Open the ‘File Inspector’ and scroll down to Localizations.<br>Click the Localize button. A menu will appear; choose Base and click Localize.</li>
 </ul>
 <p>Now the localization option has changed, with three small checkboxes, one for Base, one for English, and the last for Chinese Simplified. Select Base and Chinese Simplified. In fact the Base is just English as we choose English as development language.</p>
-<p><img src="http://p.appsites.io/2016-05-14-LocalizationFileWithoutString.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5810/31448864545_333ce2df10_o.jpg" alt=""></p>
 <p>Now create ‘InfoPlist.strings’ and did same settings as ‘Localizable.strings’. The difference is, save the ‘InfoPlist.strings’ in same level of ‘Localizations’ in Finder, but still in the ‘Localizations’ group in project. After set it as localization, it will auto matically be moved to ‘Base.lproj’ and ‘zh-Hans.lproj’ in Finder.</p>
 <p>How to localize the app’s name displayed with app icon in Finder? Add this string in Base version of ‘InfoPlist.strings’:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* App Name */</span></span><br><span class="line"><span class="string">"CFBundleDisplayName"</span> =<span class="string">"Localization Demo"</span>;</span><br></pre></td></tr></table></figure></p>
 <p>And add this for the Chinese Simplified version:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* App Name */</span></span><br><span class="line"><span class="string">"CFBundleDisplayName"</span> =<span class="string">"本地化示例"</span>;</span><br></pre></td></tr></table></figure></p>
 <p><strong>NOTE</strong><br>It’s important to use the file names of ‘InfoPlist.strings’ and ‘Localizable.strings’, as the app will look for the files with these names.</p>
 <p>After added, the files in Finder will looks like:</p>
-<p><img src="http://p.appsites.io/2016-05-14-FinderFileTree.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5478/31332974201_b42e64ca18_o.jpg" alt=""></p>
 <h1 id="Edit-Localization-Files"><a href="#Edit-Localization-Files" class="headerlink" title="Edit Localization Files"></a>Edit Localization Files</h1><p>There’re 2 ways to edit the localization files: Direclty Edit and Using .xliff Files. Now let’s introduce the .xliff files.</p>
 <p>Normally, you don’t translate the app by yourself, but let some others who are expert for the language to do it. How to cooperate with them? Use .xliff file.</p>
 <h2 id="Export-xliff-Files"><a href="#Export-xliff-Files" class="headerlink" title="Export .xliff Files"></a>Export .xliff Files</h2><ul>
 <li>Select the root of the project.</li>
-<li>Select ‘Editor’ menu &gt; ‘Export for localization…’. In the popup dialog, select where to store the files. Need to select ‘Chinese (Simplied)’ in languages. This means export the .xliff file for the languages selected. Click ‘Save’.<br><img src="http://p.appsites.io/2016-05-14-ExportLocalization1.jpg" alt=""></li>
+<li>Select ‘Editor’ menu &gt; ‘Export for localization…’. In the popup dialog, select where to store the files. Need to select ‘Chinese (Simplied)’ in languages. This means export the .xliff file for the languages selected. Click ‘Save’.<br><img src="https://farm6.staticflickr.com/5691/31078327570_feba78b030_o.jpg" alt=""></li>
 <li>Open the ‘zh-Hans.xliff’ you just saved. You can see it’s like a xml file.</li>
 </ul>
 <p>Edit parts for ‘Localizable.strings’. Find the following part, add <code>&lt;target&gt;...&lt;/target&gt;</code> under the <code>&lt;source&gt;A: It&#39;s %@.&lt;/source&gt;</code>. This is just the core of ‘localization’.</p>
@@ -392,20 +392,20 @@
 <li>Select the root of the project.</li>
 <li>Select ‘Editor’ menu &gt; ‘Import localization…’. In the popup dialog, select the ‘zh-Hans.xliff’ you just modified. It should pop up a dialog to show the difference between the files in project and the one you just modified. Click ‘Import’ if it’s fine.</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-ImportLocalization1.jpg" alt=""></p>
-<p><img src="http://p.appsites.io/2016-05-14-ImportLocalization2.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5605/30640957953_36806f86e5_o.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5454/31303456892_8d57017509_o.jpg" alt=""></p>
 <p>After it’s done, open the ‘InfoPlist.strings’ or ‘Localizable.strings’, you should be able to say the new translated strings. Did you remember I just said there’re 2 ways to edit the string files, and another one is directly edit it? Here it is, you can directly edit the files and add the strings like you added through .xliff.</p>
-<p><img src="http://p.appsites.io/2016-05-14-LocalizationFileWithString.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5445/31332978651_ecd8828df2_o.jpg" alt=""></p>
 <p><strong>Special Tips</strong><br>Seems XCode has issue. If you project has test or other target, if you import the modified strings for the first, the XCode may crash.<br>The solution is, export strings, don’t change it and import again.<br>I guess this mainly let the test or other project be localized. Even you don’t need to localize them, but have to do it to walk around XCode’s issue (again, it’s what I guess).</p>
 <h1 id="Test-Localization"><a href="#Test-Localization" class="headerlink" title="Test Localization"></a>Test Localization</h1><p>There’re 2 ways to test the localization.</p>
 <h2 id="1-Change-System’s-Language"><a href="#1-Change-System’s-Language" class="headerlink" title="1. Change System’s Language"></a>1. Change System’s Language</h2><p>Open ‘System Preferences’ &gt; ‘Language &amp; Region’, you can drag Chinese Simplied to top of the list to activate it. You can also change the ragion.</p>
-<p><img src="http://p.appsites.io/2016-05-14-ChangeSystemLanguage.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5677/31332979431_dbc687c14f_o.jpg" alt=""></p>
 <p>The disadvantage of this way is, you need to reboot to let the change work. And the entire system’s language will be changed. How only change the language for the app? Check the following way.</p>
 <h2 id="2-Use-XCode’s-Scheme"><a href="#2-Use-XCode’s-Scheme" class="headerlink" title="2. Use XCode’s Scheme"></a>2. Use XCode’s Scheme</h2><p>You can make Xcode launch the application using the special langauge or region.<br>To do this, you can duplicate current scheme, name it as ‘Chinese (Simplified)’. Open the Options panel. Change the Application Language from System Language to ‘Chinese (Simplified)’.</p>
-<p><img src="http://p.appsites.io/2016-05-14-DuplicateScheme.jpg" alt=""></p>
-<p><img src="http://p.appsites.io/2016-05-14-SelectChineseInScheme.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5330/31078329830_f6c84414f6_o.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5597/30640961673_b18d314d89_o.jpg" alt=""></p>
 <p>Now, run the app, it should look like:</p>
-<p><img src="http://p.appsites.io/2016-05-14-LocalizedApp.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5557/31332983321_2bceaa1d40_o.jpg" alt=""></p>
 ]]></content>
     </entry>
     
@@ -424,26 +424,26 @@
 <p>2.26 Apps that are set to auto-launch or to have other code automatically run at startup or login without user consent will be rejected.</p>
 </blockquote>
 <p>How to deal with it?<br>Easy, just add a checkbox in Preferences to let user choose auto launch or not. And, make sure, do <strong>NOT</strong> enable it by default. Otherwise Apple will reject it (I was ever rejected for this reason).</p>
-<p><img src="http://p.appsites.io/2016-05-14-AutoLaunchApp.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5486/31303440372_cb535ac1c7_o.jpg" alt=""></p>
 <a id="more"></a>
 <h1 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h1><p>The precondition is, you already setup your normal project.</p>
 <h2 id="Add-New-Target-of-Helper"><a href="#Add-New-Target-of-Helper" class="headerlink" title="Add New Target of Helper"></a>Add New Target of Helper</h2><p>Add a new target of your project. You can name the target as “XHelper”, and “X” is your main project.<br>Note: to reduce app’s size, choose the Language of ‘Objective-C’. No worry, only a few code is needed.</p>
-<p><img src="http://p.appsites.io/2016-05-14-Add Helper Target.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5541/31412010806_3e0b0d8720_o.jpg" alt=""></p>
 <h2 id="Settings-for-Helper-Target"><a href="#Settings-for-Helper-Target" class="headerlink" title="Settings for Helper Target"></a>Settings for Helper Target</h2><p>Let the helper works in the background and doesn’t display a Dock icon.<br>Open the <strong>Info</strong> tab for the helper target.</p>
 <ul>
 <li>Under the ‘Custom OS X Application Target Properties’ section, add a new row with the Key ‘<strong>Application is background only</strong>’ and the Boolean value of ‘<strong>YES</strong>’.</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-Helper in Background.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5464/31412010896_49ea699cdb_o.jpg" alt=""></p>
 <p>Next, let the helper target skips the install when the base application also gets installed. To do this:<br>Open the <strong>Build Settings</strong> tab for the helper target.</p>
 <ul>
 <li>Search for ‘<strong>Skip Install</strong>’, setting this option to ‘<strong>YES</strong>’</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-HelperSkipInstall.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5608/31332952541_d9fd0d8d04_o.jpg" alt=""></p>
 <h2 id="Settings-for-Main-Target"><a href="#Settings-for-Main-Target" class="headerlink" title="Settings for Main Target"></a>Settings for Main Target</h2><p>Open the <strong>Build Settings</strong> tab for the main target.</p>
 <ul>
 <li>Search for the item called ‘<strong>Strip Debug Symbols During Copy</strong>’, and set this item to ‘<strong>NO</strong>’.</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-Strip Debug Symbols During Copy.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5338/31448859785_4939efab2f_o.jpg" alt=""></p>
 <p>Open the <strong>Build Phases</strong> tab for the main target</p>
 <ul>
 <li>If you don’t already have a ‘Copy Files’ phase, then add one by selecting the small + sign in the top left corner of this section.</li>
@@ -451,7 +451,7 @@
 <li>In the Subpath section, type the following path: “<strong>Contents/Library/LoginItems</strong>“</li>
 <li>Select the + button for the Name section, then search for and add the ‘X Helper.app’ application bundle from the source list that appears, and select it in the list. Click ‘Add’ when done.</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-Copy Helper Files.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5763/31078319720_0523f09e3b_o.jpg" alt=""></p>
 <p>This will ensure that the Helper target is copied into our application bundle when we compile the project.</p>
 <h2 id="Code-for-Helper-Target"><a href="#Code-for-Helper-Target" class="headerlink" title="Code for Helper Target"></a>Code for Helper Target</h2><p>First, remove the menu and base window in the Helper app’s XIB file.</p>
 <p>Open <code>AppDelegate.m</code>, add these code in <code>applicationDidFinishLaunching</code>. It will find out the path for the main application, launch it, and then terminate itself.<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)applicationDidFinishLaunching:(<span class="built_in">NSNotification</span> *)aNotification &#123;</span><br><span class="line">  <span class="built_in">NSArray</span> *pathComponents = [[[<span class="built_in">NSBundle</span> mainBundle] bundlePath] pathComponents];</span><br><span class="line">  pathComponents = [pathComponents subarrayWithRange:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, [pathComponents count] - <span class="number">4</span>)];</span><br><span class="line">  <span class="built_in">NSString</span> *path = [<span class="built_in">NSString</span> pathWithComponents:pathComponents];</span><br><span class="line">  [[<span class="built_in">NSWorkspace</span> sharedWorkspace] launchApplication:path];</span><br><span class="line">  [<span class="built_in">NSApp</span> terminate:<span class="literal">nil</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -481,15 +481,15 @@
 <li>Swift: 2.2</li>
 </ul>
 <p>After it’s finished, the app looks like:</p>
-<p><img src="http://p.appsites.io/2016-05-14-Preferences Window.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5596/31078304850_80e40b69d4_o.jpg" alt=""></p>
 <h1 id="NSTabViewController"><a href="#NSTabViewController" class="headerlink" title="NSTabViewController"></a>NSTabViewController</h1><p>The mainly used class is <a href="https://developer.apple.com/library/mac/documentation/AppKit/Reference/NSTabViewController_Class/" target="_blank" rel="external"><code>NSTabViewController</code></a>.<br>An <code>NSTabViewController</code> object is a container view controller that manages a tab view interface, which organizes multiple pages of content but displays only one of those pages at a time. Each page of content is managed by a separate child view controller. Navigation between child view controllers is accomplished with the help of an NSTabView object, which the tab view controller manages. When the user selects a new tab, the tab view controller displays the content associated with the associated child view controller, replacing the previous content.</p>
 <a id="more"></a>
 <h1 id="Storyboard"><a href="#Storyboard" class="headerlink" title="Storyboard"></a>Storyboard</h1><p>Storyboard isn’t necessary to build preferences window, but it could let the workflow be clear and simple.</p>
-<p><img src="http://p.appsites.io/2016-05-14-Storyboard.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5712/31332931121_7f86a40076_o.jpg" alt=""></p>
 <h1 id="Preference-Manager"><a href="#Preference-Manager" class="headerlink" title="Preference Manager"></a>Preference Manager</h1><p>Typically there’re many settings in preferences. To make it easy to manage all of them, it’s better to use one singleton class to access them, e.g., register factory defaults, read, write, reset, etc.</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PreferenceManager</span> </span>&#123;</span><br><span class="line">  <span class="comment">// Single instance</span></span><br><span class="line">  <span class="keyword">static</span> <span class="keyword">let</span> sharedInstance = <span class="type">PreferenceManager</span>()</span><br><span class="line">    </span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">init</span>() &#123;</span><br><span class="line">    registerFactoryDefaults()</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">let</span> userDefaults = <span class="type">NSUserDefaults</span>.standardUserDefaults()</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">let</span> initializedKey = <span class="string">"Initialized"</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">var</span> startAtLogin: <span class="type">Bool</span> &#123;</span><br><span class="line">    <span class="keyword">get</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> userDefaults.boolForKey(startAtLoginKey)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">set</span> &#123;</span><br><span class="line">      userDefaults.setBool(newValue, forKey: startAtLoginKey)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  <span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">registerFactoryDefaults</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">let</span> factoryDefaults = [</span><br><span class="line">      initializedKey: <span class="type">NSNumber</span>(bool: <span class="literal">false</span>),</span><br><span class="line">    ]</span><br><span class="line">    </span><br><span class="line">    userDefaults.registerDefaults(factoryDefaults)</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">func</span> <span class="title">synchronize</span><span class="params">()</span></span> &#123;</span><br><span class="line">    userDefaults.synchronize()</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">func</span> <span class="title">reset</span><span class="params">()</span></span> &#123;</span><br><span class="line">    userDefaults.removeObjectForKey(initializedKey)    </span><br><span class="line">    synchronize()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="Bind-with-User-Defaults"><a href="#Bind-with-User-Defaults" class="headerlink" title="Bind with User Defaults"></a>Bind with User Defaults</h1><p>Beside using <code>class PreferenceManager</code>, you can also directly bind object’s value to user defaults.</p>
-<p><img src="http://p.appsites.io/2016-05-14-Bind.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5753/31448848435_2e6726f29d_o.jpg" alt=""></p>
 <h1 id="Register-Factory-Defaults"><a href="#Register-Factory-Defaults" class="headerlink" title="Register Factory Defaults"></a>Register Factory Defaults</h1><p>It’s better each setting has default value. <code>NSUserDefaults.registerDefaults</code> works for it.<br><strong>Note</strong>: The contents of the registration domain are not written to disk; you need to call this method each time your application starts. You can place a plist file in the application’s Resources directory and call registerDefaults: with the contents that you read in from that file.</p>
 <h1 id="Archive"><a href="#Archive" class="headerlink" title="Archive"></a>Archive</h1><p>To store data in user defaults, the object need to support archvie. For key based archive, the class need to conform to <code>NSCoding</code>. For more introduction, please refer to <a href="https://github.com/atjason/LearnCocoaWithSwift/tree/master/12_Archiving/RaiseMan" target="_blank" rel="external">here</a>.</p>
 <h1 id="Store-Tab-View’s-Size"><a href="#Store-Tab-View’s-Size" class="headerlink" title="Store Tab View’s Size"></a>Store Tab View’s Size</h1><p>If you allow user to resize the size of each tab view, its better to store them in user defaults, and restore when user access preferences window again. But as the structure of <code>NSSize</code> doesn’t support archive, you need to use a class to archive it.</p>
@@ -508,15 +508,15 @@
 <li>Swift: 2.2</li>
 </ul>
 <p>After it’s finished, the app looks like:</p>
-<p><img src="http://p.appsites.io/2016-05-14-Mirror Chatter.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5661/31412007576_17bd6cd9cb_o.jpg" alt=""></p>
 <h1 id="Storyboard-introduction"><a href="#Storyboard-introduction" class="headerlink" title="Storyboard introduction"></a>Storyboard introduction</h1><p>With storyboards, you can combine as much (or as little) of your application as you want in one canvas, as well as visualize how the parts relate to each other.<br>Storyboards are organized by scenes (windows and views), which are connected to each other by segues. Segues describe the scenes’ relationships to one another. Storyboards can be used to describe a window and its popover or sheet – or a complicated graph of nested views, each with its own view controller, which previously would have necessitated programmatic construction.<br>Storyboards were added to OS X in 10.10 Yosemite and to iOS in version 5.</p>
 <p>To create the relationship segue between the window controller and the split view controller, control-drag from the blue Window Controller icon in the border on top of the window controller down to the split view controller. In the pop-up Relationship Segue window that appears, select window content.</p>
-<p><img src="http://p.appsites.io/2016-05-14-Create segue.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5745/31332942411_d83d67bfea_o.jpg" alt=""></p>
 <a id="more"></a>
 <h1 id="How-is-the-Storyboard-Loaded"><a href="#How-is-the-Storyboard-Loaded" class="headerlink" title="How is the Storyboard Loaded?"></a>How is the Storyboard Loaded?</h1><p>Just like with MainMenu.xib, the answer is in the Info.plist.<br>If you check the Info.plist for this project you will see that the key NSMainStoryboardFile is set to Main.</p>
-<p><img src="http://p.appsites.io/2016-05-14-Main Storyboard.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5660/31332943681_ffa325b84a_o.jpg" alt=""></p>
 <p>Scenes can also be loaded from storyboards programmatically. The NSStoryboard class provides this, much like NSBundle does for NIB loading. Within a storyboard, one scene can be designated as the <strong>initial controller</strong>. This is used in the application’s Main.storyboard to designate the application window to be opened at launch.</p>
-<p><img src="http://p.appsites.io/2016-05-14-Storyboard initial controller.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5619/31448857885_8a82dc269f_o.jpg" alt=""></p>
 <p>Controllers within a storyboard can also be instantiated by their identifier, which is set in the identity inspector. If you had a view controller with an identifier of Palette, you could instantiate the view controller and show it in a window using the following code:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="keyword">let</span> storyboard = <span class="type">NSStoryboard</span>(name: <span class="string">"Main"</span>, bundle: <span class="literal">nil</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> vc = storyboard.instantiateControllerWithIdentifier(<span class="string">"Palette"</span>)</span><br><span class="line">            <span class="keyword">as</span>? <span class="type">NSViewController</span> &#123;</span><br><span class="line">        paletteWindow = <span class="type">NSWindow</span>(contentViewController: vc)</span><br><span class="line">        paletteWindow.makeKeyAndOrderFront(<span class="literal">nil</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
@@ -532,9 +532,9 @@
 <li>Swift: 2.2</li>
 </ul>
 <p>After it’s finished, the app looks like:</p>
-<p><img src="http://p.appsites.io/2016-05-14-Status App.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5488/30640931343_83d18f8a5a_o.jpg" alt=""></p>
 <h1 id="How-to-Run-as-Status-Bar-App"><a href="#How-to-Run-as-Status-Bar-App" class="headerlink" title="How to Run as Status Bar App?"></a>How to Run as Status Bar App?</h1><p>In another word, how to make the application not show a dock icon? The key point is to modify the application’s Info.plist file and indicate that it’s an agent. “Agent” is Apple’s term for a background application that doesn’t present a dock icon.<br>Select the project at the top of the project navigator. Open the Info tab at the top of the main editor. Add a new entry of <strong>Application is agent (UIElement)</strong> and set the value of this entry to YES.</p>
-<p><img src="http://p.appsites.io/2016-05-14-Application is agent.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5675/31411993296_9b15e794b0_o.jpg" alt=""></p>
 <a id="more"></a>
 <h1 id="How-to-Let-Status-App-Start"><a href="#How-to-Let-Status-App-Start" class="headerlink" title="How to Let Status App Start?"></a>How to Let Status App Start?</h1><p>It’s better don’t write much code in AppDelegate or other single class. To do it, I split main code in these 2 controllers:</p>
 <ol>
@@ -548,21 +548,21 @@
 <li>Open ‘MainMenu.xib’.</li>
 <li>Create Menu and sub-menus.</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-Create Menu.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5800/31078308250_73c43c03e0_o.jpg" alt=""></p>
 <ul>
 <li>Add an Object. Set its class to ‘StatusMenuController’.</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-Add Object.jpg" alt=""></p>
-<p><img src="http://p.appsites.io/2016-05-14-Set Object Class.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5520/31078308940_84a366791b_o.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5509/31411998896_3027536681_o.jpg" alt=""></p>
 <ul>
 <li>Add another Object of ‘StatusItemController’.</li>
 <li>Connect Menu object to StatusMenuController’s ‘menu’ outlet.</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-Connect Menu.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5346/31448852885_edf4a2bd81_o.jpg" alt=""></p>
 <ul>
 <li>Connect StatusMenuController to StatusItemController’s ‘menuController’ outlet.</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-Connect Menu Controller.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5685/31303433362_8b4cf99dd8_o.jpg" alt=""></p>
 <ul>
 <li>Open StatusItemController.swift, init the status bar item in ‘awakeFromNib’.<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">StatusItemController</span>: <span class="title">NSObject</span> </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> statusItem: <span class="type">NSStatusItem</span>!</span><br><span class="line">  <span class="meta">@IBOutlet</span> <span class="keyword">weak</span> <span class="keyword">var</span> menuController: <span class="type">StatusMenuController</span>!  </span><br><span class="line">  <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">awakeFromNib</span><span class="params">()</span></span> &#123;</span><br><span class="line">    statusItem = <span class="type">NSStatusBar</span>.systemStatusBar()</span><br><span class="line">      .statusItemWithLength(<span class="type">NSVariableStatusItemLength</span>)</span><br><span class="line">    statusItem.title = <span class="string">"App"</span></span><br><span class="line">    statusItem.highlightMode = <span class="literal">true</span></span><br><span class="line">    statusItem.menu = menuController.menu</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
@@ -571,7 +571,7 @@
 <p>In this case, the AppDelegate could even keep empty. Cool, right?<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@NSApplicationMain</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AppDelegate</span>: <span class="title">NSObject</span>, <span class="title">NSApplicationDelegate</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure></p>
 <h1 id="How-to-Show-Percent-in-Status-Bar"><a href="#How-to-Show-Percent-in-Status-Bar" class="headerlink" title="How to Show Percent in Status Bar?"></a>How to Show Percent in Status Bar?</h1><p>There’s class of <code>NSProgressIndicator</code>. The fact of it is a view. Thus the problem becomes how to add this view to status bar.</p>
 <p>You will find, the <code>NSStatusItem.view</code> is <code>nil</code>, thus you can’t add to its subview. From the API of <code>NSStatusItem</code> we can found, it’s suggested to use <code>NSStatusItem.button</code> to customize. OK, we can add view to subviews of the <code>button</code>.<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/// The button that is displayed in the status bar. This is created automatically on the creation of the StatusItem. Behavior customization for the button, such as image, target/action, tooltip, can be set with this property.</span></span><br><span class="line"><span class="meta">@available</span>(<span class="type">OSX</span> <span class="number">10.10</span>, *)</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">var</span> button: <span class="type">NSStatusBarButton</span>? &#123; <span class="keyword">get</span> &#125;</span><br></pre></td></tr></table></figure></p>
-<p>That’s not finished. Using this code could show the percent in status bar, but the size of status bar item is incorrect. How to deal with it? To be honest, I didn’t find a good way, but find a walkaround way, i.e., add an <strong>empty</strong> image to the status bar item. And then add <code>NSProgressIndicator</code> to the <code>button</code>. It’s not good, but works. The code is as following:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">if</span> <span class="keyword">let</span> button = statusItem.button &#123;</span><br><span class="line">        <span class="comment">// <span class="doctag">FIXME:</span> it works, but obviously not good.</span></span><br><span class="line">        <span class="keyword">let</span> frame = <span class="type">NSRect</span>(x: <span class="number">6</span>, y: <span class="number">2</span>, width: <span class="number">18</span>, height: <span class="number">18</span>)</span><br><span class="line">        <span class="keyword">let</span> progressIndicator = <span class="type">NSProgressIndicator</span>(frame: frame)</span><br><span class="line">        progressIndicator.style = .<span class="type">SpinningStyle</span></span><br><span class="line">        progressIndicator.indeterminate = <span class="literal">false</span></span><br><span class="line">        progressIndicator.doubleValue = <span class="number">30</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// Use empty image to extand the status item's size</span></span><br><span class="line">        statusItem.image = <span class="type">NSImage</span>(named: <span class="string">"EmptyIconImage"</span>)</span><br><span class="line">        button.addSubview(progressIndicator)</span><br><span class="line">  &#125;</span><br><span class="line">``` </span><br><span class="line"><span class="type">And</span> the percent looks like:</span><br><span class="line"></span><br><span class="line">![](http:<span class="comment">//p.appsites.io/2016-05-14-Percent.jpg)</span></span><br><span class="line">![](http:<span class="comment">//p.appsites.io/2016-05-14-Percent_Dark.jpg)</span></span><br><span class="line"></span><br><span class="line"># <span class="type">How</span> to <span class="type">Disable</span> a <span class="type">Menu</span> <span class="type">Item</span>?</span><br><span class="line"><span class="type">It</span> sounds very easy. <span class="type">Just</span> <span class="keyword">set</span> the `<span class="type">NSMenuItem</span>.enabled = <span class="literal">false</span>`. <span class="type">But</span> the fact <span class="keyword">is</span> not. <span class="type">Read</span> the description <span class="keyword">for</span> `<span class="type">NSMenuItem</span>.autoenablesItems`:</span><br><span class="line"></span><br><span class="line">```swift</span><br><span class="line">    <span class="comment">/* Set and get whether the menu autoenables items.  If a menu autoenables items, then calls to -[NSMenuItem setEnabled:] are ignored, and the enabled state is computed via the NSMenuValidation informal protocol below.  Autoenabling is on by default. */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">var</span> autoenablesItems: <span class="type">Bool</span></span><br></pre></td></tr></table></figure></p>
+<p>That’s not finished. Using this code could show the percent in status bar, but the size of status bar item is incorrect. How to deal with it? To be honest, I didn’t find a good way, but find a walkaround way, i.e., add an <strong>empty</strong> image to the status bar item. And then add <code>NSProgressIndicator</code> to the <code>button</code>. It’s not good, but works. The code is as following:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">if</span> <span class="keyword">let</span> button = statusItem.button &#123;</span><br><span class="line">        <span class="comment">// <span class="doctag">FIXME:</span> it works, but obviously not good.</span></span><br><span class="line">        <span class="keyword">let</span> frame = <span class="type">NSRect</span>(x: <span class="number">6</span>, y: <span class="number">2</span>, width: <span class="number">18</span>, height: <span class="number">18</span>)</span><br><span class="line">        <span class="keyword">let</span> progressIndicator = <span class="type">NSProgressIndicator</span>(frame: frame)</span><br><span class="line">        progressIndicator.style = .<span class="type">SpinningStyle</span></span><br><span class="line">        progressIndicator.indeterminate = <span class="literal">false</span></span><br><span class="line">        progressIndicator.doubleValue = <span class="number">30</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// Use empty image to extand the status item's size</span></span><br><span class="line">        statusItem.image = <span class="type">NSImage</span>(named: <span class="string">"EmptyIconImage"</span>)</span><br><span class="line">        button.addSubview(progressIndicator)</span><br><span class="line">  &#125;</span><br><span class="line">``` </span><br><span class="line"><span class="type">And</span> the percent looks like:</span><br><span class="line"></span><br><span class="line">![](https:<span class="comment">//farm6.staticflickr.com/5492/31332937901_69060ed428_o.jpg)</span></span><br><span class="line">![](https:<span class="comment">//farm6.staticflickr.com/5720/31303434582_304507af58_o.jpg)</span></span><br><span class="line"></span><br><span class="line"># <span class="type">How</span> to <span class="type">Disable</span> a <span class="type">Menu</span> <span class="type">Item</span>?</span><br><span class="line"><span class="type">It</span> sounds very easy. <span class="type">Just</span> <span class="keyword">set</span> the `<span class="type">NSMenuItem</span>.enabled = <span class="literal">false</span>`. <span class="type">But</span> the fact <span class="keyword">is</span> not. <span class="type">Read</span> the description <span class="keyword">for</span> `<span class="type">NSMenuItem</span>.autoenablesItems`:</span><br><span class="line"></span><br><span class="line">```swift</span><br><span class="line">    <span class="comment">/* Set and get whether the menu autoenables items.  If a menu autoenables items, then calls to -[NSMenuItem setEnabled:] are ignored, and the enabled state is computed via the NSMenuValidation informal protocol below.  Autoenabling is on by default. */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">var</span> autoenablesItems: <span class="type">Bool</span></span><br></pre></td></tr></table></figure></p>
 <p>As you can see, <code>NSMenuItem.autoenablesItems</code> is enabled by default. And if it’s enabled, the set of <code>NSMenuItem.enabled</code> property will be ignored. Thus, if you want to manually control the <code>NSMenuItem.enabled</code> property, first disable the <code>NSMenuItem.autoenablesItems</code> property.</p>
 <h1 id="How-to-Support-Dark-Mode"><a href="#How-to-Support-Dark-Mode" class="headerlink" title="How to Support Dark Mode?"></a>How to Support Dark Mode?</h1><p>There’re 2 key points needed to support dark mode of OS X.</p>
 <ol>
@@ -580,9 +580,9 @@
 </ol>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* The 'template' property is metadata that allows clients to be smarter about image processing.  An image should be marked as a template if it is basic glpyh-like black and white art that is intended to be processed into derived images for use on screen.</span><br><span class="line"> </span><br><span class="line"> NSButtonCell applies effects to images based on the state of the button.  For example, images are shaded darker when the button is pressed.  If a template image is set on a cell, the cell can apply more sophisticated effects.  For example, it may be processed into an image that looks engraved when drawn into a cell whose interiorBackgroundStyle is NSBackgroundStyleRaised, like on a textured button.</span><br><span class="line"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">var</span> template: <span class="type">Bool</span></span><br></pre></td></tr></table></figure>
 <p>The normal and dark status bar items look like:</p>
-<p><img src="http://p.appsites.io/2016-05-14-Icon.jpg" alt=""><br><img src="http://p.appsites.io/2016-05-14-Icon_Dark.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5523/30640938093_f9355d69ca_o.jpg" alt=""><br><img src="https://farm6.staticflickr.com/5349/31303436232_0f985fed3d_o.jpg" alt=""></p>
 <h1 id="How-to-Support-Indentation-Level"><a href="#How-to-Support-Indentation-Level" class="headerlink" title="How to Support Indentation Level?"></a>How to Support Indentation Level?</h1><p>Easy. Just set the <code>NSMenuItem.indentationLevel</code>.</p>
-<p><img src="http://p.appsites.io/2016-05-14-Indentation.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5718/31078312640_0c66c7e47b_o.jpg" alt=""></p>
 <h1 id="How-to-Pop-Over"><a href="#How-to-Pop-Over" class="headerlink" title="How to Pop Over?"></a>How to Pop Over?</h1><p>It’s easy to pop over status item. Check the following code:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="keyword">let</span> button = statusItem.button &#123;</span><br><span class="line">  popover.showRelativeToRect(button.bounds, ofView: button, preferredEdge: .<span class="type">MinY</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>But it’s hard to pop over menu item, as menu item’s view is nil by default. And then no view or bound to show popover relatively. Ever see some other app like <a href="http://www.clipmenu.com/blog/2014/11/11/clipmenu-1-0-0a1-released/" target="_blank" rel="external">ClipMenu</a> could implement this feature, but hasn’t found how to do it.</p>
 <p>Another walkaround is to use <code>NSMenuItem.toolTip</code> to show additional information of a menu item.</p>
@@ -606,7 +606,7 @@
 <p>#Steps</p>
 <p>##Create Basic Project<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/40ccec2db2584251483fe4dc0b9cc02746aebde3" target="_blank" rel="external">#40ccec2</a>.</p>
 <p>##Add UI Controls<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/2853186db767c0790c1ef3b99de53338818e39c6" target="_blank" rel="external">#2853186</a>.<br>After done, the UI looks like:</p>
-<p><img src="http://p.appsites.io/2016-05-14-UI_1.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5663/31303406692_2e04a5bdec_o.jpg" alt=""></p>
 <a id="more"></a>
 <p>##Add Model Class of “Node”<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/516acc4b6363a7d28862473ff464c33ef0b17a48" target="_blank" rel="external">#516acc4</a>.<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span>: <span class="title">NSObject</span> </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> title = <span class="string">"Node"</span></span><br><span class="line">  <span class="keyword">var</span> children = [<span class="type">Node</span>]()</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">override</span> <span class="keyword">init</span>() &#123;</span><br><span class="line">    <span class="keyword">super</span>.<span class="keyword">init</span>()</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">init</span>(title: <span class="type">String</span>) &#123;</span><br><span class="line">    <span class="keyword">self</span>.title = title</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="Prepare-Demo-Nodes-Data"><a href="#Prepare-Demo-Nodes-Data" class="headerlink" title="Prepare Demo Nodes Data"></a>Prepare Demo Nodes Data</h2><p>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/f9148114ec25db9a10e654f776396d1b2a2952a0" target="_blank" rel="external">#f914811</a>.<br>Node structure:<br>- Node<br>- Group<br>-– Node A<br>-– Node B</p>
@@ -620,14 +620,14 @@
 </ul>
 </li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-NSTreeController Attricutes Inspector.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5680/31411961046_8b688f8d9d_o.jpg" alt=""></p>
 <ul>
 <li>Go to “Binding Inspector”.<ul>
 <li>Bind “Content Array” to self.nodes (which was created in previous step).</li>
 </ul>
 </li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-NSTreeController Binding Inspector.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5708/31411961566_5e43982c53_o.jpg" alt=""></p>
 <p>##Bind NSOutlineView<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/f941f7be8e87ec8d99e67aaae4e059892b56e897" target="_blank" rel="external">#f941f7b</a>.<br>Steps</p>
 <ul>
 <li>Select “Outline View”.</li>
@@ -636,7 +636,7 @@
 <li>Bind “Content” to “Tree Controller”‘s “arrangedObjects”. Ignore the warning in “Model Key Path”.</li>
 <li>Bind “Selection Index Paths” to Tree Controller’s “selectionIndexPaths”.</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-Outline View Binding Inspector.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5490/31332915111_4232dc553e_o.jpg" alt=""></p>
 </li>
 <li><p>Select “Table View Cell”.</p>
 </li>
@@ -645,16 +645,16 @@
 </ul>
 </li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-Table View Cell Binding Inspector.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5796/31303410492_050d9a6a17_o.jpg" alt=""></p>
 <ul>
 <li>Go to “Attributes Inspector”.<ul>
 <li>Set “Behavior” to “Editable”.</li>
 </ul>
 </li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-Table View Cell Attributes Inspector.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5454/31303411522_280527545a_o.jpg" alt=""></p>
 <p>Run the app, you should see the app like:</p>
-<p><img src="http://p.appsites.io/2016-05-14-UI_2.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5558/31078296720_261ddc7e6b_o.jpg" alt=""></p>
 <p>##Add Node and Remove It<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/d9b71976817eb248db1c19e404e8db16e96187a2" target="_blank" rel="external">#d9b7197</a>.<br>Steps</p>
 <ul>
 <li>Right click on the tree controller.</li>
@@ -662,9 +662,9 @@
 <li>Connect “addChild:” to “Add Child Node” menu item.</li>
 <li>Connect “remove:” to edit button.</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-Connect Tree Controller.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5784/31332917871_a544120ac0_o.jpg" alt=""></p>
 <p>That’s it. Run the app. You should be able to add node or remove it.</p>
-<p><img src="http://p.appsites.io/2016-05-14-UI_3.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5653/31303414282_9473713262_o.jpg" alt=""></p>
 <p>##Edit Selected Node<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/22e2c073297d8887b13c97d9030ae5dee30e12c6" target="_blank" rel="external">#22e2c07</a>.<br>The key code is here:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@IBAction</span> <span class="function"><span class="keyword">func</span> <span class="title">editNode</span><span class="params">(sender: NSObject)</span></span> &#123;</span><br><span class="line">  <span class="keyword">let</span> row = outlineView.selectedRow</span><br><span class="line">  <span class="keyword">if</span> row != -<span class="number">1</span> &#123;</span><br><span class="line">    outlineView.editColumn(<span class="number">0</span>, row: row, withEvent: <span class="literal">nil</span>, select: <span class="literal">true</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>##Disable Remove and Edit Controls if no Node Selected<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/eb7decdf6a2baeb60f6883e287899ab61d825af8" target="_blank" rel="external">#eb7decd</a>.<br>The key point is to bind the “Enabled” attribute to tree controller’s “canRemove” controller key.<br>Another point is, when app starts maybe nothing was selected. In this case, disable the Outline’s “Attributes &gt; Selection &gt; Empty”, and select the Tree Controller’s “Attributes &gt; Avoid Empty Selection”.</p>
 ]]></content>
@@ -684,20 +684,20 @@
 <h2 id="Add-Model-Class-of-“Node”"><a href="#Add-Model-Class-of-“Node”" class="headerlink" title="Add Model Class of “Node”"></a>Add Model Class of “Node”</h2><p>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/e302b91f3d4268714323fd3d94c21a781ed135fb" target="_blank" rel="external">#e302b91</a>.<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span>: <span class="title">NSObject</span> </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> title = <span class="string">"Node"</span></span><br><span class="line">  <span class="keyword">var</span> isGroup = <span class="literal">false</span></span><br><span class="line">  <span class="keyword">var</span> children = [<span class="type">Node</span>]()</span><br><span class="line">  <span class="keyword">weak</span> <span class="keyword">var</span> parent: <span class="type">Node</span>?</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">override</span> <span class="keyword">init</span>() &#123;</span><br><span class="line">    <span class="keyword">super</span>.<span class="keyword">init</span>()</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">init</span>(title: <span class="type">String</span>) &#123;</span><br><span class="line">    <span class="keyword">self</span>.title = title</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">func</span> <span class="title">isLeaf</span><span class="params">()</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> children.isEmpty</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <h2 id="Add-UI-Controls"><a href="#Add-UI-Controls" class="headerlink" title="Add UI Controls"></a>Add UI Controls</h2><p>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/5dee8d160650624d55333808b7fa5e9fba6e0b9c" target="_blank" rel="external">#5dee8d1</a>.<br>After done, the UI looks like:</p>
-<p><img src="http://p.appsites.io/2016-05-20_22_27_35.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5513/31078297700_fc0e048454_o.jpg" alt=""></p>
 <h2 id="Implement-NSOutlineViewDataSource"><a href="#Implement-NSOutlineViewDataSource" class="headerlink" title="Implement NSOutlineViewDataSource"></a>Implement NSOutlineViewDataSource</h2><p>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/c467d0b36a58994dca5f376d668777d8484a72fd" target="_blank" rel="external">#c467d0b</a>.<br>Notes:</p>
 <ul>
-<li><p>Set NSOutlineView’s dataSource to File’s Owner.<br><img src="http://p.appsites.io/2016-05-20_22_27_59.jpg" alt=""></p>
+<li><p>Set NSOutlineView’s dataSource to File’s Owner.<br><img src="https://farm6.staticflickr.com/5445/31303416292_3dbbb9c077_o.jpg" alt=""></p>
 </li>
-<li><p>Bind value “Table Cell View” to “Table Cell View” &gt; Model Key Path: objectValue.title.<br><img src="http://p.appsites.io/2016-05-20_22_28_07.jpg" alt=""></p>
+<li><p>Bind value “Table Cell View” to “Table Cell View” &gt; Model Key Path: objectValue.title.<br><img src="https://farm6.staticflickr.com/5661/31303418352_2f985f6a86_o.jpg" alt=""></p>
 </li>
 </ul>
 <p>After done, the UI looks like:</p>
-<p><img src="http://p.appsites.io/2016-05-20_22_28_15.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5703/31078299580_c874b3fb94_o.jpg" alt=""></p>
 <h2 id="Implement-NSOutlineViewDelegate"><a href="#Implement-NSOutlineViewDelegate" class="headerlink" title="Implement NSOutlineViewDelegate"></a>Implement NSOutlineViewDelegate</h2><p>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/300948eaabd9afe72c1addcb0438102bc21c2783" target="_blank" rel="external">#300948e</a>.</p>
 <p>Notes:</p>
 <ul>
-<li>Set NSOutlineView’s delegate to File’s Owner.<br><img src="http://p.appsites.io/2016-05-20_22_28_24.jpg" alt=""></li>
+<li>Set NSOutlineView’s delegate to File’s Owner.<br><img src="https://farm6.staticflickr.com/5698/30640920653_2b1750cee8_o.jpg" alt=""></li>
 </ul>
 <h2 id="Add-Node-and-Group"><a href="#Add-Node-and-Group" class="headerlink" title="Add Node and Group"></a>Add Node and Group</h2><p>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/f18c61f94bd813f0ae2c0d2d33dbc6054f530d61" target="_blank" rel="external">#f18c61f</a>.</p>
 <p>Notes:</p>
@@ -706,13 +706,13 @@
 <li>There’re 2 ways to insert item in outline view. One is update the data modal, then call <code>NSOutlineView.reloadData()</code>. But this will let UI flash. So it’s better to manually insert item in outline view (e.g., use <code>NSOutlineView.insertItemsAtIndexes</code>). Another benefit is could use animation during inserting.</li>
 </ul>
 <p>After done, you can add node or group. The UI looks like:</p>
-<p><img src="http://p.appsites.io/2016-05-20_22_28_42.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5344/31303421682_6c97330c0e_o.jpg" alt=""></p>
 <h2 id="Implement-other-UI-Operations"><a href="#Implement-other-UI-Operations" class="headerlink" title="Implement other UI Operations"></a>Implement other UI Operations</h2><p>The operations include remove, edit, move up and move down. It’s not hard. But the logic is complex and boring. Be careful.<br>Refer to commit till <a href="https://github.com/atjason/CocoaDemoWithSwift/commit/3f7ffaa8efb62b5e08d2f53da693da05055a80cf" target="_blank" rel="external">#3f7ffaa</a>.</p>
 <p>Notes</p>
 <ul>
-<li><p>Could create a <strong>dynamic</strong> property (e.g., <code>dynamic var removeButtonEnabled = false</code>), and then bind a control’s enable property to it. e.g.,<br><img src="http://p.appsites.io/2016-05-20_22_28_51.jpg" alt=""></p>
+<li><p>Could create a <strong>dynamic</strong> property (e.g., <code>dynamic var removeButtonEnabled = false</code>), and then bind a control’s enable property to it. e.g.,<br><img src="https://farm6.staticflickr.com/5593/30640925323_2d063c143d_o.jpg" alt=""></p>
 </li>
-<li><p>Should set table view cell’s behavior as “Editable” to edit it.<br><img src="http://p.appsites.io/2016-05-20_22_28_59.jpg" alt=""></p>
+<li><p>Should set table view cell’s behavior as “Editable” to edit it.<br><img src="https://farm6.staticflickr.com/5529/30640927443_912e4b7e77_o.jpg" alt=""></p>
 </li>
 </ul>
 ]]></content>

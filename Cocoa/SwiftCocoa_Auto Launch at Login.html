@@ -104,13 +104,13 @@ XCode: 7.3
 Swift: 2.2
 
 Enable ‘launch at login’ in">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-AutoLaunchApp.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-Add Helper Target.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-Helper in Background.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-HelperSkipInstall.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-Strip Debug Symbols During Copy.jpg">
-<meta property="og:image" content="http://p.appsites.io/2016-05-14-Copy Helper Files.jpg">
-<meta property="og:updated_time" content="2016-05-17T12:26:42.000Z">
+<meta property="og:image" content="https://farm6.staticflickr.com/5486/31303440372_cb535ac1c7_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5541/31412010806_3e0b0d8720_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5464/31412010896_49ea699cdb_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5608/31332952541_d9fd0d8d04_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5338/31448859785_4939efab2f_o.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5763/31078319720_0523f09e3b_o.jpg">
+<meta property="og:updated_time" content="2016-12-06T01:51:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift & Cocoa: Auto Launch at Login">
 <meta name="twitter:description" content="This article is based on this blog. I adjust and implement using Swift. The project could be downloaded here.
@@ -121,7 +121,7 @@ XCode: 7.3
 Swift: 2.2
 
 Enable ‘launch at login’ in">
-<meta name="twitter:image" content="http://p.appsites.io/2016-05-14-AutoLaunchApp.jpg">
+<meta name="twitter:image" content="https://farm6.staticflickr.com/5486/31303440372_cb535ac1c7_o.jpg">
 
 
 
@@ -349,26 +349,26 @@ Enable ‘launch at login’ in">
 <p>2.26 Apps that are set to auto-launch or to have other code automatically run at startup or login without user consent will be rejected.</p>
 </blockquote>
 <p>How to deal with it?<br>Easy, just add a checkbox in Preferences to let user choose auto launch or not. And, make sure, do <strong>NOT</strong> enable it by default. Otherwise Apple will reject it (I was ever rejected for this reason).</p>
-<p><img src="http://p.appsites.io/2016-05-14-AutoLaunchApp.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5486/31303440372_cb535ac1c7_o.jpg" alt=""></p>
 <a id="more"></a>
 <h1 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h1><p>The precondition is, you already setup your normal project.</p>
 <h2 id="Add-New-Target-of-Helper"><a href="#Add-New-Target-of-Helper" class="headerlink" title="Add New Target of Helper"></a>Add New Target of Helper</h2><p>Add a new target of your project. You can name the target as “XHelper”, and “X” is your main project.<br>Note: to reduce app’s size, choose the Language of ‘Objective-C’. No worry, only a few code is needed.</p>
-<p><img src="http://p.appsites.io/2016-05-14-Add Helper Target.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5541/31412010806_3e0b0d8720_o.jpg" alt=""></p>
 <h2 id="Settings-for-Helper-Target"><a href="#Settings-for-Helper-Target" class="headerlink" title="Settings for Helper Target"></a>Settings for Helper Target</h2><p>Let the helper works in the background and doesn’t display a Dock icon.<br>Open the <strong>Info</strong> tab for the helper target.</p>
 <ul>
 <li>Under the ‘Custom OS X Application Target Properties’ section, add a new row with the Key ‘<strong>Application is background only</strong>’ and the Boolean value of ‘<strong>YES</strong>’.</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-Helper in Background.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5464/31412010896_49ea699cdb_o.jpg" alt=""></p>
 <p>Next, let the helper target skips the install when the base application also gets installed. To do this:<br>Open the <strong>Build Settings</strong> tab for the helper target.</p>
 <ul>
 <li>Search for ‘<strong>Skip Install</strong>’, setting this option to ‘<strong>YES</strong>’</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-HelperSkipInstall.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5608/31332952541_d9fd0d8d04_o.jpg" alt=""></p>
 <h2 id="Settings-for-Main-Target"><a href="#Settings-for-Main-Target" class="headerlink" title="Settings for Main Target"></a>Settings for Main Target</h2><p>Open the <strong>Build Settings</strong> tab for the main target.</p>
 <ul>
 <li>Search for the item called ‘<strong>Strip Debug Symbols During Copy</strong>’, and set this item to ‘<strong>NO</strong>’.</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-Strip Debug Symbols During Copy.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5338/31448859785_4939efab2f_o.jpg" alt=""></p>
 <p>Open the <strong>Build Phases</strong> tab for the main target</p>
 <ul>
 <li>If you don’t already have a ‘Copy Files’ phase, then add one by selecting the small + sign in the top left corner of this section.</li>
@@ -376,7 +376,7 @@ Enable ‘launch at login’ in">
 <li>In the Subpath section, type the following path: “<strong>Contents/Library/LoginItems</strong>“</li>
 <li>Select the + button for the Name section, then search for and add the ‘X Helper.app’ application bundle from the source list that appears, and select it in the list. Click ‘Add’ when done.</li>
 </ul>
-<p><img src="http://p.appsites.io/2016-05-14-Copy Helper Files.jpg" alt=""></p>
+<p><img src="https://farm6.staticflickr.com/5763/31078319720_0523f09e3b_o.jpg" alt=""></p>
 <p>This will ensure that the Helper target is copied into our application bundle when we compile the project.</p>
 <h2 id="Code-for-Helper-Target"><a href="#Code-for-Helper-Target" class="headerlink" title="Code for Helper Target"></a>Code for Helper Target</h2><p>First, remove the menu and base window in the Helper app’s XIB file.</p>
 <p>Open <code>AppDelegate.m</code>, add these code in <code>applicationDidFinishLaunching</code>. It will find out the path for the main application, launch it, and then terminate itself.<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)applicationDidFinishLaunching:(<span class="built_in">NSNotification</span> *)aNotification &#123;</span><br><span class="line">  <span class="built_in">NSArray</span> *pathComponents = [[[<span class="built_in">NSBundle</span> mainBundle] bundlePath] pathComponents];</span><br><span class="line">  pathComponents = [pathComponents subarrayWithRange:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, [pathComponents count] - <span class="number">4</span>)];</span><br><span class="line">  <span class="built_in">NSString</span> *path = [<span class="built_in">NSString</span> pathWithComponents:pathComponents];</span><br><span class="line">  [[<span class="built_in">NSWorkspace</span> sharedWorkspace] launchApplication:path];</span><br><span class="line">  [<span class="built_in">NSApp</span> terminate:<span class="literal">nil</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -493,7 +493,7 @@ Enable ‘launch at login’ in">
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="http://ww3.sinaimg.cn/large/006ghf8igw1f3lxt6lgnsj30lc0jygn8.jpg"
+               src="https://ohpsctde4.qnssl.com/bq0zf.jpg"
                alt="Jason" />
           <p class="site-author-name" itemprop="name">Jason</p>
           <p class="site-description motion-element" itemprop="description">Digital Nomad, Mac Developer</p>
