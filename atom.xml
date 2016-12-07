@@ -832,7 +832,7 @@
     <link href="http://en.atjason.com/Cocoa/Outline%20With%20Controller.html"/>
     <id>http://en.atjason.com/Cocoa/Outline With Controller.html</id>
     <published>2016-04-06T12:38:00.000Z</published>
-    <updated>2016-12-06T11:46:41.000Z</updated>
+    <updated>2016-12-06T14:06:59.000Z</updated>
     
     <content type="html">&lt;p&gt;This article describes the steps to use NSOutlineView With NSTreeController. The source code can be downloaded &lt;a href=&quot;https://github.com/atjason/CocoaDemoWithSwift/tree/master/Outline/OutlineWithController&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Development environment:&lt;/p&gt;
@@ -861,7 +861,7 @@
 &lt;p&gt;&lt;img src=&quot;https://farm6.staticflickr.com/5708/31411961566_5e43982c53_o.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Go to “Binding Inspector”.&lt;ul&gt;
-&lt;li&gt;Bind “Content Array” to self.nodes (which was created in previous step).&lt;/li&gt;
+&lt;li&gt;Bind “Content Array” to self.nodes (which was created in previous step, and it should be &lt;strong&gt;dynamic&lt;/strong&gt;).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

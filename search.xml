@@ -623,7 +623,7 @@
 <p><img src="https://farm6.staticflickr.com/5708/31411961566_5e43982c53_o.jpg" alt=""></p>
 <ul>
 <li>Go to “Binding Inspector”.<ul>
-<li>Bind “Content Array” to self.nodes (which was created in previous step).</li>
+<li>Bind “Content Array” to self.nodes (which was created in previous step, and it should be <strong>dynamic</strong>).</li>
 </ul>
 </li>
 </ul>
